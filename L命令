@@ -15,7 +15,10 @@ ls -al
 ifconfig > ifconfig_output
 less ifconfig_output
 
-
+ln
+cp
+mv
+rm
 
 tar -cf tarfileName.tar file*
 tar -tf tarfileName.tar 		// 查看压缩文件列表
