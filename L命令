@@ -1,0 +1,218 @@
+
+
+
+
+ls -ali
+ls -alh
+ls -alS
+ls -alt
+mkdir playground
+cd playground
+pwd
+
+touch touchfile
+ls -al
+ifconfig > ifconfig_output
+less ifconfig_output
+
+
+
+tar -cf tarfileName.tar file*
+tar -tf tarfileName.tar 		// 查看压缩文件列表
+tar -xf tarfileName.tar                 // 解压到当前目录
+tar -xf tarfileName.tar -C path         // 解压到指定目录
+z gzip    .gz
+j bzip2   .bz2
+
+
+======用户、组、权限管理======
+
+id					// 显示当前用户信息
+useradd Raymond 			// 创建用户
+cat /etc/passwd | grep Raymond   	// 在用户表中查看信息  用户名:密码:UID:GID:用户信息:HOME目录路径:用户shell
+ls -al /home/
+password Raymond 			// 修改Raymond的密码
+userdel Raymond 			// 删除用户
+
+groups                  		// 显示当前用户的组 
+groupadd RaymondGroup         		// 创建组
+cat /etc/group | grep RaymondGroup    	// 在组表中查看组信息  用户组名:组密码:GID:组内帐号（多个帐号用逗号分隔）
+groupdel RaymondGroup			// 删除组
+cat /etc/group | grep RaymondGroup
+
+gpasswd -M Raymond RaymondGroup  	// 把用户添加到组
+cat /etc/group | grep RaymondGroup
+gpasswd -d Raymond RaymondGroup       	// 把用户从组中删除
+
+umask 0022   				// 屏蔽g2 o2
+touch file{1..5}
+chmod +rwx file1
+chmod u-x  file2
+chmod g-x  file3
+chmod o-x  file4  
+
+chown Raymond file1  			// 更改文件的所有者为Raymond
+chown :RaymondGroup file1 		// 更改文件的组为RaymondGroup
+
+
+======进程管理======
+ps aux     	// 查看进程
+pstree        	// 进程树
+top             // 实时当前资源情况
+command &       // 后台运行命令 （或者是Ctrl+Z 暂停）
+jobs            // 
+fg %1  		// 使进程回到前台
+bg %1           // 使进程回到后台
+
+
+
+======VI 操作======
+hjkl   		// 光标上下左右
+w W b B      	// 下一单词 上一单词
+^ 行首
+$ 行尾
+
+dd 剪切行
+dw 剪切单词
+
+yy 复制行
+yw 复制单词
+
+光标前（上一行）黏贴P
+光标后（下一行）黏贴p
+
+当前行搜索字符
+
+V 选择区域
+v 
+
+gg=G可对整篇代码进行排版
+
+/搜索
+s/findstr/replacestr/gc 替换
+
+多文本编辑
+
+显示行号
+
+======命令行快捷键======
+Ctrl-a 行首
+Ctrl-e 行尾
+Ctrl-f 右移
+Ctrl-b 左移
+
+Ctrl-d 删除光标字符
+Ctrl-u 前切到行首
+Ctrl-k 前切到行尾
+
+Ctrl-y 黏贴
+
+
+
+======文件搜索======
+locate bin   // 
+find 
+
+======文本处理======
+
+
+======常用的命令======
+who   					// 查看当前在线用户
+df -h   				// 查看磁盘使用情况
+du -sh  				// 统计目录大小
+查看IP 修改IP
+dd if=/dev/cdrom of=XXXXX.iso  		// 拷贝cd 创建ISO
+genisoimage -o XXXX.iso -RJ path  	// 把路径下的内容制作成ISO文件 
+mkdir /mnt/iso_xxx
+mount -t iso9660 -o loop xxxx.iso /mnt/iso_xxx  // 挂载ISO
+
+
+======软件包管理======
+
+yum check-update      	 	# 1.列出所有可更新的软件清单命令：
+yum update 			# 2.更新所有软件命令：
+yum install <package_name>  	# 3.仅安装指定的软件命令：
+yum install <package_name> 	# 4.仅更新指定的软件命令：
+yum list  			# 5.列出所有可安裝的软件清单命令：
+yum remove <package_name>  	# 6.删除软件包命令：
+yum search <keyword>    	# 7.查找软件包 命令：
+
+1，进入yum源配置目录
+cd /etc/yum.repos.d
+2，备份系统自带的yum源
+mv CentOS-Base.repo CentOS-Base.repo.bk
+下载163网易的yum源：
+wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
+3，更新玩yum源后，执行下边命令更新yum配置，使操作立即生效
+yum makecache
+
+
+rpm -ivh <package.rpm>   	# 安装一个包
+rpm -Uvh <package.rpm> 		# 升级一个包
+rpm -e <package>  		# 卸载一个包 而不是rpm文件名"package.rpm"
+rpm -q <package.rpm>  		# 查询一个包是否被安装 
+rpm -qi <package.rpm>  		# 得到被安装的包的信息
+rpm -ql <package.rpm>  		# 列出该包中有哪些文件
+
+4.安装参数 
+--force 即使覆盖属于其它包的文件也强迫安装 
+--nodeps 如果该RPM包的安装依赖其它包，即使其它包没装，也强迫安装。 
+
+
+/etc/apt/sources.list
+apt-get update    			# 更新软件包列表
+apt-get install packagename    		# 安装一个新软件包：
+apt-get remove packagename  		# 卸载一个已安装的软件包
+apt-get –purge remove packagename  	# 卸载一个已安装的软件包（删除配置文件）
+apt-get upgrade   			# 更新所有已安装的软件包：
+apt-get clean   			# 把安装的软件的备份也删除，不会影响软件的使用的
+
+dpkg -i <package.deb>   		# 安装一个Debian 软件包，如你手动下载的文件。
+dpkg -c <package.deb> 			# 列出<package.deb> 的内容。
+dpkg -I <package.deb>   		# 从<package.deb> 中提取包裹信息。
+dpkg -r <package>  			# 移除一个已安装的包裹。只是删掉数据和可执行文件
+dpkg -P <package>  			# 完全清除一个已安装的包裹。另外还删除所有的配制文件。
+
+
+
+======Git ======
+git init      				# 创建本地仓库
+git clone https://github.com/RuolinXu/MyPythonProject.git  # 复制在线仓库
+
+git status  				# 查看当前仓库状态（是否有未提交的修改）
+git add * 				# 把修改提交到缓冲区
+git rm readme.txt			# 删除文件
+git commit -m '提交备注'   		# 把缓冲区提交到本地仓库
+git log         			# 查看仓库日志   查找commit id
+git reflog				# 查看Git的操作记录 可以查找历史commit id
+git reset --hard [commit id]    	# 回到之前的版本 commit id没必要写全，前几位就可以了，来回也是可以的
+git checkout -- readme.txt         	# 把文件回到最近一次git commit或git add时的状态
+
+ssh-keygen -t rsa -C "youremail@example.com"  里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥
+
+git remote add origin git@github.com:RuolinXu/MyPythonProject.git  # 把本地仓库关联到在线仓库 （ssh链接）
+git push -u origin master           	# 把本地的master 和远端的origin关联并推送
+git push origin master 			# 把master分支提交到origin
+
+git checkout -b dev                 	# 创建新分支 dev，并切换到dev
+git branch -a 				# 查看所有分支
+git checkout master   			# 切换到master分支
+git branch -d dev    			# 删除本地分支dev
+git push --delete origin dev 		# 删除远端的分支dev
+git pull origin dev 			# 拉取dev分支内容 不写dev 默认master
+
+git merge dev 				# 把dev分支与当前分支合并
+
+当需要修复一个代号101的bug的任务时，很自然地，你想创建一个分支issue-101来修复它，但是当前正在dev上进行的工作还没有提交：
+git stash 				# 保存当前的工作
+git checkout master	
+git checkout -d issue-101           
+bug修复以后
+git add
+git commit -m 'fix-bug-101'
+git checkout master
+git merge issue-101
+git branch -d issue-101
+git checkout dev
+git stash list
+git stash pop      			# 用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
