@@ -2,6 +2,7 @@ from functools import reduce
 from datetime import datetime, timedelta
 from collections import namedtuple
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 class Analyst:
@@ -25,6 +26,18 @@ class Analyst:
         interval_array = list(map(lambda pp: reduce(lambda a, b: b - a, pp), pp_array))
         interval_array.insert(0, 0)
         return interval_array
+
+    @staticmethod
+    def __gettime_add_ind(current, ind, period=390, shour=9, smin=30):
+        current_time = datetime.strptime(current, '%Y-%m-%d %H:%M:%S')
+        start_time = datetime(current_time.year, current_time.month, current_time.day, shour, smin)
+        delta = int((current_time - start_time).seconds / 60)
+        days = int((ind + delta) / period)
+        mins = int((ind + delta) % period)
+        if ind < 0 and abs(ind) > delta:
+            days -= 1
+        time_tar = start_time + timedelta(days=days, minutes=mins)
+        return time_tar.strftime('%Y-%m-%d %H:%M:%S')
 
     def get_kp_array(self, fromdate='2000-01-01', todate='2100-01-01', rate=0.03):
         """返回走势骨架
@@ -76,6 +89,40 @@ class Analyst:
         rst = list(filter(lambda x: x.KLTime < kltime, self.__cache))
         return sorted(rst, key=lambda x: x.KLTime)
 
+    def get_keypoint_report(self, kp_array):
+        price_array = np.array([x.Price for x in kp_array])
+        ind_array = np.array([x.Ind for x in kp_array])
+        change_array = self.__get_change_array(price_array, price_array)
+        interval_array = self.__get_interval_array(ind_array, ind_array)
+        if kp_array[1].D == 1:      # 如果第一个节点是涨
+            up_change_array = np.array(change_array[1::2])
+            up_interval_array = np.array(interval_array[1::2])
+            down_change_array = np.array(change_array[2::2])
+            down_interval_array = np.array(interval_array[2::2])
+        if kp_array[1].D == -1:     # 如果第一个节点是跌
+            up_change_array = np.array(change_array[2::2])
+            up_interval_array = np.array(interval_array[2::2])
+            down_change_array = np.array(change_array[1::2])
+            down_interval_array = np.array(interval_array[1::2])
+        print("平均涨幅%f,最大涨幅%f,最小涨幅%f, 平均周期%f分钟" %
+              (up_change_array.mean(), up_change_array.max(), up_change_array.min(), up_interval_array.mean()))
+        print("平均跌幅%f,最大跌幅%f,最小跌幅%f, 平均周期%f分钟" %
+              (down_change_array.mean(), down_change_array.min(), down_change_array.max(), down_interval_array.mean()))
+        print(change_array)
+
+        if kp_array[-1].D == 1:  # 如果最后一个节点是涨 显示下一节点的目标价
+            price_tar = kp_array[-1].Price * (1 + down_change_array.mean())
+            time_delta = down_interval_array.mean()
+        if kp_array[-1].D == -1:
+            price_tar = kp_array[-1].Price * (1 + up_change_array.mean())
+            time_delta = up_interval_array.mean()
+
+        time_str = self.add_mins_to_time(kp_array[-1].KLTime, time_delta)
+        print("目标价%f,时间点%s" % (price_tar, time_str))
+        plt.figure(figsize=(16, 9))
+        plt.plot(ind_array, price_array)
+        plt.show()
+
     def can_buy(self, kltime, cache=True):
         """根据关键点的倒数第二个点 如果是个涨点，则根据该点和历史关键点跌幅（排除最近一次），寻找买点
         :param kltime: 观察点
@@ -85,16 +132,6 @@ class Analyst:
 
     def can_sell(self, kltime, cache=True):
         return self.__buy_sell_report(what='sell', kltime=kltime, cache=cache)
-
-    @staticmethod
-    def __gettime_add_ind(current, ind, period=390, shour=9, smin=30):
-        current_time = datetime.strptime(current, '%Y-%m-%d %H:%M:%S')
-        start_time = datetime(current_time.year, current_time.month, current_time.day, shour, smin)
-        delta = int((current_time - start_time).seconds / 60)
-        days = int((ind + delta) / period)
-        mins = int((ind + delta) % period)
-        time_tar = start_time + timedelta(days=days, minutes=mins)
-        return time_tar.strftime('%Y-%m-%d %H:%M:%S')
 
     def __buy_sell_report(self, what, kltime='2100-01-01', cache=True):
         if cache:
@@ -225,5 +262,5 @@ class AnalystB:
     def can_buy(self, kltime, cache=True):
         pass
 
-
+    
 
