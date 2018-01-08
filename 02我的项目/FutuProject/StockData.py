@@ -212,7 +212,7 @@ if __name__ == '__main__':
 
     # d.get_keypoint_report(kp_array)
     # 更新数据库
-    d.update_db()
+    # d.update_db()
     # d.get_kline_view('2017-02-13 10:34:00', '2017-02-13 12:34:00')
 
     # x = '2017-02-15 10:12:00'

@@ -15,7 +15,10 @@ ls -al
 ifconfig > ifconfig_output
 less ifconfig_output
 
-
+ln
+cp
+mv
+rm
 
 tar -cf tarfileName.tar file*
 tar -tf tarfileName.tar 		// 查看压缩文件列表
@@ -143,7 +146,7 @@ cd /etc/yum.repos.d
 mv CentOS-Base.repo CentOS-Base.repo.bk
 下载163网易的yum源：
 wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
-3，更新玩yum源后，执行下边命令更新yum配置，使操作立即生效
+3，更新yum源后，执行下边命令更新yum配置，使操作立即生效
 yum makecache
 
 
