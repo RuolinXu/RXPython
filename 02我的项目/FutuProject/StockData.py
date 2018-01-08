@@ -57,50 +57,6 @@ class StockData(object):
         end = self.__time_array[-1]
         return str(self.days_dict[start]) + '\n...\n' + str(self.days_dict[end])
 
-    def get_kp_array(self, fromdate='2000-01-01', todate='2100-01-01', rate=0.03):
-        """获取时间段中的关键点
-        :param fromdate:
-        :param todate:
-        :param rate:
-        :return: namedtuple_list('Ind', 'Price', 'KLTime', 'D')
-        """
-        p_nametuple = namedtuple(self.stockcode.split('.')[1], ('Ind', 'Price', 'KLTime', 'D'))
-        kp_array = []
-        for key in self.days_dict:
-            if key > todate:
-                break
-            if fromdate < key < todate:
-                _ind = self.__time_array.index(key)
-                _open = self.days_dict[key].Open
-                _low = self.days_dict[key].Low
-                _high = self.days_dict[key].High
-                _ktime = self.days_dict[key].KLTime
-                if len(kp_array) == 0:
-                    kp_array.append(p_nametuple(_ind, _open, _ktime, 0))
-                    continue
-                if kp_array[-1].D == 0:
-                    if _high > (kp_array[-1].Price * (1+rate)):
-                        kp_array.append(p_nametuple(_ind, _high, _ktime, 1))
-                        continue
-                    if _low < (kp_array[-1].Price * (1-rate)):
-                        kp_array.append(p_nametuple(_ind, _low, _ktime, -1))
-                        continue
-                if kp_array[-1].D == 1:
-                    if _high > kp_array[-1].Price:
-                        kp_array[-1] = p_nametuple(_ind, _high, _ktime, 1)
-                        continue
-                    elif _low < (kp_array[-1].Price * (1-rate)):
-                        kp_array.append(p_nametuple(_ind, _low, _ktime, -1))
-                        continue
-                if kp_array[-1].D == -1:
-                    if _low < kp_array[-1].Price:
-                        kp_array[-1] = p_nametuple(_ind, _low, _ktime, -1)
-                        continue
-                    elif _high > (kp_array[-1].Price * (1 + rate)):
-                        kp_array.append(p_nametuple(_ind, _high, _ktime, 1))
-                        continue
-        return kp_array
-
     def update_db(self):
         """调用富途接口，把数据添加到数据库 """
         quote_context = OpenQuoteContext(host='127.0.0.1', async_port=11111)
