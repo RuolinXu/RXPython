@@ -39,17 +39,8 @@ class StockData(object):
 
     def __init_days_dict(self):
         stock_nametuple = namedtuple(self.stockcode.split('.')[1],
-                                     ('Open','Low','High','Close','Volume','Turnover','KLTime'))
+                                     ('Open', 'Low', 'High', 'Close', 'Volume', 'Turnover', 'KLTime'))
         # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
-        # days_dict = OrderedDict((x6, stock_nametuple(x0,x1,x2,x3,x4,x5,x6))
-        #                         for x0,x1,x2,x3,x4,x5,x6 in
-        #                         zip([x[0] for x in self.__sorted_rs],
-        #                             [x[1] for x in self.__sorted_rs],
-        #                             [x[2] for x in self.__sorted_rs],
-        #                             [x[3] for x in self.__sorted_rs],
-        #                             [x[4] for x in self.__sorted_rs],
-        #                             [x[5] for x in self.__sorted_rs],
-        #                             [x[6] for x in self.__sorted_rs]))
         days_dict = OrderedDict((x[6], stock_nametuple(x[0], x[1], x[2], x[3], x[4], x[5], x[6]))
                                 for x in self.__sorted_rs)
 
