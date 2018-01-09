@@ -2,7 +2,7 @@ from collections import namedtuple
 from collections import OrderedDict
 from SQLite3DB import SQLite3DB, DataCondition
 import datetime
-from futuquant.open_context import *
+from futuquant.futuquant.open_context import *
 import matplotlib.pyplot as plt
 import matplotlib.finance as mpf
 
@@ -59,7 +59,7 @@ class StockData(object):
 
     def update_db(self):
         """调用富途接口，把数据添加到数据库 """
-        quote_context = OpenQuoteContext(host='127.0.0.1', async_port=11111)
+        quote_context = OpenQuoteContext(host='127.0.0.1', port=11111)
         market = self.stockcode.split('.')[0]
         from_date = self.__time_array[-1][0:10]
         to_date = (datetime.now() + timedelta(days=2)).strftime('%Y-%m-%d')
@@ -141,7 +141,7 @@ class StockData(object):
 
 
 if __name__ == '__main__':
-    d = StockData('US.BABA')
+    d = StockData('US.NVDA')
     print(d)            # print data summary
     # print(d[0])         # print first line
     # print(d[0].Close)         # print second line
@@ -168,7 +168,7 @@ if __name__ == '__main__':
 
     # d.get_keypoint_report(kp_array)
     # 更新数据库
-    # d.update_db()
+    d.update_db()
     # d.get_kline_view('2017-02-13 10:34:00', '2017-02-13 12:34:00')
 
     # x = '2017-02-15 10:12:00'
