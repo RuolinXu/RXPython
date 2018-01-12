@@ -66,6 +66,10 @@ command &       // 后台运行命令 （或者是Ctrl+Z 暂停）
 jobs            // 
 fg %1  		// 使进程回到前台
 bg %1           // 使进程回到后台
+service --status-all // 查看所有服务状态
+service xxxx status
+service xxxx start/restart/stop
+
 
 
 
