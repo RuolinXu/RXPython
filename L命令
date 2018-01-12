@@ -15,10 +15,7 @@ ls -al
 ifconfig > ifconfig_output
 less ifconfig_output
 
-ln
-cp
-mv
-rm
+
 
 tar -cf tarfileName.tar file*
 tar -tf tarfileName.tar 		// 查看压缩文件列表
@@ -150,7 +147,7 @@ cd /etc/yum.repos.d
 mv CentOS-Base.repo CentOS-Base.repo.bk
 下载163网易的yum源：
 wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
-3，更新yum源后，执行下边命令更新yum配置，使操作立即生效
+3，更新玩yum源后，执行下边命令更新yum配置，使操作立即生效
 yum makecache
 
 
@@ -223,3 +220,36 @@ git branch -d issue-101
 git checkout dev
 git stash list
 git stash pop      			# 用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
+
+git config --global http.proxy http://127.0.0.1:8088
+
+
+======MySQL ======
+mysql -hip地址 -uroot -p     
+create database 数据库名 charset=utf8;
+show databases;
+select database();
+use 数据库名;
+show tables;
+desc 表名;
+rename table 原表名 to 新表名;
+show create table '表名';
+
+
+mysqldump –uroot –p 数据库名 > ~/Desktop/备份文件.sql;   # 以系统管理员身份
+mysql -uroot –p 数据库名 < ~/Desktop/备份文件.sql        # 导入前要先创建数据库
+mysql> source  /root/data/mydb.bak;                      # 或者这样也可以
+
+mysqldump -h192.168.1.1 -uroot -p123456 mydb tb1 > tb1.bak;   # 导出表
+mysql> source /root/data/tb1.bak;							  # 导入表
+
+
+======Redis ======
+
+
+
+
+
+
+
+

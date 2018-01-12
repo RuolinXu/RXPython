@@ -5,6 +5,7 @@ import datetime
 from futuquant.futuquant.open_context import *
 import matplotlib.pyplot as plt
 import matplotlib.finance as mpf
+import pandas as pd
 
 
 DB_PATH = r'./StockDB.db'
@@ -20,6 +21,22 @@ class StockData(object):
         self.__time_array = [x[6] for x in self.__sorted_rs]
         self.days_dict = self.__init_days_dict()
         self.__sorted_rs = None  # free some memory
+        self.data_frame = self.__dataFrame_from_db()
+
+    def __dataFrame_from_db(self):
+        db = SQLite3DB(DB_PATH)
+        db.open()
+        rs = db.table("KLine1M") \
+            .select("Open", "Low", "High", "Close", "Volume", "Turnover", "KLTime") \
+            .where(DataCondition(("=", "AND"), StockCode=self.stockcode),
+                   DataCondition((">", "AND"), KLTime=self.fromdate),
+                   DataCondition(("<", "AND"), KLTime=self.todate)) \
+            .fetchall()
+        # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
+        db.close()
+        sorted_rs = sorted(rs, key=lambda a: a[6])  # sorted by time
+        data_frame = pd.DataFrame(sorted_rs, columns=["Open", "Low", "High", "Close", "Volume", "Turnover", "KLTime"])
+        return data_frame.set_index(['KLTime'])
 
     def __load_sorted_rs(self):
         db = SQLite3DB(DB_PATH)
@@ -53,6 +70,8 @@ class StockData(object):
         return self.days_dict[time_key]
 
     def __str__(self):
+        if len(self.__time_array)<1:
+            return 'No Data!'
         start = self.__time_array[1]
         end = self.__time_array[-1]
         return str(self.days_dict[start]) + '\n...\n' + str(self.days_dict[end])
@@ -61,8 +80,12 @@ class StockData(object):
         """调用富途接口，把数据添加到数据库 """
         quote_context = OpenQuoteContext(host='127.0.0.1', port=11111)
         market = self.stockcode.split('.')[0]
-        from_date = self.__time_array[-1][0:10]
+        if len(self.__time_array) < 1:
+            from_date = '2017-01-01'
+        else:
+            from_date = self.__time_array[-1][0:10]
         to_date = (datetime.now() + timedelta(days=2)).strftime('%Y-%m-%d')
+        # to_date = '2017-03-01'
         ret_code, content = quote_context.get_trading_days(market, from_date, to_date)
         if ret_code != RET_OK:
             print("RTDataTest: error, msg: %s" % content)
@@ -141,8 +164,10 @@ class StockData(object):
 
 
 if __name__ == '__main__':
+    # d = StockData('US.BABA')
     d = StockData('US.NVDA')
-    print(d)            # print data summary
+    print(d)
+    # print(d.data_frame.loc['2017-01-31 09:39:00']['Turnover'])            # print data summary
     # print(d[0])         # print first line
     # print(d[0].Close)         # print second line
     # c = d.get_change_array()  # get change_array default close
@@ -168,7 +193,7 @@ if __name__ == '__main__':
 
     # d.get_keypoint_report(kp_array)
     # 更新数据库
-    d.update_db()
+    # d.update_db()
     # d.get_kline_view('2017-02-13 10:34:00', '2017-02-13 12:34:00')
 
     # x = '2017-02-15 10:12:00'
