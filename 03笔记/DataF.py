@@ -27,6 +27,15 @@ print('对水平轴统计')
 print(df1.mean(0))    # 对水平轴统计
 print(df1['a'].mean(0))    # 对纵轴统计
 
+print('按a列排序')
+print(df1.sort_values('a', ascending=False))
+
+print('按索引排序')
+print(df1.sort_index(ascending=False))
+
+
+for x in df1['a']:
+    print(x)
 
 df = pd.DataFrame({'A':['foo','bar','foo','bar','foo','bar','foo','bar'],
                    'B':['one','one','two','one','one','two','one','two'],
@@ -36,3 +45,4 @@ df = pd.DataFrame({'A':['foo','bar','foo','bar','foo','bar','foo','bar'],
 print(df)
 print('分组统计')
 print(df.groupby(['A','B']).sum())
+
