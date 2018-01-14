@@ -2,7 +2,7 @@ from collections import namedtuple
 from collections import OrderedDict
 from SQLite3DB import SQLite3DB, DataCondition
 import datetime
-from futuquant.futuquant.open_context import *
+from futuquant.open_context import *
 import matplotlib.pyplot as plt
 import matplotlib.finance as mpf
 import pandas as pd
@@ -100,6 +100,7 @@ class StockData(object):
         for i in range(len(trade_day_range)-1):
             ret_code, content = quote_context.get_history_kline(self.stockcode, trade_day_range[i],
                                                                 trade_day_range[i+1], ktype='K_1M')
+            print("from %s to %s" % (trade_day_range[i], trade_day_range[i+1]))
             # print(content.columns)   # 上面接口返回的是pandas的dataframe对象
             # """
             # Index(['code', 'time_key', 'open', 'close', 'high', 'low', 'volume','turnover'], dtype='object')
@@ -107,14 +108,16 @@ class StockData(object):
             if ret_code != RET_OK:
                 print("RTDataTest: error, msg: %s" % content)
                 return RET_ERROR, content
+            tmplist = []
             for _, row in content.iterrows():
-                if row['time_key'] not in self.__time_array:
+                if row['time_key'] not in self.__time_array and row['time_key'] not in tmplist:
                     # print("%s %s" % (row['time_key'], round(row['open'], 3)))
                     db.table("KLine1M") \
                       .insert(StockCode=row['code'], Open=round(row['open'], 3), High=round(row['high'], 3),
                               Low=round(row['low'], 3), Close=round(row['close'], 3), Volume=row['volume'],
                               Turnover=row['turnover'], KLTime=row['time_key']) \
                       .execute(commit_at_once=False)
+                    tmplist.append(row['time_key'])
                     count += 1
         db.commit()
         print("%d rows inserted!" % count)
@@ -167,6 +170,8 @@ if __name__ == '__main__':
     # d = StockData('US.BABA')
     d = StockData('US.NVDA')
     print(d)
+    d.update_db()
+
     # print(d.data_frame.loc['2017-01-31 09:39:00']['Turnover'])            # print data summary
     # print(d[0])         # print first line
     # print(d[0].Close)         # print second line

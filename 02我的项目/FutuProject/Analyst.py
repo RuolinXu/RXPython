@@ -5,30 +5,31 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-class Analyst:
+class AnalystBase:
     def __init__(self, stockdata):
         self.stockdata = stockdata
         self.days_dict = stockdata.days_dict
-        self.__time_array = [x for x in self.days_dict.keys()]
+        self._time_array = [x for x in self.days_dict.keys()]
+        self.data_frame = stockdata.data_frame
+        self.__kpm_cache = None
         self.__cache = None
-        pass
 
     @classmethod
-    def __get_change_array(cls, tar, base):
+    def _get_change_array(cls, tar, base):
         pp_array = [(p1, p2) for p1, p2 in zip(base[:-1], tar[1:])]
         change_array = list(map(lambda pp: reduce(lambda a, b: (b - a) / a, pp), pp_array))
         change_array.insert(0, 0)
         return change_array
 
     @classmethod
-    def __get_interval_array(cls, tar, base):
+    def _get_interval_array(cls, tar, base):
         pp_array = [(p1, p2) for p1, p2 in zip(base[:-1], tar[1:])]
         interval_array = list(map(lambda pp: reduce(lambda a, b: b - a, pp), pp_array))
         interval_array.insert(0, 0)
         return interval_array
 
     @staticmethod
-    def __gettime_add_ind(current, ind, period=390, shour=9, smin=30):
+    def _gettime_add_ind(current, ind, period=390, shour=9, smin=30):
         current_time = datetime.strptime(current, '%Y-%m-%d %H:%M:%S')
         start_time = datetime(current_time.year, current_time.month, current_time.day, shour, smin)
         delta = int((current_time - start_time).seconds / 60)
@@ -39,7 +40,27 @@ class Analyst:
         time_tar = start_time + timedelta(days=days, minutes=mins)
         return time_tar.strftime('%Y-%m-%d %H:%M:%S')
 
-    def get_kp_array(self, fromdate='2000-01-01', todate='2100-01-01', rate=0.03):
+    def get_kpm_array(self, todate='2100-01-01', rate=0.03):
+        if self.__kpm_cache is None:
+            self.__kpm_cache = []
+        if len(self.__kpm_cache) < 2:
+            self.__kpm_cache = self._get_kp_array(todate=todate, rate=rate)
+        else:
+            fromdate = self.__kpm_cache[-2].KLTime
+            tmp = self._get_kp_array(fromdate=fromdate, todate=todate, rate=rate)
+            if len(tmp) > 0:
+                self.__kpm_cache.pop()
+                for x in tmp[1:]:
+                    self.__kpm_cache.append(x)
+        return self.__kpm_cache
+
+    def get_kp_array_cache(self, kltime):
+        if self.__cache is None:
+            self.__cache = self._get_kp_array()
+        rst = list(filter(lambda x: x.KLTime < kltime, self.__cache))
+        return sorted(rst, key=lambda x: x.KLTime)
+
+    def _get_kp_array(self, fromdate='2000-01-01', todate='2100-01-01', rate=0.03):
         """返回走势骨架
         :param fromdate:
         :param todate:
@@ -52,7 +73,7 @@ class Analyst:
             if key > todate:
                 break
             if fromdate < key < todate:
-                _ind = self.__time_array.index(key)
+                _ind = self._time_array.index(key)
                 _open = self.days_dict[key].Open
                 _low = self.days_dict[key].Low
                 _high = self.days_dict[key].High
@@ -83,12 +104,6 @@ class Analyst:
                         continue
         return kp_array
 
-    def get_kp_array_cache(self, kltime):
-        if self.__cache is None:
-            self.__cache = self.get_kp_array()
-        rst = list(filter(lambda x: x.KLTime < kltime, self.__cache))
-        return sorted(rst, key=lambda x: x.KLTime)
-
     def get_keypoint_report(self, kp_array):
         price_array = np.array([x.Price for x in kp_array])
         ind_array = np.array([x.Ind for x in kp_array])
@@ -117,40 +132,54 @@ class Analyst:
             price_tar = kp_array[-1].Price * (1 + up_change_array.mean())
             time_delta = up_interval_array.mean()
 
-        time_str = self.add_mins_to_time(kp_array[-1].KLTime, time_delta)
+        time_str = self._gettime_add_ind(kp_array[-1].KLTime, time_delta)
         print("目标价%f,时间点%s" % (price_tar, time_str))
         plt.figure(figsize=(16, 9))
         plt.plot(ind_array, price_array)
         plt.show()
 
-    def can_buy(self, kltime, cache=True):
-        """根据关键点的倒数第二个点 如果是个涨点，则根据该点和历史关键点跌幅（排除最近一次），寻找买点
-        :param kltime: 观察点
-        :return: True or False
-        """
-        return self.__buy_sell_report(what='buy', kltime=kltime, cache=cache)
+    def print_a(self,start, KLTime):
+        print(self.data_frame.iloc[0:10])
+        print(self.data_frame.loc[start:KLTime])
+        print(len(self.data_frame))
+        print(len(self.days_dict))
+        # print(self.data_frame.loc['2017-02-02 12:32:00':KLTime]['High'].max())
 
-    def can_sell(self, kltime, cache=True):
-        return self.__buy_sell_report(what='sell', kltime=kltime, cache=cache)
 
-    def __buy_sell_report(self, what, kltime='2100-01-01', cache=True):
-        if cache:
-            kp_array = self.get_kp_array_cache(kltime)     # 有缓存取最后一个点 因为该点是确定的
-        else:
-            kp_array = self.get_kp_array(todate=kltime)    # 没有缓存取倒数第二个点 因为最后一点是不确定的
+
+class AnalystA(AnalystBase):
+    """未完成
+    大于前高点 某个百分点 卖出
+    小于前高点 某个百分点 买入
+    """
+    def __init__(self, stockdata, b_rate=-0.09, s_rate=0.15):
+        AnalystBase.__init__(self, stockdata)
+
+    def can_buy(self, kltime):
+        return self.__buy_sell_report(what='buy', kltime=kltime)
+
+    def can_sell(self, kltime):
+        return self.__buy_sell_report(what='sell', kltime=kltime)
+
+    def __buy_sell_report(self, what, kltime='2100-01-01'):
+        kp_array = self.get_kp_array_cache(kltime)
+
         if len(kp_array) < 3:
             print("Not enough data, keep watching...")
             return
+
+        # 获取前高点
         if kp_array[-1].D == 1:
             kp_buy_ref = kp_array[-1]   # 买点依据上一高点
             kp_sell_ref = kp_array[-2]  # 卖点依据上一低点
         else:
             kp_buy_ref = kp_array[-2]
             kp_sell_ref = kp_array[-1]
+
         price_array = np.array([x.Price for x in kp_array])
         ind_array = np.array([x.Ind for x in kp_array])
-        change_array = self.__get_change_array(price_array, price_array)
-        interval_array = self.__get_interval_array(ind_array, ind_array)
+        change_array = self._get_change_array(price_array, price_array)
+        interval_array = self._get_interval_array(ind_array, ind_array)
         if kp_array[1].D == 1:      # 如果第一个节点是涨
             up_change_array = np.array(change_array[1::2])
             up_interval_array = np.array(interval_array[1::2])
@@ -172,29 +201,29 @@ class Analyst:
                 return
             print("Ref:%s %.03f. You can buy at" % (kp_buy_ref.KLTime, kp_buy_ref.Price))
             print("if before %s and price <= %.03f, you can buy"
-                  % (self.__gettime_add_ind(kp_buy_ref.KLTime, bt_min), (kp_buy_ref.Price * (1 + bc_min))))
+                  % (self._gettime_add_ind(kp_buy_ref.KLTime, bt_min), (kp_buy_ref.Price * (1 + bc_min))))
             print("if between %s and %s, and price < %.03f, you can buy"
-                  % (self.__gettime_add_ind(kp_buy_ref.KLTime, bt_min),
-                     self.__gettime_add_ind(kp_buy_ref.KLTime, bt_avg), (kp_buy_ref.Price * (1 + bc_avg))))
+                  % (self._gettime_add_ind(kp_buy_ref.KLTime, bt_min),
+                     self._gettime_add_ind(kp_buy_ref.KLTime, bt_avg), (kp_buy_ref.Price * (1 + bc_avg))))
             print("if between %s and %s, and price < %.03f, you can buy"
-                  % (self.__gettime_add_ind(kp_buy_ref.KLTime, bt_avg),
-                     self.__gettime_add_ind(kp_buy_ref.KLTime, bt_max), (kp_buy_ref.Price * (1 + bc_max))))
+                  % (self._gettime_add_ind(kp_buy_ref.KLTime, bt_avg),
+                     self._gettime_add_ind(kp_buy_ref.KLTime, bt_max), (kp_buy_ref.Price * (1 + bc_max))))
             print("if after %s and price <= %.03f, you can buy"
-                  % (self.__gettime_add_ind(kp_buy_ref.KLTime, bt_max), (kp_buy_ref.Price * (1 + bc_max / 2))))
+                  % (self._gettime_add_ind(kp_buy_ref.KLTime, bt_max), (kp_buy_ref.Price * (1 + bc_max / 2))))
             print("Ref:%s %.03f. You can sell at" % (kp_sell_ref.KLTime, kp_sell_ref.Price))
             print("if before %s and price >= %.03f, you can sell"
-                  % (self.__gettime_add_ind(kp_sell_ref.KLTime, st_min), (kp_sell_ref.Price * (1 + sc_max))))
+                  % (self._gettime_add_ind(kp_sell_ref.KLTime, st_min), (kp_sell_ref.Price * (1 + sc_max))))
             print("if between %s and %s, and price > %.03f, you can sell"
-                  % (self.__gettime_add_ind(kp_sell_ref.KLTime, st_min),
-                     self.__gettime_add_ind(kp_sell_ref.KLTime, st_avg), (kp_sell_ref.Price * (1 + sc_avg))))
+                  % (self._gettime_add_ind(kp_sell_ref.KLTime, st_min),
+                     self._gettime_add_ind(kp_sell_ref.KLTime, st_avg), (kp_sell_ref.Price * (1 + sc_avg))))
             print("if between %s and %s, and price > %.03f, you can sell"
-                  % (self.__gettime_add_ind(kp_sell_ref.KLTime, st_avg),
-                     self.__gettime_add_ind(kp_sell_ref.KLTime, st_max), (kp_sell_ref.Price * (1 + sc_min))))
+                  % (self._gettime_add_ind(kp_sell_ref.KLTime, st_avg),
+                     self._gettime_add_ind(kp_sell_ref.KLTime, st_max), (kp_sell_ref.Price * (1 + sc_min))))
             print("if after %s and price >= %.03f, you can sell"
-                  % (self.__gettime_add_ind(kp_sell_ref.KLTime, st_max), (kp_sell_ref.Price * (1 + sc_min / 2))))
+                  % (self._gettime_add_ind(kp_sell_ref.KLTime, st_max), (kp_sell_ref.Price * (1 + sc_min / 2))))
             print("Other conditions please wait !!!")
 
-        if self.__time_array[-1] < kltime:
+        if self._time_array[-1] < kltime:
             cur_price = self.stockdata[-1].Close
         else:
             cur_price = self.days_dict[kltime].Close
@@ -202,24 +231,24 @@ class Analyst:
         def can_buy():
             if len(kp_array) < 3:
                 return False
-            if kltime <= self.__gettime_add_ind(kp_buy_ref.KLTime, bt_min) and cur_price <= (kp_buy_ref.Price * (1 + bc_min)):
+            if kltime <= self._gettime_add_ind(kp_buy_ref.KLTime, bt_min) and cur_price <= (kp_buy_ref.Price * (1 + bc_min)):
                 return True
-            if self.__gettime_add_ind(kp_buy_ref.KLTime, bt_min) < kltime < self.__gettime_add_ind(kp_buy_ref.KLTime, bt_avg) \
+            if self._gettime_add_ind(kp_buy_ref.KLTime, bt_min) < kltime < self._gettime_add_ind(kp_buy_ref.KLTime, bt_avg) \
                     and cur_price < (kp_buy_ref.Price * (1 + bc_avg)):
                 return True
-            if self.__gettime_add_ind(kp_buy_ref.KLTime, bt_avg) <= kltime < self.__gettime_add_ind(kp_buy_ref.KLTime, bt_max) \
+            if self._gettime_add_ind(kp_buy_ref.KLTime, bt_avg) <= kltime < self._gettime_add_ind(kp_buy_ref.KLTime, bt_max) \
                     and cur_price < (kp_buy_ref.Price * (1 + bc_max)):
                 return True
-            if self.__gettime_add_ind(kp_buy_ref.KLTime, bt_max) <= kltime and cur_price <= (kp_buy_ref.Price * (1 + bc_max / 2)):
+            if self._gettime_add_ind(kp_buy_ref.KLTime, bt_max) <= kltime and cur_price <= (kp_buy_ref.Price * (1 + bc_max / 2)):
                 return True
             return False
 
         def can_sell():
             if len(kp_array) < 3:
                 return False
-            if kltime <= self.__gettime_add_ind(kp_sell_ref.KLTime, st_min) and cur_price >= (kp_sell_ref.Price * (1 + sc_max)):
+            if kltime <= self._gettime_add_ind(kp_sell_ref.KLTime, st_min) and cur_price >= (kp_sell_ref.Price * (1 + sc_max)):
                 return True
-            if self.__gettime_add_ind(kp_sell_ref.KLTime, st_min) < kltime < self.__gettime_add_ind(kp_sell_ref.KLTime, st_avg) \
+            if self._gettime_add_ind(kp_sell_ref.KLTime, st_min) < kltime < self._gettime_add_ind(kp_sell_ref.KLTime, st_avg) \
                     and cur_price > (kp_sell_ref.Price * (1 + sc_avg)):
                 return True
             # if self.__gettime_add_ind(kp_sell_ref.KLTime, st_avg) <= kltime < self.__gettime_add_ind(kp_sell_ref.KLTime, st_max) \
@@ -246,21 +275,89 @@ class Analyst:
         else:
             return report()
 
-    def get_report(self, kltime='2100-01-01', cache=True):
-        self.__buy_sell_report(what='report', kltime=kltime, cache=cache)
+    def get_report(self, kltime='2100-01-01'):
+        self.__buy_sell_report(what='report', kltime=kltime)
 
-class AnalystB:
+
+class AnalystB(AnalystBase):
     """
     大于前高点 某个百分点 卖出
     小于前高点 某个百分点 买入
     """
+    def __init__(self, stockdata, b_rate=-0.09, s_rate=0.15):
+        AnalystBase.__init__(self, stockdata)
+        self.b_rate = b_rate
+        self.s_rate = s_rate
+
+    def can_buy(self, kltime):
+        return self.__buy_sell_report(what='buy', kltime=kltime)
+
+    def can_sell(self, kltime):
+        return self.__buy_sell_report(what='sell', kltime=kltime)
+
+    def __buy_sell_report(self, what, kltime='2100-01-01'):
+        kp_array = self.get_kpm_array(kltime)
+
+        if len(kp_array) < 3:
+            # print("Not enough data, keep watching...%s" % kltime)
+            return
+        # 获取前高点
+        if kp_array[-1].D == 1:
+            ref_point = kp_array[-3]
+        else:
+            ref_point = kp_array[-1]
+
+        def report():
+            if len(kp_array) < 3:
+                print("Not enough data, keep watching...")
+                return
+            print("前高点为:%s %.03f." % (ref_point.KLTime, ref_point.Price))
+            print("when price <= %.03f, you can buy \nwhen price >= %.03f, you can sell"
+                  % ((ref_point.Price * (1 + self.b_rate)), (ref_point.Price * (1 + self.s_rate))))
+
+        # 取当前价 防止下标溢出
+        if self._time_array[-1] < kltime:
+            cur_price = self.stockdata[-1].Close
+        else:
+            cur_price = self.days_dict[kltime].Close
+
+        def can_buy():
+            if len(kp_array) < 3:
+                return False
+            if cur_price <= (ref_point.Price * (1 + self.b_rate)):
+                return True
+            return False
+
+        def can_sell():
+            if len(kp_array) < 3:
+                return False
+            if cur_price >= (ref_point.Price * (1 + self.s_rate)):
+                return True
+            return False
+
+        if what == 'buy':
+            b = can_buy()
+            s = can_sell()
+            if b is True and s is False:
+                return True
+            else:
+                return False
+        elif what == 'sell':
+            b = can_buy()
+            s = can_sell()
+            if s is True and b is False:
+                return True
+            else:
+                return False
+        else:
+            return report()
+
+    def get_report(self, kltime='2100-01-01'):
+        self.__buy_sell_report(what='report', kltime=kltime)
+
+
+class AnalystC(AnalystBase):
     def __init__(self, stockdata):
-        self.stockdata = stockdata
-        self.days_dict = stockdata.days_dict
-        self.__time_array = [x for x in self.days_dict.keys()]
+        AnalystBase.__init__(self, stockdata)
 
-    def can_buy(self, kltime, cache=True):
-        pass
-
-    
 

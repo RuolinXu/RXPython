@@ -247,7 +247,11 @@ mysql> source /root/data/tb1.bak;							  # 导入表
 ======Redis ======
 
 
-
+delete from KLine1M where id in (
+select max(id) from KLine1M 
+group by StockCode,KLTime 
+having (StockCode='US.NVDA' and count(*) >1)
+)
 
 
 
