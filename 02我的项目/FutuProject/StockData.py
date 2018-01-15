@@ -2,7 +2,7 @@ from collections import namedtuple
 from collections import OrderedDict
 from SQLite3DB import SQLite3DB, DataCondition
 import datetime
-from futuquant.open_context import *
+from futuquant.futuquant.open_context import *
 import matplotlib.pyplot as plt
 import matplotlib.finance as mpf
 import pandas as pd
@@ -21,7 +21,7 @@ class StockData(object):
         self.__time_array = [x[6] for x in self.__sorted_rs]
         self.days_dict = self.__init_days_dict()
         self.__sorted_rs = None  # free some memory
-        self.data_frame = self.__dataFrame_from_db()
+        self.stockdata_df = self.__dataFrame_from_db()
 
     def __dataFrame_from_db(self):
         db = SQLite3DB(DB_PATH)
@@ -53,6 +53,8 @@ class StockData(object):
         return sorted_rs
 
     def __init_days_dict(self):
+        if len(self.__sorted_rs) < 1:
+            return None
         stock_nametuple = namedtuple(self.stockcode.split('.')[1],
                                      ('Open', 'Low', 'High', 'Close', 'Volume', 'Turnover', 'KLTime'))
         # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
@@ -70,7 +72,7 @@ class StockData(object):
         return self.days_dict[time_key]
 
     def __str__(self):
-        if len(self.__time_array)<1:
+        if len(self.__time_array) < 1:
             return 'No Data!'
         start = self.__time_array[1]
         end = self.__time_array[-1]
@@ -85,7 +87,8 @@ class StockData(object):
         else:
             from_date = self.__time_array[-1][0:10]
         to_date = (datetime.now() + timedelta(days=2)).strftime('%Y-%m-%d')
-        # to_date = '2017-03-01'
+        # from_date = '2017-09-21'
+        # to_date = '2017-09-26'
         ret_code, content = quote_context.get_trading_days(market, from_date, to_date)
         if ret_code != RET_OK:
             print("RTDataTest: error, msg: %s" % content)
@@ -169,10 +172,12 @@ class StockData(object):
 if __name__ == '__main__':
     # d = StockData('US.BABA')
     d = StockData('US.NVDA')
-    print(d)
-    d.update_db()
+    print(d)                    # print data summary
+    # d.update_db()
 
-    # print(d.data_frame.loc['2017-01-31 09:39:00']['Turnover'])            # print data summary
+    # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
+    df = d.stockdata_df
+    print(df[df.index < '2017-02-01 09:31:00' & df.index > '2017-01-31 10:31:00'])    #
     # print(d[0])         # print first line
     # print(d[0].Close)         # print second line
     # c = d.get_change_array()  # get change_array default close
