@@ -134,6 +134,13 @@ genisoimage -o XXXX.iso -RJ path  	// 把路径下的内容制作成ISO文件
 mkdir /mnt/iso_xxx
 mount -t iso9660 -o loop xxxx.iso /mnt/iso_xxx  // 挂载ISO
 
+sftp --help
+cd 路径                        更改远程目录到“路径” 
+lcd 路径                       更改本地目录到“路径” 
+ls [选项] [路径]               显示远程目录列表 
+lls [选项] [路径]              显示本地目录列表 
+put 本地路径                   上传文件 
+get 远程路径                   下载文件
 
 ======软件包管理======
 
@@ -227,6 +234,7 @@ git stash pop      			# 用git stash apply恢复，但是恢复后，stash内容
 
 git config --global http.proxy http://127.0.0.1:8088
 
+git@github.com:FutunnOpen/futuquant.git
 
 ======MySQL ======
 mysql -hip地址 -uroot -p     
