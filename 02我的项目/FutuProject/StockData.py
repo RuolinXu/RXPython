@@ -6,6 +6,7 @@ from futuquant.futuquant.open_context import *
 import matplotlib.pyplot as plt
 import matplotlib.finance as mpf
 import pandas as pd
+import numpy as np
 
 
 DB_PATH = r'./StockDB.db'
@@ -177,7 +178,10 @@ if __name__ == '__main__':
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
     df = d.stockdata_df
-    print(df[df.index < '2017-02-01 09:31:00' & df.index > '2017-01-31 10:31:00'])    #
+    # print(df[df.index < '2017-02-01 09:31:00'])    #
+    print(df[('2017-01-31 10:31:00' < df.index) & (df.index < '2017-02-01 09:31:00')])  # 选择区间
+    df2 = df[('2017-01-31 10:31:00' < df.index) & (df.index < '2017-02-01 09:31:00')]
+    print(df2.High.mean())
     # print(d[0])         # print first line
     # print(d[0].Close)         # print second line
     # c = d.get_change_array()  # get change_array default close
