@@ -34,6 +34,10 @@ print('按索引排序')
 print(df1.sort_index(ascending=False))
 
 
+# DataFrame.iterrows() 迭代(iterate)覆盖整个DataFrame的行中，返回(index, Series)对
+arr1 = [x[1]['a'] for x in df1.iterrows()]
+print(arr1)
+
 for x in df1['a']:
     print(x)
 
@@ -45,4 +49,7 @@ df = pd.DataFrame({'A':['foo','bar','foo','bar','foo','bar','foo','bar'],
 print(df)
 print('分组统计')
 print(df.groupby(['A','B']).sum())
+
+
+
 

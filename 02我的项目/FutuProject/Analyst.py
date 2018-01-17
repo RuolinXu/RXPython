@@ -146,7 +146,6 @@ class AnalystBase:
         # print(self.data_frame.loc['2017-02-02 12:32:00':KLTime]['High'].max())
 
 
-
 class AnalystA(AnalystBase):
     """未完成
     大于前高点 某个百分点 卖出
@@ -162,6 +161,7 @@ class AnalystA(AnalystBase):
         return self.__buy_sell_report(what='sell', kltime=kltime)
 
     def __buy_sell_report(self, what, kltime='2100-01-01'):
+
         kp_array = self.get_kp_array_cache(kltime)
 
         if len(kp_array) < 3:
@@ -279,13 +279,13 @@ class AnalystA(AnalystBase):
         self.__buy_sell_report(what='report', kltime=kltime)
 
 
-class AnalystB(AnalystBase):
+class AnalystB:
     """
     大于前高点 某个百分点 卖出
     小于前高点 某个百分点 买入
     """
     def __init__(self, stockdata, b_rate=-0.09, s_rate=0.15):
-        AnalystBase.__init__(self, stockdata)
+        self.data_df = stockdata.stockdata_df
         self.b_rate = b_rate
         self.s_rate = s_rate
 
@@ -296,42 +296,29 @@ class AnalystB(AnalystBase):
         return self.__buy_sell_report(what='sell', kltime=kltime)
 
     def __buy_sell_report(self, what, kltime='2100-01-01'):
-        kp_array = self.get_kpm_array(kltime)
-
-        if len(kp_array) < 3:
+        from_time = '2017-01-21 10:31:00'
+        range_df = self.data_df.query("index > @from_time and index <= @kltime ")
+        if len(range_df.index) < 1:
             # print("Not enough data, keep watching...%s" % kltime)
-            return
+            return False
         # 获取前高点
-        if kp_array[-1].D == 1:
-            ref_point = kp_array[-3]
-        else:
-            ref_point = kp_array[-1]
-
+        _high = range_df.High.max()
+        _high_time = range_df.query("High == @_high").index[0]
         def report():
-            if len(kp_array) < 3:
-                print("Not enough data, keep watching...")
-                return
-            print("前高点为:%s %.03f." % (ref_point.KLTime, ref_point.Price))
+            print("前高点为:%s %.03f." % (_high_time, _high))
             print("when price <= %.03f, you can buy \nwhen price >= %.03f, you can sell"
-                  % ((ref_point.Price * (1 + self.b_rate)), (ref_point.Price * (1 + self.s_rate))))
+                  % ((_high * (1 + self.b_rate)), (_high * (1 + self.s_rate))))
 
         # 取当前价 防止下标溢出
-        if self._time_array[-1] < kltime:
-            cur_price = self.stockdata[-1].Close
-        else:
-            cur_price = self.days_dict[kltime].Close
+        cur_price = self.data_df.loc[kltime].Close
 
         def can_buy():
-            if len(kp_array) < 3:
-                return False
-            if cur_price <= (ref_point.Price * (1 + self.b_rate)):
+            if cur_price <= (_high * (1 + self.b_rate)):
                 return True
             return False
 
         def can_sell():
-            if len(kp_array) < 3:
-                return False
-            if cur_price >= (ref_point.Price * (1 + self.s_rate)):
+            if cur_price >= (_high * (1 + self.s_rate)):
                 return True
             return False
 

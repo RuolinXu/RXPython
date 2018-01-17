@@ -1,5 +1,5 @@
 from StockData import StockData
-from Analyst import AnalystBase
+from Analyst import *
 from Operator import Operator
 
 
@@ -26,8 +26,12 @@ class TradeLoopBack:
 if __name__ == '__main__':
     sd = StockData("US.NVDA", todate='2017-02-14 09:33:00')
     # ay = Analyst(sd)
-    # ayB = AnalystB(sd, b_rate=-0.05, s_rate=0.10)
-    # op = Operator(10000,100)
+    ayB = AnalystB(sd, b_rate=-0.05, s_rate=0.10)
+    op = Operator(10000,0)
+
+    trade = TradeLoopBack(sd, op, ayB)
+    trade.execute_trade()
+    op.get_value(sd[-1].Close)      # 报告当前账户情况
 
     # kp_array = ay.get_kp_array(todate='2017-02-14 10:40:00')
     # print(kp_array)
@@ -39,9 +43,7 @@ if __name__ == '__main__':
     # print("-"*10)
     # ay.get_report(kltime='2017-03-08 09:45:00')
 
-    # trade = TradeLoopBack(sd, op, ayB)
-    # trade.execute_trade()
-    # op.get_value(sd[-1].Close)      # 报告当前账户情况
+
 
     # kp = ay.get_kp_array(rate=0.05)
     # print(kp)
@@ -59,8 +61,8 @@ if __name__ == '__main__':
     #     print(x)
 
     # ayB.get_report()
-    ayb = AnalystBase(sd)
-    ayb.print_a('2017-02-10 11:32:00', '2017-02-10 12:32:00')
+    # ayb = AnalystBase(sd)
+    # ayb.print_a('2017-02-10 11:32:00', '2017-02-10 12:32:00')
 
     pass
 

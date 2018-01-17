@@ -132,67 +132,26 @@ class StockData(object):
         fig = plt.figure(figsize=(16, 9))
         ax1 = fig.add_axes([0.1, 0.4, 0.85, 0.5])   # [left, bottom, width, height]
         ax2 = fig.add_axes([0.1, 0.1, 0.85, 0.3])
-        qutotes = []
-        index, indexs, volumns, lows, highs = 0, [], [], [], []
-        for key in self.days_dict:
-            if key > to_time:
-                break
-            if from_time < key < to_time:
-                index += 1
-                indexs.append(index)
-                # d = datetime.strptime(key, '%Y-%m-%d %H:%M:%S')
-                # d = index if 1=1 else mpf.date2num(d)
-                d = index  # mpf.date2num(datetime.strptime(key, '%Y-%m-%d %H:%M:%S'))
-                o = self.days_dict[key].Open
-                l = self.days_dict[key].Low
-                h = self.days_dict[key].High
-                c = self.days_dict[key].Close
-                volumns.append(self.days_dict[key].Volume)
-                lows.append(l)
-                highs.append(h)
-                val = (d, o, c, h, l)
-                qutotes.append(val)
-
-        mpf.candlestick_ochl(ax1, qutotes, colorup='red', colordown='green')
-        ax1.grid(True)
-        ax1.axis([0, max(indexs)+1, min(lows)-0.1, max(highs)+0.1])
-        ax2.grid(True)
-        # ax1.autoscale_view()
-        ax2.bar(indexs, volumns)
-        # .axis([0, 6, 0, 20])是指定xy坐标的起始范围，它的参数是列表[xmin, xmax, ymin, ymax]
-        ax2.axis([0, max(indexs)+1, 0, max(volumns)+10])
-        # plt.title("%s ---- %s" % (from_time, to_time))
-        plt.title(title)
-        # ax.xaxis_date()
-        # plt.show()
-        f = datetime.strptime(from_time, '%Y-%m-%d %H:%M:%S').strftime('%m-%d %H_%M')
-        t = datetime.strptime(to_time, '%Y-%m-%d %H:%M:%S').strftime('%m-%d %H_%M')
-        plt.savefig(r'D:\pics\%s -- %s.jpg' % (f, t))
-
-    def get_kline_view2(self, from_time, to_time, title):
-        """绘制某时段的K线"""
-        fig = plt.figure(figsize=(16, 9))
-        ax1 = fig.add_axes([0.1, 0.4, 0.85, 0.5])   # [left, bottom, width, height]
-        ax2 = fig.add_axes([0.1, 0.1, 0.85, 0.3])
 
         df = self.stockdata_df.query("index > @from_time and index < @to_time ")
-        qutotes = []
-        # mpf.candlestick_ochl(ax1, qutotes, colorup='red', colordown='green')
-        mpf.candlestick2_ochl(ax=ax1,
-                          opens=df["Open"].values, closes=df["Close"].values,
-                          highs=df["High"].values, lows=df["Low"].values,
-                          width=0.75, colorup='r', colordown='g', alpha=0.75)
-        index_length = len(df)
+        i_length = len(df)
+        qutotes = [(i, x[1]['Open'], x[1]['Close'], x[1]['High'], x[1]['Low'])
+                   for i, x in zip(range(i_length), df.iterrows())]
+        mpf.candlestick_ochl(ax1, qutotes, colorup='red', colordown='green')
+        # mpf.candlestick2_ochl(ax=ax1,
+        #                   opens=df["Open"].values, closes=df["Close"].values,
+        #                   highs=df["High"].values, lows=df["Low"].values,
+        #                   width=0.75, colorup='r', colordown='g', alpha=0.75)
+
         ax1.grid(True)
-        ax1.axis([0, index_length+1, df["Low"].min()-0.1, df["High"].max()+0.1])
+        ax1.axis([-1, i_length+1, df["Low"].min()-0.1, df["High"].max()+0.1])
         ax2.grid(True)
         # ax1.autoscale_view()
-        ax2.bar(range(0,index_length), df["Volume"].values)
+        ax2.bar(range(0,i_length), df["Volume"].values)
         # .axis([0, 6, 0, 20])是指定xy坐标的起始范围，它的参数是列表[xmin, xmax, ymin, ymax]
-        ax2.axis([0, index_length+1, 0, df["Volume"].max()+10])
+        ax2.axis([-1, i_length+1, 0, df["Volume"].max()+10])
         # plt.title("%s ---- %s" % (from_time, to_time))
         plt.title(title)
-        # ax2.xaxis_date()
         plt.show()
         # f = datetime.strptime(from_time, '%Y-%m-%d %H:%M:%S').strftime('%m-%d %H_%M')
         # t = datetime.strptime(to_time, '%Y-%m-%d %H:%M:%S').strftime('%m-%d %H_%M')
@@ -206,18 +165,25 @@ if __name__ == '__main__':
     # d.update_db()
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
-    df = d.stockdata_df
+    # df = d.stockdata_df
     # print(df[df.index < '2017-02-01 09:31:00'])    #
     # print(df[('2017-01-31 10:31:00' < df.index) & (df.index < '2017-02-01 09:31:00')])  # 选择区间
     # df2 = df[('2017-01-31 10:31:00' < df.index) & (df.index < '2017-02-01 09:31:00')]
     # print(df2.High.mean())
 
     df3 = d.stockdata_df.query("index > '2017-01-31 10:31:00' and index < '2017-01-31 12:31:00' ")
+    _high = df3.High.max()
+    df4 = df3.query("High == @_high").index
+    _high_time = df4[0]
     # print(df3)
+    # df3 = df3.round(3)
+    # qutotes = [(i, x[1]['Open'], x[1]['Close'], x[1]['High'], x[1]['Low'])
+    #            for i, x in zip(range(len(df3)), df3.iterrows())]
+    print(df3.loc['2017-01-31 11:23:00'])
+    print(_high_time)
+    print(df3)
+    # d.get_kline_view('2017-01-31 10:31:00', '2017-01-31 12:31:00','xxx')
 
-    qutotes = [(i, x['Open']) for i,x in zip(range(0,len(df3)),df3)]
-    # d.get_kline_view2('2017-01-31 10:31:00', '2017-01-31 12:31:00','xxx')
-    print(qutotes)
     # print(d[0])         # print first line
     # print(d[0].Close)         # print second line
     # c = d.get_change_array()  # get change_array default close
