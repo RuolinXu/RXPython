@@ -18,11 +18,11 @@ class StockData(object):
         self.stockcode = stockcode
         self.fromdate = fromdate
         self.todate = todate
-        self.__sorted_rs = self.__load_sorted_rs()
-        self.__time_array = [x[6] for x in self.__sorted_rs]
-        self.days_dict = self.__init_days_dict()
-        self.__sorted_rs = None  # free some memory
         self.stockdata_df = self.__dataFrame_from_db()
+        self.time_array = self.stockdata_df.index.values
+        # self.__sorted_rs = self.__load_sorted_rs()
+        # self.days_dict = self.__init_days_dict()
+        # self.__sorted_rs = None  # free some memory
 
     def __dataFrame_from_db(self):
         db = SQLite3DB(DB_PATH)
@@ -39,54 +39,55 @@ class StockData(object):
         data_frame = pd.DataFrame(sorted_rs, columns=["Open", "Low", "High", "Close", "Volume", "Turnover", "KLTime"])
         return data_frame.set_index(['KLTime'])
 
-    def __load_sorted_rs(self):
-        db = SQLite3DB(DB_PATH)
-        db.open()
-        rs = db.table("KLine1M") \
-            .select("Open", "Low", "High", "Close", "Volume", "Turnover", "KLTime") \
-            .where(DataCondition(("=", "AND"), StockCode=self.stockcode),
-                   DataCondition((">", "AND"), KLTime=self.fromdate),
-                   DataCondition(("<", "AND"), KLTime=self.todate)) \
-            .fetchall()
-        # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
-        db.close()
-        sorted_rs = sorted(rs, key=lambda a: a[6])  # sorted by time
-        return sorted_rs
-
-    def __init_days_dict(self):
-        if len(self.__sorted_rs) < 1:
-            return None
-        stock_nametuple = namedtuple(self.stockcode.split('.')[1],
-                                     ('Open', 'Low', 'High', 'Close', 'Volume', 'Turnover', 'KLTime'))
-        # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
-        days_dict = OrderedDict((x[6], stock_nametuple(x[0], x[1], x[2], x[3], x[4], x[5], x[6]))
-                                for x in self.__sorted_rs)
-
-        return days_dict
-
+    # def __load_sorted_rs(self):
+    #     db = SQLite3DB(DB_PATH)
+    #     db.open()
+    #     rs = db.table("KLine1M") \
+    #         .select("Open", "Low", "High", "Close", "Volume", "Turnover", "KLTime") \
+    #         .where(DataCondition(("=", "AND"), StockCode=self.stockcode),
+    #                DataCondition((">", "AND"), KLTime=self.fromdate),
+    #                DataCondition(("<", "AND"), KLTime=self.todate)) \
+    #         .fetchall()
+    #     # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
+    #     db.close()
+    #     sorted_rs = sorted(rs, key=lambda a: a[6])  # sorted by time
+    #     return sorted_rs
+    #
+    # def __init_days_dict(self):
+    #     if len(self.__sorted_rs) < 1:
+    #         return None
+    #     stock_nametuple = namedtuple(self.stockcode.split('.')[1],
+    #                                  ('Open', 'Low', 'High', 'Close', 'Volume', 'Turnover', 'KLTime'))
+    #     # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
+    #     days_dict = OrderedDict((x[6], stock_nametuple(x[0], x[1], x[2], x[3], x[4], x[5], x[6]))
+    #                             for x in self.__sorted_rs)
+    #
+    #     return days_dict
+    #
     def __iter__(self):
-        for key in self.days_dict:
-            yield self.days_dict[key]
-
-    def __getitem__(self, ind):
-        time_key = self.__time_array[ind]
-        return self.days_dict[time_key]
+        for key in self.stockdata_df.iterrows():
+            yield key
+    #
+    # def __getitem__(self, ind):
+    #     time_key = self.time_array[ind]
+    #     return self.stockdata_df.loc[time_key]
 
     def __str__(self):
-        if len(self.__time_array) < 1:
+        count = len(self.time_array)
+        if count < 1:
             return 'No Data!'
-        start = self.__time_array[1]
-        end = self.__time_array[-1]
-        return str(self.days_dict[start]) + '\n...\n' + str(self.days_dict[end])
+        start = self.time_array[1]
+        end = self.time_array[-1]
+        return self.stockcode + ":from " + start + " to " + end + "\ntotal count:" + str(count)
 
     def update_db(self):
         """调用富途接口，把数据添加到数据库 """
         quote_context = OpenQuoteContext(host='127.0.0.1', port=11111)
         market = self.stockcode.split('.')[0]
-        if len(self.__time_array) < 1:
+        if len(self.time_array) < 1:
             from_date = '2017-01-01'
         else:
-            from_date = self.__time_array[-1][0:10]
+            from_date = self.time_array[-1][0:10]
         to_date = (datetime.now() + timedelta(days=2)).strftime('%Y-%m-%d')
         # from_date = '2017-09-21'
         # to_date = '2017-09-26'
@@ -114,7 +115,7 @@ class StockData(object):
                 return RET_ERROR, content
             tmplist = []
             for _, row in content.iterrows():
-                if row['time_key'] not in self.__time_array and row['time_key'] not in tmplist:
+                if row['time_key'] not in self.time_array and row['time_key'] not in tmplist:
                     # print("%s %s" % (row['time_key'], round(row['open'], 3)))
                     db.table("KLine1M") \
                       .insert(StockCode=row['code'], Open=round(row['open'], 3), High=round(row['high'], 3),
@@ -161,7 +162,9 @@ class StockData(object):
 if __name__ == '__main__':
     # d = StockData('US.BABA')
     d = StockData('US.NVDA')
-    print(d)                    # print data summary
+    for x in d[:3]:
+        print(x)
+    # print(d.time_array[1])                    # print data summary
     # d.update_db()
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
@@ -171,18 +174,22 @@ if __name__ == '__main__':
     # df2 = df[('2017-01-31 10:31:00' < df.index) & (df.index < '2017-02-01 09:31:00')]
     # print(df2.High.mean())
 
-    df3 = d.stockdata_df.query("index > '2017-01-31 10:31:00' and index < '2017-01-31 12:31:00' ")
-    _high = df3.High.max()
-    df4 = df3.query("High == @_high").index
-    _high_time = df4[0]
+    # df3 = d.stockdata_df.query("index > '2017-01-31 10:31:00' and index < '2017-01-31 12:31:00' ")
+    # _high = df3.High.max()
+    # df4 = df3.query("High == @_high").index
+    # _high_time = df4[0]
     # print(df3)
     # df3 = df3.round(3)
     # qutotes = [(i, x[1]['Open'], x[1]['Close'], x[1]['High'], x[1]['Low'])
     #            for i, x in zip(range(len(df3)), df3.iterrows())]
-    print(df3.loc['2017-01-31 11:23:00'])
-    print(_high_time)
-    print(df3)
+    # print(df3.loc['2017-01-31 11:23:00'])
+    # print(_high_time)
+    # print(df3)
     # d.get_kline_view('2017-01-31 10:31:00', '2017-01-31 12:31:00','xxx')
+
+
+
+
 
     # print(d[0])         # print first line
     # print(d[0].Close)         # print second line

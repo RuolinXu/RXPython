@@ -8,7 +8,7 @@ class TradeLoopBack:
         交易回测系统
     """
     def __init__(self, stock_data, operator, analyst):
-        self.__Stock_data = stock_data
+        self.stock_data = stock_data
         self.__operator = operator
         self.__analyst = analyst
 
@@ -16,15 +16,15 @@ class TradeLoopBack:
         """
             以时间驱动，完成交易回测
         """
-        for x in self.__Stock_data:
-            # print(x.KLTime)
+        for x in self.stock_data:
+            print(x[0])
             self.__operator.buy_strategy(self.__analyst, x)
             self.__operator.sell_strategy(self.__analyst, x)
         # return self.__operator.get_records()
 
 
 if __name__ == '__main__':
-    sd = StockData("US.NVDA", todate='2017-02-14 09:33:00')
+    sd = StockData("US.NVDA", todate='2017-10-14 09:33:00')
     # ay = Analyst(sd)
     ayB = AnalystB(sd, b_rate=-0.05, s_rate=0.10)
     op = Operator(10000,0)

@@ -288,6 +288,7 @@ class AnalystB:
         self.data_df = stockdata.stockdata_df
         self.b_rate = b_rate
         self.s_rate = s_rate
+        self.days = -50
 
     def can_buy(self, kltime):
         return self.__buy_sell_report(what='buy', kltime=kltime)
@@ -295,9 +296,12 @@ class AnalystB:
     def can_sell(self, kltime):
         return self.__buy_sell_report(what='sell', kltime=kltime)
 
-    def __buy_sell_report(self, what, kltime='2100-01-01'):
-        from_time = '2017-01-21 10:31:00'
-        range_df = self.data_df.query("index > @from_time and index <= @kltime ")
+    def __buy_sell_report(self, what, kltime):
+        t_now = datetime.strptime(kltime[0:10], '%Y-%m-%d')
+        from_time = t_now + timedelta(days=self.days)
+        from_t = from_time.strftime('%Y-%m-%d %H:%M:%S')
+        to_t = t_now.strftime('%Y-%m-%d %H:%M:%S')
+        range_df = self.data_df.query("index > @from_t and index < @to_t ")
         if len(range_df.index) < 1:
             # print("Not enough data, keep watching...%s" % kltime)
             return False
