@@ -23,19 +23,37 @@ class TradeLoopBack:
             self.__operator.buy_strategy(self.__analyst, cur_time, cur_price)
             self.__operator.sell_strategy(self.__analyst, cur_time, cur_price)
         end_time = datetime.now()
-        self.__operator.get_value(self.stock_data[-1].Close)
+        # self.__operator.get_value(self.stock_data[-1].Close)
         print("耗时%d秒" % (end_time - start_time).seconds)
 
 
-if __name__ == '__main__':
-    sd = StockData("US.NVDA")
-    # ay = Analyst(sd)
-    ayB = AnalystB(sd, b_rate=-0.05, s_rate=0.10)
-    op = Operator(10000, 0)
-
-    trade = TradeLoopBack(sd, op, ayB)
+def stock_days(params):
+    days = params[0]
+    b_rate = params[1]*-1
+    s_rate = params[2]
+    print(params)
+    sd = StockData('US.NVDA')
+    ay = AnalystB(sd,days,b_rate,s_rate)
+    op = Operator(10000,0)
+    trade = TradeLoopBack(sd, op, ay)
     trade.execute_trade()
+    return op.get_value(sd[-1].Close) * -1
+
+
+
+if __name__ == '__main__':
+    # sd = StockData("US.NVDA")
+    # ay = Analyst(sd)
+    # ayB = AnalystB(sd,5, b_rate=-0.05, s_rate=0.10)
+    # op = Operator(10000, 0)
+
+    # trade = TradeLoopBack(sd, op, ayB)
+    # trade.execute_trade()
     # op.get_value(sd[-1].Close)      # 报告当前账户情况
+
+    import scipy.optimize as sco
+    opt_global = sco.brute(stock_days, ((5, 10, 1), (0.03, 0.1, 0.01), (0.05, 0.15, 0.01)))
+    print(opt_global)
 
     # kp_array = ay.get_kp_array(todate='2017-02-14 10:40:00')
     # print(kp_array)

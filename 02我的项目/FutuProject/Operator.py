@@ -23,6 +23,7 @@ class Operator:
     def get_value(self, cur_price):
         print("current price:$%.03f Now have %d shares, $%.03f cash, total value: %.03f"
               % (cur_price, self.__shares, self.__money, (self.__shares*cur_price + self.__money)))
+        return self.__shares*cur_price + self.__money
 
     def add_his_value(self, ind, cur_price):
         self.__his_value.append((ind, cur_price, (self.__shares*cur_price + self.__money)))

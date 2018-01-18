@@ -284,11 +284,11 @@ class AnalystB:
     大于前高点 某个百分点 卖出
     小于前高点 某个百分点 买入
     """
-    def __init__(self, stockdata, b_rate=-0.09, s_rate=0.15):
+    def __init__(self, stockdata, days, b_rate=-0.09, s_rate=0.15):
         self.data_df = stockdata.stockdata_df
         self.b_rate = b_rate
         self.s_rate = s_rate
-        self.days = -50
+        self.days = days*-1
         self.__status_cache_key = ""
         self.__status_cache = None
 

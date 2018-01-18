@@ -1,0 +1,3787 @@
+/home/xu/anaconda3/bin/python /home/xu/PycharmProjects/MyPython/RXPython/02我的项目/FutuProject/main.py
+/home/xu/anaconda3/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py:106: MatplotlibDeprecationWarning: The finance module has been deprecated in mpl 2.0 and will be removed in mpl 2.2. Please use the module mpl_finance instead.
+  warnings.warn(message, mplDeprecation, stacklevel=1)
+[ 5.    0.03  0.05]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12189.676
+2017-06-09 12:03:00 buy 78 shares at 154.835. money:112.546
+2017-09-18 11:08:00 sell 78 shares at 189.033. money:14857.120
+2017-09-19 09:40:00 buy 80 shares at 185.250. money:37.120
+2018-01-03 11:00:00 sell 80 shares at 209.506. money:16797.600
+2018-01-05 09:35:00 buy 79 shares at 211.470. money:91.470
+耗时63秒
+current price:$222.980 Now have 79 shares, $91.470 cash, total value: 17706.890
+[ 5.    0.03  0.05]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12189.676
+2017-06-09 12:03:00 buy 78 shares at 154.835. money:112.546
+2017-09-18 11:08:00 sell 78 shares at 189.033. money:14857.120
+2017-09-19 09:40:00 buy 80 shares at 185.250. money:37.120
+2018-01-03 11:00:00 sell 80 shares at 209.506. money:16797.600
+2018-01-05 09:35:00 buy 79 shares at 211.470. money:91.470
+耗时64秒
+current price:$222.980 Now have 79 shares, $91.470 cash, total value: 17706.890
+[ 5.    0.03  0.06]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 15:17:00 sell 77 shares at 158.580. money:12283.616
+2017-06-09 12:03:00 buy 79 shares at 154.835. money:51.651
+2017-09-18 13:52:00 sell 79 shares at 190.760. money:15121.691
+2017-09-19 09:40:00 buy 81 shares at 185.250. money:116.441
+2018-01-03 12:49:00 sell 81 shares at 211.610. money:17256.851
+2018-01-05 09:35:00 buy 81 shares at 211.470. money:127.781
+耗时63秒
+current price:$222.980 Now have 81 shares, $127.781 cash, total value: 18189.161
+[ 5.    0.03  0.07]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2018-01-03 14:42:00 sell 77 shares at 213.620. money:16521.696
+2018-01-05 09:35:00 buy 78 shares at 211.470. money:27.036
+耗时63秒
+current price:$222.980 Now have 78 shares, $27.036 cash, total value: 17419.476
+[ 5.    0.03  0.08]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+耗时63秒
+current price:$222.980 Now have 77 shares, $72.956 cash, total value: 17242.416
+[ 5.    0.03  0.09]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+耗时63秒
+current price:$222.980 Now have 77 shares, $72.956 cash, total value: 17242.416
+[ 5.    0.03  0.1 ]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:33:00 sell 85 shares at 115.180. money:9868.675
+2017-05-12 10:33:00 buy 78 shares at 126.047. money:37.009
+耗时64秒
+current price:$222.980 Now have 78 shares, $37.009 cash, total value: 17429.449
+[ 5.    0.03  0.11]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:37:00 sell 85 shares at 116.340. money:9967.275
+2017-05-12 10:33:00 buy 79 shares at 126.047. money:9.562
+耗时62秒
+current price:$222.980 Now have 79 shares, $9.562 cash, total value: 17624.982
+[ 5.    0.03  0.12]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:42:00 sell 85 shares at 117.440. money:10060.775
+2017-05-12 10:33:00 buy 79 shares at 126.047. money:103.062
+耗时63秒
+current price:$222.980 Now have 79 shares, $103.062 cash, total value: 17718.482
+[ 5.    0.03  0.13]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 12:14:00 sell 85 shares at 118.215. money:10126.650
+2017-05-12 10:33:00 buy 80 shares at 126.047. money:42.890
+耗时63秒
+current price:$222.980 Now have 80 shares, $42.890 cash, total value: 17881.290
+[ 5.    0.03  0.14]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 13:02:00 sell 85 shares at 119.170. money:10207.825
+2017-05-12 10:33:00 buy 80 shares at 126.047. money:124.065
+耗时62秒
+current price:$222.980 Now have 80 shares, $124.065 cash, total value: 17962.465
+[ 5.    0.04  0.05]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2017-06-08 12:10:00 sell 75 shares at 157.360. money:11848.702
+2017-06-09 12:36:00 buy 77 shares at 153.150. money:56.152
+2017-09-18 11:08:00 sell 77 shares at 189.033. money:14611.693
+2017-09-21 09:31:00 buy 80 shares at 180.840. money:144.493
+2018-01-03 11:00:00 sell 80 shares at 209.506. money:16904.973
+耗时62秒
+current price:$222.980 Now have 0 shares, $16904.973 cash, total value: 16904.973
+[ 5.    0.04  0.06]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2017-06-08 15:17:00 sell 75 shares at 158.580. money:11940.202
+2017-06-09 12:36:00 buy 77 shares at 153.150. money:147.652
+2017-06-09 13:59:00 buy 1 shares at 147.620. money:0.032
+2017-09-18 13:52:00 sell 78 shares at 190.760. money:14879.312
+2017-09-21 09:31:00 buy 82 shares at 180.840. money:50.432
+2018-01-03 12:49:00 sell 82 shares at 211.610. money:17402.452
+耗时62秒
+current price:$222.980 Now have 0 shares, $17402.452 cash, total value: 17402.452
+[ 5.    0.04  0.07]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2018-01-03 14:42:00 sell 75 shares at 213.620. money:16068.202
+耗时62秒
+current price:$222.980 Now have 0 shares, $16068.202 cash, total value: 16068.202
+[ 5.    0.04  0.08]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+耗时62秒
+current price:$222.980 Now have 75 shares, $46.702 cash, total value: 16770.202
+[ 5.    0.04  0.09]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+耗时62秒
+current price:$222.980 Now have 75 shares, $46.702 cash, total value: 16770.202
+[ 5.    0.04  0.1 ]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:33:00 sell 86 shares at 115.180. money:9992.862
+2017-05-17 10:39:00 buy 76 shares at 131.400. money:6.462
+耗时61秒
+current price:$222.980 Now have 76 shares, $6.462 cash, total value: 16952.942
+[ 5.    0.04  0.11]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:37:00 sell 86 shares at 116.340. money:10092.622
+2017-05-17 10:39:00 buy 76 shares at 131.400. money:106.222
+耗时61秒
+current price:$222.980 Now have 76 shares, $106.222 cash, total value: 17052.702
+[ 5.    0.04  0.12]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:42:00 sell 86 shares at 117.440. money:10187.222
+2017-05-17 10:39:00 buy 77 shares at 131.400. money:69.422
+耗时61秒
+current price:$222.980 Now have 77 shares, $69.422 cash, total value: 17238.882
+[ 5.    0.04  0.13]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 12:14:00 sell 86 shares at 118.215. money:10253.872
+2017-05-17 10:39:00 buy 78 shares at 131.400. money:4.672
+耗时61秒
+current price:$222.980 Now have 78 shares, $4.672 cash, total value: 17397.112
+[ 5.    0.04  0.14]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 13:02:00 sell 86 shares at 119.170. money:10336.002
+2017-05-17 10:39:00 buy 78 shares at 131.400. money:86.802
+耗时62秒
+current price:$222.980 Now have 78 shares, $86.802 cash, total value: 17479.242
+[ 5.    0.05  0.05]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12175.610
+2017-06-09 13:11:00 buy 80 shares at 151.045. money:92.010
+2017-09-18 11:08:00 sell 80 shares at 189.033. money:15214.650
+2017-09-21 09:31:00 buy 84 shares at 180.840. money:24.090
+2018-01-03 11:00:00 sell 84 shares at 209.506. money:17622.594
+耗时61秒
+current price:$222.980 Now have 0 shares, $17622.594 cash, total value: 17622.594
+[ 5.    0.05  0.06]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2017-06-08 15:17:00 sell 77 shares at 158.580. money:12269.550
+2017-06-09 13:11:00 buy 81 shares at 151.045. money:34.905
+2017-09-18 13:52:00 sell 81 shares at 190.760. money:15486.465
+2017-09-21 09:31:00 buy 85 shares at 180.840. money:115.065
+2018-01-03 12:49:00 sell 85 shares at 211.610. money:18101.915
+耗时61秒
+current price:$222.980 Now have 0 shares, $18101.915 cash, total value: 18101.915
+[ 5.    0.05  0.07]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2018-01-03 14:42:00 sell 77 shares at 213.620. money:16507.630
+耗时61秒
+current price:$222.980 Now have 0 shares, $16507.630 cash, total value: 16507.630
+[ 5.    0.05  0.08]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+耗时61秒
+current price:$222.980 Now have 77 shares, $58.890 cash, total value: 17228.350
+[ 5.    0.05  0.09]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+耗时61秒
+current price:$222.980 Now have 77 shares, $58.890 cash, total value: 17228.350
+[ 5.    0.05  0.1 ]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:33:00 sell 88 shares at 115.180. money:10135.990
+2017-05-17 11:04:00 buy 78 shares at 129.660. money:22.510
+耗时61秒
+current price:$222.980 Now have 78 shares, $22.510 cash, total value: 17414.950
+[ 5.    0.05  0.11]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:37:00 sell 88 shares at 116.340. money:10238.070
+2017-05-17 11:04:00 buy 78 shares at 129.660. money:124.590
+耗时61秒
+current price:$222.980 Now have 78 shares, $124.590 cash, total value: 17517.030
+[ 5.    0.05  0.12]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:42:00 sell 88 shares at 117.440. money:10334.870
+2017-05-17 11:04:00 buy 79 shares at 129.660. money:91.730
+耗时61秒
+current price:$222.980 Now have 79 shares, $91.730 cash, total value: 17707.150
+[ 5.    0.05  0.13]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 12:14:00 sell 88 shares at 118.215. money:10403.070
+2017-05-17 11:04:00 buy 80 shares at 129.660. money:30.270
+耗时61秒
+current price:$222.980 Now have 80 shares, $30.270 cash, total value: 17868.670
+[ 5.    0.05  0.14]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 13:02:00 sell 88 shares at 119.170. money:10487.110
+2017-05-17 11:04:00 buy 80 shares at 129.660. money:114.310
+耗时61秒
+current price:$222.980 Now have 80 shares, $114.310 cash, total value: 17952.710
+[ 5.    0.06  0.05]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2017-06-08 12:10:00 sell 78 shares at 157.360. money:12324.896
+2017-06-09 13:13:00 buy 82 shares at 149.862. money:36.212
+2017-09-18 11:08:00 sell 82 shares at 189.033. money:15536.918
+2017-09-21 09:32:00 buy 86 shares at 179.272. money:119.526
+2018-01-03 11:00:00 sell 86 shares at 209.506. money:18137.042
+耗时62秒
+current price:$222.980 Now have 0 shares, $18137.042 cash, total value: 18137.042
+[ 5.    0.06  0.06]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2017-06-08 15:17:00 sell 78 shares at 158.580. money:12420.056
+2017-06-09 13:13:00 buy 82 shares at 149.862. money:131.372
+2017-09-18 13:52:00 sell 82 shares at 190.760. money:15773.692
+2017-09-21 09:32:00 buy 87 shares at 179.272. money:177.028
+2017-09-25 09:33:00 buy 1 shares at 176.043. money:0.985
+2018-01-03 12:49:00 sell 88 shares at 211.610. money:18622.665
+耗时63秒
+current price:$222.980 Now have 0 shares, $18622.665 cash, total value: 18622.665
+[ 5.    0.06  0.07]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2018-01-03 14:42:00 sell 78 shares at 213.620. money:16713.176
+耗时63秒
+current price:$222.980 Now have 0 shares, $16713.176 cash, total value: 16713.176
+[ 5.    0.06  0.08]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+耗时62秒
+current price:$222.980 Now have 78 shares, $50.816 cash, total value: 17443.256
+[ 5.    0.06  0.09]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+耗时62秒
+current price:$222.980 Now have 78 shares, $50.816 cash, total value: 17443.256
+[ 5.    0.06  0.1 ]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:33:00 sell 88 shares at 115.180. money:10188.936
+2017-05-17 14:30:00 buy 79 shares at 128.780. money:15.316
+耗时62秒
+current price:$222.980 Now have 79 shares, $15.316 cash, total value: 17630.736
+[ 5.    0.06  0.11]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:37:00 sell 88 shares at 116.340. money:10291.016
+2017-05-17 14:30:00 buy 79 shares at 128.780. money:117.396
+耗时62秒
+current price:$222.980 Now have 79 shares, $117.396 cash, total value: 17732.816
+[ 5.    0.06  0.12]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:42:00 sell 88 shares at 117.440. money:10387.816
+2017-05-17 14:30:00 buy 80 shares at 128.780. money:85.416
+耗时62秒
+current price:$222.980 Now have 80 shares, $85.416 cash, total value: 17923.816
+[ 5.    0.06  0.13]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 12:14:00 sell 88 shares at 118.215. money:10456.016
+2017-05-17 14:30:00 buy 81 shares at 128.780. money:24.836
+耗时62秒
+current price:$222.980 Now have 81 shares, $24.836 cash, total value: 18086.216
+[ 5.    0.06  0.14]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 13:02:00 sell 88 shares at 119.170. money:10540.056
+2017-05-17 14:30:00 buy 81 shares at 128.780. money:108.876
+耗时62秒
+current price:$222.980 Now have 81 shares, $108.876 cash, total value: 18170.256
+[ 5.    0.07  0.05]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:47.870
+2017-06-08 12:10:00 sell 80 shares at 157.360. money:12636.670
+2017-06-09 13:55:00 buy 85 shares at 148.340. money:27.770
+2017-09-18 11:08:00 sell 85 shares at 189.033. money:16095.575
+2017-09-21 10:25:00 buy 90 shares at 177.590. money:112.475
+2018-01-03 11:00:00 sell 90 shares at 209.506. money:18968.015
+耗时62秒
+current price:$222.980 Now have 0 shares, $18968.015 cash, total value: 18968.015
+[ 5.    0.07  0.06]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:47.870
+2017-06-08 15:17:00 sell 80 shares at 158.580. money:12734.270
+2017-06-09 13:55:00 buy 85 shares at 148.340. money:125.370
+2017-09-18 13:52:00 sell 85 shares at 190.760. money:16339.970
+2017-09-21 10:25:00 buy 92 shares at 177.590. money:1.690
+2018-01-03 12:49:00 sell 92 shares at 211.610. money:19469.810
+耗时62秒
+current price:$222.980 Now have 0 shares, $19469.810 cash, total value: 19469.810
+[ 5.    0.07  0.07]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:47.870
+2018-01-03 14:42:00 sell 80 shares at 213.620. money:17137.470
+耗时62秒
+current price:$222.980 Now have 0 shares, $17137.470 cash, total value: 17137.470
+[ 5.    0.07  0.08]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:47.870
+耗时62秒
+current price:$222.980 Now have 80 shares, $47.870 cash, total value: 17886.270
+[ 5.    0.07  0.09]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:47.870
+耗时62秒
+current price:$222.980 Now have 80 shares, $47.870 cash, total value: 17886.270
+[ 5.    0.07  0.1 ]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:33:00 sell 89 shares at 115.180. money:10331.970
+2017-05-17 15:58:00 buy 81 shares at 127.372. money:14.838
+耗时62秒
+current price:$222.980 Now have 81 shares, $14.838 cash, total value: 18076.218
+[ 5.    0.07  0.11]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:37:00 sell 89 shares at 116.340. money:10435.210
+2017-05-17 15:58:00 buy 81 shares at 127.372. money:118.078
+耗时62秒
+current price:$222.980 Now have 81 shares, $118.078 cash, total value: 18179.458
+[ 5.    0.07  0.12]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:42:00 sell 89 shares at 117.440. money:10533.110
+2017-05-17 15:58:00 buy 82 shares at 127.372. money:88.606
+耗时62秒
+current price:$222.980 Now have 82 shares, $88.606 cash, total value: 18372.966
+[ 5.    0.07  0.13]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 12:14:00 sell 89 shares at 118.215. money:10602.085
+2017-05-17 15:58:00 buy 83 shares at 127.372. money:30.209
+耗时62秒
+current price:$222.980 Now have 83 shares, $30.209 cash, total value: 18537.549
+[ 5.    0.07  0.14]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 13:02:00 sell 89 shares at 119.170. money:10687.080
+2017-05-17 15:58:00 buy 83 shares at 127.372. money:115.204
+耗时62秒
+current price:$222.980 Now have 83 shares, $115.204 cash, total value: 18622.544
+[ 5.    0.08  0.05]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2017-09-18 11:08:00 sell 70 shares at 189.033. money:13277.890
+2017-09-25 09:49:00 buy 76 shares at 174.000. money:53.890
+2018-01-03 11:00:00 sell 76 shares at 209.506. money:15976.346
+耗时62秒
+current price:$222.980 Now have 0 shares, $15976.346 cash, total value: 15976.346
+[ 5.    0.08  0.06]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2017-09-18 13:52:00 sell 70 shares at 190.760. money:13398.780
+2017-09-25 09:49:00 buy 77 shares at 174.000. money:0.780
+2018-01-03 12:49:00 sell 77 shares at 211.610. money:16294.750
+耗时62秒
+current price:$222.980 Now have 0 shares, $16294.750 cash, total value: 16294.750
+[ 5.    0.08  0.07]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2018-01-03 14:42:00 sell 70 shares at 213.620. money:14998.980
+耗时62秒
+current price:$222.980 Now have 0 shares, $14998.980 cash, total value: 14998.980
+[ 5.    0.08  0.08]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+耗时62秒
+current price:$222.980 Now have 70 shares, $45.580 cash, total value: 15654.180
+[ 5.    0.08  0.09]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+耗时62秒
+current price:$222.980 Now have 70 shares, $45.580 cash, total value: 15654.180
+[ 5.    0.08  0.1 ]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:33:00 sell 90 shares at 115.180. money:10421.110
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:140.980
+2017-07-03 11:07:00 buy 1 shares at 139.515. money:1.465
+耗时62秒
+current price:$222.980 Now have 71 shares, $1.465 cash, total value: 15833.045
+[ 5.    0.08  0.11]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:37:00 sell 90 shares at 116.340. money:10525.510
+2017-06-09 14:02:00 buy 71 shares at 146.859. money:98.521
+耗时62秒
+current price:$222.980 Now have 71 shares, $98.521 cash, total value: 15930.101
+[ 5.    0.08  0.12]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:42:00 sell 90 shares at 117.440. money:10624.510
+2017-06-09 14:02:00 buy 72 shares at 146.859. money:50.662
+耗时62秒
+current price:$222.980 Now have 72 shares, $50.662 cash, total value: 16105.222
+[ 5.    0.08  0.13]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 12:14:00 sell 90 shares at 118.215. money:10694.260
+2017-06-09 14:02:00 buy 72 shares at 146.859. money:120.412
+耗时62秒
+current price:$222.980 Now have 72 shares, $120.412 cash, total value: 16174.972
+[ 5.    0.08  0.14]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 13:02:00 sell 90 shares at 119.170. money:10780.210
+2017-06-09 14:02:00 buy 73 shares at 146.859. money:59.503
+耗时62秒
+current price:$222.980 Now have 73 shares, $59.503 cash, total value: 16337.043
+[ 5.    0.09  0.05]
+2017-02-13 10:48:00 buy 91 shares at 109.090. money:72.810
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10457.730
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:142.495
+2017-06-12 09:52:00 buy 1 shares at 142.290. money:0.205
+2017-09-18 11:08:00 sell 72 shares at 189.033. money:13610.581
+2017-09-25 10:57:00 buy 79 shares at 172.010. money:21.791
+2018-01-03 11:00:00 sell 79 shares at 209.506. money:16572.765
+耗时62秒
+current price:$222.980 Now have 0 shares, $16572.765 cash, total value: 16572.765
+[ 5.    0.09  0.06]
+2017-02-13 10:48:00 buy 91 shares at 109.090. money:72.810
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10457.730
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:142.495
+2017-06-12 09:52:00 buy 1 shares at 142.290. money:0.205
+2017-09-18 13:52:00 sell 72 shares at 190.760. money:13734.925
+2017-09-25 10:57:00 buy 79 shares at 172.010. money:146.135
+2018-01-03 12:49:00 sell 79 shares at 211.610. money:16863.325
+耗时62秒
+current price:$222.980 Now have 0 shares, $16863.325 cash, total value: 16863.325
+[ 5.    0.09  0.07]
+2017-02-13 10:48:00 buy 91 shares at 109.090. money:72.810
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10457.730
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:142.495
+2017-06-12 09:52:00 buy 1 shares at 142.290. money:0.205
+2018-01-03 14:42:00 sell 72 shares at 213.620. money:15380.845
+耗时62秒
+current price:$222.980 Now have 0 shares, $15380.845 cash, total value: 15380.845
+[ 5.    0.09  0.08]
+2017-02-13 10:48:00 buy 91 shares at 109.090. money:72.810
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10457.730
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:142.495
+2017-06-12 09:52:00 buy 1 shares at 142.290. money:0.205
+耗时62秒
+current price:$222.980 Now have 72 shares, $0.205 cash, total value: 16054.765
+[ 5.    0.09  0.09]
+2017-02-13 10:48:00 buy 91 shares at 109.090. money:72.810
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10457.730
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:142.495
+2017-06-12 09:52:00 buy 1 shares at 142.290. money:0.205
+耗时62秒
+current price:$222.980 Now have 72 shares, $0.205 cash, total value: 16054.765
+[ 5.    0.09  0.1 ]
+2017-02-13 10:48:00 buy 91 shares at 109.090. money:72.810
+2017-05-10 09:33:00 sell 91 shares at 115.180. money:10554.190
+2017-06-09 14:38:00 buy 72 shares at 145.285. money:93.670
+耗时62秒
+current price:$222.980 Now have 72 shares, $93.670 cash, total value: 16148.230
+[ 5.    0.09  0.11]
+2017-02-13 10:48:00 buy 91 shares at 109.090. money:72.810
+2017-05-10 09:37:00 sell 91 shares at 116.340. money:10659.750
+2017-06-09 14:38:00 buy 73 shares at 145.285. money:53.945
+耗时62秒
+current price:$222.980 Now have 73 shares, $53.945 cash, total value: 16331.485
+[ 5.    0.09  0.12]
+2017-02-13 10:48:00 buy 91 shares at 109.090. money:72.810
+2017-05-10 09:42:00 sell 91 shares at 117.440. money:10759.850
+2017-06-09 14:38:00 buy 74 shares at 145.285. money:8.760
+耗时62秒
+current price:$222.980 Now have 74 shares, $8.760 cash, total value: 16509.280
+[ 5.    0.09  0.13]
+2017-02-13 10:48:00 buy 91 shares at 109.090. money:72.810
+2017-05-10 12:14:00 sell 91 shares at 118.215. money:10830.375
+2017-06-09 14:38:00 buy 74 shares at 145.285. money:79.285
+耗时62秒
+current price:$222.980 Now have 74 shares, $79.285 cash, total value: 16579.805
+[ 5.    0.09  0.14]
+2017-02-13 10:48:00 buy 91 shares at 109.090. money:72.810
+2017-05-10 13:02:00 sell 91 shares at 119.170. money:10917.280
+2017-06-09 14:38:00 buy 75 shares at 145.285. money:20.905
+耗时62秒
+current price:$222.980 Now have 75 shares, $20.905 cash, total value: 16744.405
+[ 5.    0.1   0.05]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2017-09-18 11:08:00 sell 74 shares at 189.033. money:14002.058
+2017-09-25 14:42:00 buy 82 shares at 170.282. money:38.934
+2018-01-03 11:00:00 sell 82 shares at 209.506. money:17218.426
+耗时62秒
+current price:$222.980 Now have 0 shares, $17218.426 cash, total value: 17218.426
+[ 5.    0.1   0.06]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2017-09-18 13:52:00 sell 74 shares at 190.760. money:14129.856
+2017-09-25 14:42:00 buy 82 shares at 170.282. money:166.732
+2018-01-03 12:49:00 sell 82 shares at 211.610. money:17518.752
+耗时62秒
+current price:$222.980 Now have 0 shares, $17518.752 cash, total value: 17518.752
+[ 5.    0.1   0.07]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2018-01-03 14:42:00 sell 74 shares at 213.620. money:15821.496
+耗时62秒
+current price:$222.980 Now have 0 shares, $15821.496 cash, total value: 15821.496
+[ 5.    0.1   0.08]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.616 cash, total value: 16514.136
+[ 5.    0.1   0.09]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.616 cash, total value: 16514.136
+[ 5.   0.1  0.1]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:33:00 sell 92 shares at 115.180. money:10657.616
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:111.136
+耗时62秒
+current price:$222.980 Now have 74 shares, $111.136 cash, total value: 16611.656
+[ 5.    0.1   0.11]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:37:00 sell 92 shares at 116.340. money:10764.336
+2017-06-09 14:50:00 buy 75 shares at 142.520. money:75.336
+耗时62秒
+current price:$222.980 Now have 75 shares, $75.336 cash, total value: 16798.836
+[ 5.    0.1   0.12]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:42:00 sell 92 shares at 117.440. money:10865.536
+2017-06-09 14:50:00 buy 76 shares at 142.520. money:34.016
+耗时62秒
+current price:$222.980 Now have 76 shares, $34.016 cash, total value: 16980.496
+[ 5.    0.1   0.13]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 12:14:00 sell 92 shares at 118.215. money:10936.836
+2017-06-09 14:50:00 buy 76 shares at 142.520. money:105.316
+耗时62秒
+current price:$222.980 Now have 76 shares, $105.316 cash, total value: 17051.796
+[ 5.    0.1   0.14]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 13:02:00 sell 92 shares at 119.170. money:11024.696
+2017-06-09 14:50:00 buy 77 shares at 142.520. money:50.656
+耗时62秒
+current price:$222.980 Now have 77 shares, $50.656 cash, total value: 17220.116
+[ 6.    0.03  0.05]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12189.676
+2017-06-09 12:03:00 buy 78 shares at 154.835. money:112.546
+2017-09-18 11:08:00 sell 78 shares at 189.033. money:14857.120
+2017-09-19 09:40:00 buy 80 shares at 185.250. money:37.120
+2018-01-03 11:00:00 sell 80 shares at 209.506. money:16797.600
+2018-01-05 09:35:00 buy 79 shares at 211.470. money:91.470
+耗时62秒
+current price:$222.980 Now have 79 shares, $91.470 cash, total value: 17706.890
+[ 6.    0.03  0.06]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 15:17:00 sell 77 shares at 158.580. money:12283.616
+2017-06-09 12:03:00 buy 79 shares at 154.835. money:51.651
+2017-09-18 13:52:00 sell 79 shares at 190.760. money:15121.691
+2017-09-19 09:40:00 buy 81 shares at 185.250. money:116.441
+2018-01-03 12:49:00 sell 81 shares at 211.610. money:17256.851
+2018-01-05 09:35:00 buy 81 shares at 211.470. money:127.781
+耗时62秒
+current price:$222.980 Now have 81 shares, $127.781 cash, total value: 18189.161
+[ 6.    0.03  0.07]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2018-01-03 14:42:00 sell 77 shares at 213.620. money:16521.696
+2018-01-05 09:35:00 buy 78 shares at 211.470. money:27.036
+耗时62秒
+current price:$222.980 Now have 78 shares, $27.036 cash, total value: 17419.476
+[ 6.    0.03  0.08]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+耗时62秒
+current price:$222.980 Now have 77 shares, $72.956 cash, total value: 17242.416
+[ 6.    0.03  0.09]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+耗时62秒
+current price:$222.980 Now have 77 shares, $72.956 cash, total value: 17242.416
+[ 6.    0.03  0.1 ]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:33:00 sell 85 shares at 115.180. money:9868.675
+2017-05-12 10:33:00 buy 78 shares at 126.047. money:37.009
+耗时62秒
+current price:$222.980 Now have 78 shares, $37.009 cash, total value: 17429.449
+[ 6.    0.03  0.11]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:37:00 sell 85 shares at 116.340. money:9967.275
+2017-05-12 10:33:00 buy 79 shares at 126.047. money:9.562
+耗时62秒
+current price:$222.980 Now have 79 shares, $9.562 cash, total value: 17624.982
+[ 6.    0.03  0.12]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:42:00 sell 85 shares at 117.440. money:10060.775
+2017-05-12 10:33:00 buy 79 shares at 126.047. money:103.062
+耗时62秒
+current price:$222.980 Now have 79 shares, $103.062 cash, total value: 17718.482
+[ 6.    0.03  0.13]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 12:14:00 sell 85 shares at 118.215. money:10126.650
+2017-05-12 10:33:00 buy 80 shares at 126.047. money:42.890
+耗时62秒
+current price:$222.980 Now have 80 shares, $42.890 cash, total value: 17881.290
+[ 6.    0.03  0.14]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 13:02:00 sell 85 shares at 119.170. money:10207.825
+2017-05-12 10:33:00 buy 80 shares at 126.047. money:124.065
+耗时62秒
+current price:$222.980 Now have 80 shares, $124.065 cash, total value: 17962.465
+[ 6.    0.04  0.05]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2017-06-08 12:10:00 sell 75 shares at 157.360. money:11848.702
+2017-06-09 12:36:00 buy 77 shares at 153.150. money:56.152
+2017-09-18 11:08:00 sell 77 shares at 189.033. money:14611.693
+2017-09-21 09:31:00 buy 80 shares at 180.840. money:144.493
+2018-01-03 11:00:00 sell 80 shares at 209.506. money:16904.973
+耗时62秒
+current price:$222.980 Now have 0 shares, $16904.973 cash, total value: 16904.973
+[ 6.    0.04  0.06]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2017-06-08 15:17:00 sell 75 shares at 158.580. money:11940.202
+2017-06-09 12:36:00 buy 77 shares at 153.150. money:147.652
+2017-06-09 13:59:00 buy 1 shares at 147.620. money:0.032
+2017-09-18 13:52:00 sell 78 shares at 190.760. money:14879.312
+2017-09-21 09:31:00 buy 82 shares at 180.840. money:50.432
+2018-01-03 12:49:00 sell 82 shares at 211.610. money:17402.452
+耗时62秒
+current price:$222.980 Now have 0 shares, $17402.452 cash, total value: 17402.452
+[ 6.    0.04  0.07]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2018-01-03 14:42:00 sell 75 shares at 213.620. money:16068.202
+耗时62秒
+current price:$222.980 Now have 0 shares, $16068.202 cash, total value: 16068.202
+[ 6.    0.04  0.08]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+耗时62秒
+current price:$222.980 Now have 75 shares, $46.702 cash, total value: 16770.202
+[ 6.    0.04  0.09]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+耗时62秒
+current price:$222.980 Now have 75 shares, $46.702 cash, total value: 16770.202
+[ 6.    0.04  0.1 ]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:33:00 sell 86 shares at 115.180. money:9992.862
+2017-05-17 10:39:00 buy 76 shares at 131.400. money:6.462
+耗时62秒
+current price:$222.980 Now have 76 shares, $6.462 cash, total value: 16952.942
+[ 6.    0.04  0.11]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:37:00 sell 86 shares at 116.340. money:10092.622
+2017-05-17 10:39:00 buy 76 shares at 131.400. money:106.222
+耗时62秒
+current price:$222.980 Now have 76 shares, $106.222 cash, total value: 17052.702
+[ 6.    0.04  0.12]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:42:00 sell 86 shares at 117.440. money:10187.222
+2017-05-17 10:39:00 buy 77 shares at 131.400. money:69.422
+耗时62秒
+current price:$222.980 Now have 77 shares, $69.422 cash, total value: 17238.882
+[ 6.    0.04  0.13]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 12:14:00 sell 86 shares at 118.215. money:10253.872
+2017-05-17 10:39:00 buy 78 shares at 131.400. money:4.672
+耗时62秒
+current price:$222.980 Now have 78 shares, $4.672 cash, total value: 17397.112
+[ 6.    0.04  0.14]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 13:02:00 sell 86 shares at 119.170. money:10336.002
+2017-05-17 10:39:00 buy 78 shares at 131.400. money:86.802
+耗时62秒
+current price:$222.980 Now have 78 shares, $86.802 cash, total value: 17479.242
+[ 6.    0.05  0.05]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12175.610
+2017-06-09 13:11:00 buy 80 shares at 151.045. money:92.010
+2017-09-18 11:08:00 sell 80 shares at 189.033. money:15214.650
+2017-09-21 09:31:00 buy 84 shares at 180.840. money:24.090
+2018-01-03 11:00:00 sell 84 shares at 209.506. money:17622.594
+耗时62秒
+current price:$222.980 Now have 0 shares, $17622.594 cash, total value: 17622.594
+[ 6.    0.05  0.06]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2017-06-08 15:17:00 sell 77 shares at 158.580. money:12269.550
+2017-06-09 13:11:00 buy 81 shares at 151.045. money:34.905
+2017-09-18 13:52:00 sell 81 shares at 190.760. money:15486.465
+2017-09-21 09:31:00 buy 85 shares at 180.840. money:115.065
+2018-01-03 12:49:00 sell 85 shares at 211.610. money:18101.915
+耗时62秒
+current price:$222.980 Now have 0 shares, $18101.915 cash, total value: 18101.915
+[ 6.    0.05  0.07]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2018-01-03 14:42:00 sell 77 shares at 213.620. money:16507.630
+耗时62秒
+current price:$222.980 Now have 0 shares, $16507.630 cash, total value: 16507.630
+[ 6.    0.05  0.08]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+耗时62秒
+current price:$222.980 Now have 77 shares, $58.890 cash, total value: 17228.350
+[ 6.    0.05  0.09]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+耗时62秒
+current price:$222.980 Now have 77 shares, $58.890 cash, total value: 17228.350
+[ 6.    0.05  0.1 ]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:33:00 sell 88 shares at 115.180. money:10135.990
+2017-05-17 11:04:00 buy 78 shares at 129.660. money:22.510
+耗时62秒
+current price:$222.980 Now have 78 shares, $22.510 cash, total value: 17414.950
+[ 6.    0.05  0.11]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:37:00 sell 88 shares at 116.340. money:10238.070
+2017-05-17 11:04:00 buy 78 shares at 129.660. money:124.590
+耗时62秒
+current price:$222.980 Now have 78 shares, $124.590 cash, total value: 17517.030
+[ 6.    0.05  0.12]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:42:00 sell 88 shares at 117.440. money:10334.870
+2017-05-17 11:04:00 buy 79 shares at 129.660. money:91.730
+耗时62秒
+current price:$222.980 Now have 79 shares, $91.730 cash, total value: 17707.150
+[ 6.    0.05  0.13]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 12:14:00 sell 88 shares at 118.215. money:10403.070
+2017-05-17 11:04:00 buy 80 shares at 129.660. money:30.270
+耗时62秒
+current price:$222.980 Now have 80 shares, $30.270 cash, total value: 17868.670
+[ 6.    0.05  0.14]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 13:02:00 sell 88 shares at 119.170. money:10487.110
+2017-05-17 11:04:00 buy 80 shares at 129.660. money:114.310
+耗时62秒
+current price:$222.980 Now have 80 shares, $114.310 cash, total value: 17952.710
+[ 6.    0.06  0.05]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2017-06-08 12:10:00 sell 78 shares at 157.360. money:12324.896
+2017-06-09 13:13:00 buy 82 shares at 149.862. money:36.212
+2017-09-18 11:08:00 sell 82 shares at 189.033. money:15536.918
+2017-09-21 09:32:00 buy 86 shares at 179.272. money:119.526
+2018-01-03 11:00:00 sell 86 shares at 209.506. money:18137.042
+耗时62秒
+current price:$222.980 Now have 0 shares, $18137.042 cash, total value: 18137.042
+[ 6.    0.06  0.06]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2017-06-08 15:17:00 sell 78 shares at 158.580. money:12420.056
+2017-06-09 13:13:00 buy 82 shares at 149.862. money:131.372
+2017-09-18 13:52:00 sell 82 shares at 190.760. money:15773.692
+2017-09-21 09:32:00 buy 87 shares at 179.272. money:177.028
+2017-09-25 09:33:00 buy 1 shares at 176.043. money:0.985
+2018-01-03 12:49:00 sell 88 shares at 211.610. money:18622.665
+耗时62秒
+current price:$222.980 Now have 0 shares, $18622.665 cash, total value: 18622.665
+[ 6.    0.06  0.07]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2018-01-03 14:42:00 sell 78 shares at 213.620. money:16713.176
+耗时62秒
+current price:$222.980 Now have 0 shares, $16713.176 cash, total value: 16713.176
+[ 6.    0.06  0.08]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+耗时62秒
+current price:$222.980 Now have 78 shares, $50.816 cash, total value: 17443.256
+[ 6.    0.06  0.09]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+耗时62秒
+current price:$222.980 Now have 78 shares, $50.816 cash, total value: 17443.256
+[ 6.    0.06  0.1 ]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:33:00 sell 88 shares at 115.180. money:10188.936
+2017-05-17 14:30:00 buy 79 shares at 128.780. money:15.316
+耗时62秒
+current price:$222.980 Now have 79 shares, $15.316 cash, total value: 17630.736
+[ 6.    0.06  0.11]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:37:00 sell 88 shares at 116.340. money:10291.016
+2017-05-17 14:30:00 buy 79 shares at 128.780. money:117.396
+耗时62秒
+current price:$222.980 Now have 79 shares, $117.396 cash, total value: 17732.816
+[ 6.    0.06  0.12]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:42:00 sell 88 shares at 117.440. money:10387.816
+2017-05-17 14:30:00 buy 80 shares at 128.780. money:85.416
+耗时62秒
+current price:$222.980 Now have 80 shares, $85.416 cash, total value: 17923.816
+[ 6.    0.06  0.13]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 12:14:00 sell 88 shares at 118.215. money:10456.016
+2017-05-17 14:30:00 buy 81 shares at 128.780. money:24.836
+耗时62秒
+current price:$222.980 Now have 81 shares, $24.836 cash, total value: 18086.216
+[ 6.    0.06  0.14]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 13:02:00 sell 88 shares at 119.170. money:10540.056
+2017-05-17 14:30:00 buy 81 shares at 128.780. money:108.876
+耗时62秒
+current price:$222.980 Now have 81 shares, $108.876 cash, total value: 18170.256
+[ 6.    0.07  0.05]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+2017-06-08 12:10:00 sell 80 shares at 157.360. money:12605.520
+2017-06-09 13:55:00 buy 84 shares at 148.340. money:144.960
+2017-06-09 14:46:00 buy 1 shares at 144.260. money:0.700
+2017-09-18 11:08:00 sell 85 shares at 189.033. money:16068.505
+2017-09-21 10:25:00 buy 90 shares at 177.590. money:85.405
+2018-01-03 11:00:00 sell 90 shares at 209.506. money:18940.945
+耗时62秒
+current price:$222.980 Now have 0 shares, $18940.945 cash, total value: 18940.945
+[ 6.    0.07  0.06]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+2017-06-08 15:17:00 sell 80 shares at 158.580. money:12703.120
+2017-06-09 13:55:00 buy 85 shares at 148.340. money:94.220
+2017-09-18 13:52:00 sell 85 shares at 190.760. money:16308.820
+2017-09-21 10:25:00 buy 91 shares at 177.590. money:148.130
+2018-01-03 12:49:00 sell 91 shares at 211.610. money:19404.640
+耗时62秒
+current price:$222.980 Now have 0 shares, $19404.640 cash, total value: 19404.640
+[ 6.    0.07  0.07]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+2018-01-03 14:42:00 sell 80 shares at 213.620. money:17106.320
+耗时62秒
+current price:$222.980 Now have 0 shares, $17106.320 cash, total value: 17106.320
+[ 6.    0.07  0.08]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+耗时62秒
+current price:$222.980 Now have 80 shares, $16.720 cash, total value: 17855.120
+[ 6.    0.07  0.09]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+耗时62秒
+current price:$222.980 Now have 80 shares, $16.720 cash, total value: 17855.120
+[ 6.    0.07  0.1 ]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:33:00 sell 89 shares at 115.180. money:10300.820
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:111.060
+耗时62秒
+current price:$222.980 Now have 80 shares, $111.060 cash, total value: 17949.460
+[ 6.    0.07  0.11]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:37:00 sell 89 shares at 116.340. money:10404.060
+2017-05-17 15:58:00 buy 81 shares at 127.372. money:86.928
+耗时62秒
+current price:$222.980 Now have 81 shares, $86.928 cash, total value: 18148.308
+[ 6.    0.07  0.12]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:42:00 sell 89 shares at 117.440. money:10501.960
+2017-05-17 15:58:00 buy 82 shares at 127.372. money:57.456
+耗时62秒
+current price:$222.980 Now have 82 shares, $57.456 cash, total value: 18341.816
+[ 6.    0.07  0.13]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 12:14:00 sell 89 shares at 118.215. money:10570.935
+2017-05-17 15:58:00 buy 82 shares at 127.372. money:126.431
+耗时62秒
+current price:$222.980 Now have 82 shares, $126.431 cash, total value: 18410.791
+[ 6.    0.07  0.14]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 13:02:00 sell 89 shares at 119.170. money:10655.930
+2017-05-17 15:58:00 buy 83 shares at 127.372. money:84.054
+耗时62秒
+current price:$222.980 Now have 83 shares, $84.054 cash, total value: 18591.394
+[ 6.    0.08  0.05]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2017-09-18 11:08:00 sell 70 shares at 189.033. money:13277.890
+2017-09-25 09:39:00 buy 76 shares at 174.130. money:44.010
+2018-01-03 11:00:00 sell 76 shares at 209.506. money:15966.466
+耗时62秒
+current price:$222.980 Now have 0 shares, $15966.466 cash, total value: 15966.466
+[ 6.    0.08  0.06]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2017-09-18 13:52:00 sell 70 shares at 190.760. money:13398.780
+2017-09-25 09:39:00 buy 76 shares at 174.130. money:164.900
+2018-01-03 12:49:00 sell 76 shares at 211.610. money:16247.260
+耗时62秒
+current price:$222.980 Now have 0 shares, $16247.260 cash, total value: 16247.260
+[ 6.    0.08  0.07]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2018-01-03 14:42:00 sell 70 shares at 213.620. money:14998.980
+耗时62秒
+current price:$222.980 Now have 0 shares, $14998.980 cash, total value: 14998.980
+[ 6.    0.08  0.08]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+耗时62秒
+current price:$222.980 Now have 70 shares, $45.580 cash, total value: 15654.180
+[ 6.    0.08  0.09]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+耗时62秒
+current price:$222.980 Now have 70 shares, $45.580 cash, total value: 15654.180
+[ 6.    0.08  0.1 ]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:33:00 sell 90 shares at 115.180. money:10421.110
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:140.980
+2017-07-03 11:07:00 buy 1 shares at 139.515. money:1.465
+耗时62秒
+current price:$222.980 Now have 71 shares, $1.465 cash, total value: 15833.045
+[ 6.    0.08  0.11]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:37:00 sell 90 shares at 116.340. money:10525.510
+2017-06-09 14:02:00 buy 71 shares at 146.859. money:98.521
+耗时62秒
+current price:$222.980 Now have 71 shares, $98.521 cash, total value: 15930.101
+[ 6.    0.08  0.12]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:42:00 sell 90 shares at 117.440. money:10624.510
+2017-06-09 14:02:00 buy 72 shares at 146.859. money:50.662
+耗时62秒
+current price:$222.980 Now have 72 shares, $50.662 cash, total value: 16105.222
+[ 6.    0.08  0.13]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 12:14:00 sell 90 shares at 118.215. money:10694.260
+2017-06-09 14:02:00 buy 72 shares at 146.859. money:120.412
+耗时62秒
+current price:$222.980 Now have 72 shares, $120.412 cash, total value: 16174.972
+[ 6.    0.08  0.14]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 13:02:00 sell 90 shares at 119.170. money:10780.210
+2017-06-09 14:02:00 buy 73 shares at 146.859. money:59.503
+耗时62秒
+current price:$222.980 Now have 73 shares, $59.503 cash, total value: 16337.043
+[ 6.    0.09  0.05]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+2017-09-18 11:08:00 sell 71 shares at 189.033. money:13527.256
+2017-09-25 10:55:00 buy 78 shares at 172.513. money:71.242
+2018-01-03 11:00:00 sell 78 shares at 209.506. money:16412.710
+耗时62秒
+current price:$222.980 Now have 0 shares, $16412.710 cash, total value: 16412.710
+[ 6.    0.09  0.06]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+2017-09-18 13:52:00 sell 71 shares at 190.760. money:13649.873
+2017-09-25 10:55:00 buy 79 shares at 172.513. money:21.346
+2018-01-03 12:49:00 sell 79 shares at 211.610. money:16738.536
+耗时62秒
+current price:$222.980 Now have 0 shares, $16738.536 cash, total value: 16738.536
+[ 6.    0.09  0.07]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+2018-01-03 14:42:00 sell 71 shares at 213.620. money:15272.933
+耗时62秒
+current price:$222.980 Now have 0 shares, $15272.933 cash, total value: 15272.933
+[ 6.    0.09  0.08]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+耗时62秒
+current price:$222.980 Now have 71 shares, $105.913 cash, total value: 15937.493
+[ 6.    0.09  0.09]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+耗时62秒
+current price:$222.980 Now have 71 shares, $105.913 cash, total value: 15937.493
+[ 6.    0.09  0.1 ]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:33:00 sell 91 shares at 115.180. money:10517.608
+2017-06-09 14:38:00 buy 72 shares at 145.285. money:57.088
+耗时62秒
+current price:$222.980 Now have 72 shares, $57.088 cash, total value: 16111.648
+[ 6.    0.09  0.11]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:37:00 sell 91 shares at 116.340. money:10623.168
+2017-06-09 14:38:00 buy 73 shares at 145.285. money:17.363
+耗时62秒
+current price:$222.980 Now have 73 shares, $17.363 cash, total value: 16294.903
+[ 6.    0.09  0.12]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:42:00 sell 91 shares at 117.440. money:10723.268
+2017-06-09 14:38:00 buy 73 shares at 145.285. money:117.463
+耗时62秒
+current price:$222.980 Now have 73 shares, $117.463 cash, total value: 16395.003
+[ 6.    0.09  0.13]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 12:14:00 sell 91 shares at 118.215. money:10793.793
+2017-06-09 14:38:00 buy 74 shares at 145.285. money:42.703
+耗时62秒
+current price:$222.980 Now have 74 shares, $42.703 cash, total value: 16543.223
+[ 6.    0.09  0.14]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 13:02:00 sell 91 shares at 119.170. money:10880.698
+2017-06-09 14:38:00 buy 74 shares at 145.285. money:129.608
+耗时62秒
+current price:$222.980 Now have 74 shares, $129.608 cash, total value: 16630.128
+[ 6.    0.1   0.05]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2017-09-18 11:08:00 sell 74 shares at 189.033. money:14002.058
+2017-09-25 14:36:00 buy 82 shares at 170.680. money:6.298
+2018-01-03 11:00:00 sell 82 shares at 209.506. money:17185.790
+耗时62秒
+current price:$222.980 Now have 0 shares, $17185.790 cash, total value: 17185.790
+[ 6.    0.1   0.06]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2017-09-18 13:52:00 sell 74 shares at 190.760. money:14129.856
+2017-09-25 14:36:00 buy 82 shares at 170.680. money:134.096
+2018-01-03 12:49:00 sell 82 shares at 211.610. money:17486.116
+耗时62秒
+current price:$222.980 Now have 0 shares, $17486.116 cash, total value: 17486.116
+[ 6.    0.1   0.07]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2018-01-03 14:42:00 sell 74 shares at 213.620. money:15821.496
+耗时62秒
+current price:$222.980 Now have 0 shares, $15821.496 cash, total value: 15821.496
+[ 6.    0.1   0.08]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.616 cash, total value: 16514.136
+[ 6.    0.1   0.09]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.616 cash, total value: 16514.136
+[ 6.   0.1  0.1]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:33:00 sell 92 shares at 115.180. money:10657.616
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:111.136
+耗时62秒
+current price:$222.980 Now have 74 shares, $111.136 cash, total value: 16611.656
+[ 6.    0.1   0.11]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:37:00 sell 92 shares at 116.340. money:10764.336
+2017-06-09 14:50:00 buy 75 shares at 142.520. money:75.336
+耗时62秒
+current price:$222.980 Now have 75 shares, $75.336 cash, total value: 16798.836
+[ 6.    0.1   0.12]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:42:00 sell 92 shares at 117.440. money:10865.536
+2017-06-09 14:50:00 buy 76 shares at 142.520. money:34.016
+耗时62秒
+current price:$222.980 Now have 76 shares, $34.016 cash, total value: 16980.496
+[ 6.    0.1   0.13]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 12:14:00 sell 92 shares at 118.215. money:10936.836
+2017-06-09 14:50:00 buy 76 shares at 142.520. money:105.316
+耗时62秒
+current price:$222.980 Now have 76 shares, $105.316 cash, total value: 17051.796
+[ 6.    0.1   0.14]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 13:02:00 sell 92 shares at 119.170. money:11024.696
+2017-06-09 14:50:00 buy 77 shares at 142.520. money:50.656
+耗时62秒
+current price:$222.980 Now have 77 shares, $50.656 cash, total value: 17220.116
+[ 7.    0.03  0.05]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12189.676
+2017-06-09 12:03:00 buy 78 shares at 154.835. money:112.546
+2017-09-18 11:08:00 sell 78 shares at 189.033. money:14857.120
+2017-09-19 09:40:00 buy 80 shares at 185.250. money:37.120
+2018-01-03 12:34:00 sell 80 shares at 210.150. money:16849.120
+2018-01-05 09:35:00 buy 79 shares at 211.470. money:142.990
+耗时62秒
+current price:$222.980 Now have 79 shares, $142.990 cash, total value: 17758.410
+[ 7.    0.03  0.06]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 15:17:00 sell 77 shares at 158.580. money:12283.616
+2017-06-09 12:03:00 buy 79 shares at 154.835. money:51.651
+2017-09-18 13:52:00 sell 79 shares at 190.760. money:15121.691
+2017-09-19 09:40:00 buy 81 shares at 185.250. money:116.441
+2018-01-03 14:26:00 sell 81 shares at 212.168. money:17302.049
+2018-01-05 09:35:00 buy 81 shares at 211.470. money:172.979
+耗时62秒
+current price:$222.980 Now have 81 shares, $172.979 cash, total value: 18234.359
+[ 7.    0.03  0.07]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+耗时62秒
+current price:$222.980 Now have 77 shares, $72.956 cash, total value: 17242.416
+[ 7.    0.03  0.08]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+耗时62秒
+current price:$222.980 Now have 77 shares, $72.956 cash, total value: 17242.416
+[ 7.    0.03  0.09]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+耗时62秒
+current price:$222.980 Now have 77 shares, $72.956 cash, total value: 17242.416
+[ 7.    0.03  0.1 ]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:33:00 sell 85 shares at 115.180. money:9868.675
+2017-05-12 10:33:00 buy 78 shares at 126.047. money:37.009
+耗时62秒
+current price:$222.980 Now have 78 shares, $37.009 cash, total value: 17429.449
+[ 7.    0.03  0.11]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:37:00 sell 85 shares at 116.340. money:9967.275
+2017-05-12 10:33:00 buy 79 shares at 126.047. money:9.562
+耗时62秒
+current price:$222.980 Now have 79 shares, $9.562 cash, total value: 17624.982
+[ 7.    0.03  0.12]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:42:00 sell 85 shares at 117.440. money:10060.775
+2017-05-12 10:33:00 buy 79 shares at 126.047. money:103.062
+耗时62秒
+current price:$222.980 Now have 79 shares, $103.062 cash, total value: 17718.482
+[ 7.    0.03  0.13]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 12:14:00 sell 85 shares at 118.215. money:10126.650
+2017-05-12 10:33:00 buy 80 shares at 126.047. money:42.890
+耗时62秒
+current price:$222.980 Now have 80 shares, $42.890 cash, total value: 17881.290
+[ 7.    0.03  0.14]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 13:02:00 sell 85 shares at 119.170. money:10207.825
+2017-05-12 10:33:00 buy 80 shares at 126.047. money:124.065
+耗时62秒
+current price:$222.980 Now have 80 shares, $124.065 cash, total value: 17962.465
+[ 7.    0.04  0.05]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2017-06-08 12:10:00 sell 75 shares at 157.360. money:11848.702
+2017-06-09 12:36:00 buy 77 shares at 153.150. money:56.152
+2017-09-18 11:08:00 sell 77 shares at 189.033. money:14611.693
+2017-09-21 09:31:00 buy 80 shares at 180.840. money:144.493
+2018-01-03 12:34:00 sell 80 shares at 210.150. money:16956.493
+耗时62秒
+current price:$222.980 Now have 0 shares, $16956.493 cash, total value: 16956.493
+[ 7.    0.04  0.06]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2017-06-08 15:17:00 sell 75 shares at 158.580. money:11940.202
+2017-06-09 12:36:00 buy 77 shares at 153.150. money:147.652
+2017-06-09 13:59:00 buy 1 shares at 147.620. money:0.032
+2017-09-18 13:52:00 sell 78 shares at 190.760. money:14879.312
+2017-09-21 09:31:00 buy 82 shares at 180.840. money:50.432
+2018-01-03 14:26:00 sell 82 shares at 212.168. money:17448.208
+耗时62秒
+current price:$222.980 Now have 0 shares, $17448.208 cash, total value: 17448.208
+[ 7.    0.04  0.07]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+耗时62秒
+current price:$222.980 Now have 75 shares, $46.702 cash, total value: 16770.202
+[ 7.    0.04  0.08]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+耗时62秒
+current price:$222.980 Now have 75 shares, $46.702 cash, total value: 16770.202
+[ 7.    0.04  0.09]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+耗时62秒
+current price:$222.980 Now have 75 shares, $46.702 cash, total value: 16770.202
+[ 7.    0.04  0.1 ]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:33:00 sell 86 shares at 115.180. money:9992.862
+2017-05-17 10:39:00 buy 76 shares at 131.400. money:6.462
+耗时62秒
+current price:$222.980 Now have 76 shares, $6.462 cash, total value: 16952.942
+[ 7.    0.04  0.11]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:37:00 sell 86 shares at 116.340. money:10092.622
+2017-05-17 10:39:00 buy 76 shares at 131.400. money:106.222
+耗时62秒
+current price:$222.980 Now have 76 shares, $106.222 cash, total value: 17052.702
+[ 7.    0.04  0.12]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:42:00 sell 86 shares at 117.440. money:10187.222
+2017-05-17 10:39:00 buy 77 shares at 131.400. money:69.422
+耗时62秒
+current price:$222.980 Now have 77 shares, $69.422 cash, total value: 17238.882
+[ 7.    0.04  0.13]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 12:14:00 sell 86 shares at 118.215. money:10253.872
+2017-05-17 10:39:00 buy 78 shares at 131.400. money:4.672
+耗时62秒
+current price:$222.980 Now have 78 shares, $4.672 cash, total value: 17397.112
+[ 7.    0.04  0.14]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 13:02:00 sell 86 shares at 119.170. money:10336.002
+2017-05-17 10:39:00 buy 78 shares at 131.400. money:86.802
+耗时62秒
+current price:$222.980 Now have 78 shares, $86.802 cash, total value: 17479.242
+[ 7.    0.05  0.05]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12175.610
+2017-06-09 13:11:00 buy 80 shares at 151.045. money:92.010
+2017-09-18 11:08:00 sell 80 shares at 189.033. money:15214.650
+2017-09-21 09:31:00 buy 84 shares at 180.840. money:24.090
+2018-01-03 12:34:00 sell 84 shares at 210.150. money:17676.690
+耗时62秒
+current price:$222.980 Now have 0 shares, $17676.690 cash, total value: 17676.690
+[ 7.    0.05  0.06]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2017-06-08 15:17:00 sell 77 shares at 158.580. money:12269.550
+2017-06-09 13:11:00 buy 81 shares at 151.045. money:34.905
+2017-09-18 13:52:00 sell 81 shares at 190.760. money:15486.465
+2017-09-21 09:31:00 buy 85 shares at 180.840. money:115.065
+2018-01-03 14:26:00 sell 85 shares at 212.168. money:18149.345
+耗时62秒
+current price:$222.980 Now have 0 shares, $18149.345 cash, total value: 18149.345
+[ 7.    0.05  0.07]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+耗时62秒
+current price:$222.980 Now have 77 shares, $58.890 cash, total value: 17228.350
+[ 7.    0.05  0.08]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+耗时62秒
+current price:$222.980 Now have 77 shares, $58.890 cash, total value: 17228.350
+[ 7.    0.05  0.09]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+耗时62秒
+current price:$222.980 Now have 77 shares, $58.890 cash, total value: 17228.350
+[ 7.    0.05  0.1 ]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:33:00 sell 88 shares at 115.180. money:10135.990
+2017-05-17 11:04:00 buy 78 shares at 129.660. money:22.510
+耗时62秒
+current price:$222.980 Now have 78 shares, $22.510 cash, total value: 17414.950
+[ 7.    0.05  0.11]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:37:00 sell 88 shares at 116.340. money:10238.070
+2017-05-17 11:04:00 buy 78 shares at 129.660. money:124.590
+耗时62秒
+current price:$222.980 Now have 78 shares, $124.590 cash, total value: 17517.030
+[ 7.    0.05  0.12]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:42:00 sell 88 shares at 117.440. money:10334.870
+2017-05-17 11:04:00 buy 79 shares at 129.660. money:91.730
+耗时62秒
+current price:$222.980 Now have 79 shares, $91.730 cash, total value: 17707.150
+[ 7.    0.05  0.13]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 12:14:00 sell 88 shares at 118.215. money:10403.070
+2017-05-17 11:04:00 buy 80 shares at 129.660. money:30.270
+耗时62秒
+current price:$222.980 Now have 80 shares, $30.270 cash, total value: 17868.670
+[ 7.    0.05  0.14]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 13:02:00 sell 88 shares at 119.170. money:10487.110
+2017-05-17 11:04:00 buy 80 shares at 129.660. money:114.310
+耗时62秒
+current price:$222.980 Now have 80 shares, $114.310 cash, total value: 17952.710
+[ 7.    0.06  0.05]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2017-06-08 12:10:00 sell 78 shares at 157.360. money:12324.896
+2017-06-09 13:13:00 buy 82 shares at 149.862. money:36.212
+2017-09-18 11:08:00 sell 82 shares at 189.033. money:15536.918
+2017-09-21 09:32:00 buy 86 shares at 179.272. money:119.526
+2018-01-03 12:34:00 sell 86 shares at 210.150. money:18192.426
+耗时62秒
+current price:$222.980 Now have 0 shares, $18192.426 cash, total value: 18192.426
+[ 7.    0.06  0.06]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2017-06-08 15:17:00 sell 78 shares at 158.580. money:12420.056
+2017-06-09 13:13:00 buy 82 shares at 149.862. money:131.372
+2017-09-18 13:52:00 sell 82 shares at 190.760. money:15773.692
+2017-09-21 09:32:00 buy 87 shares at 179.272. money:177.028
+2017-09-25 09:33:00 buy 1 shares at 176.043. money:0.985
+2018-01-03 14:26:00 sell 88 shares at 212.168. money:18671.769
+耗时62秒
+current price:$222.980 Now have 0 shares, $18671.769 cash, total value: 18671.769
+[ 7.    0.06  0.07]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+耗时62秒
+current price:$222.980 Now have 78 shares, $50.816 cash, total value: 17443.256
+[ 7.    0.06  0.08]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+耗时62秒
+current price:$222.980 Now have 78 shares, $50.816 cash, total value: 17443.256
+[ 7.    0.06  0.09]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+耗时62秒
+current price:$222.980 Now have 78 shares, $50.816 cash, total value: 17443.256
+[ 7.    0.06  0.1 ]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:33:00 sell 88 shares at 115.180. money:10188.936
+2017-05-17 14:30:00 buy 79 shares at 128.780. money:15.316
+耗时62秒
+current price:$222.980 Now have 79 shares, $15.316 cash, total value: 17630.736
+[ 7.    0.06  0.11]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:37:00 sell 88 shares at 116.340. money:10291.016
+2017-05-17 14:30:00 buy 79 shares at 128.780. money:117.396
+耗时62秒
+current price:$222.980 Now have 79 shares, $117.396 cash, total value: 17732.816
+[ 7.    0.06  0.12]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:42:00 sell 88 shares at 117.440. money:10387.816
+2017-05-17 14:30:00 buy 80 shares at 128.780. money:85.416
+耗时62秒
+current price:$222.980 Now have 80 shares, $85.416 cash, total value: 17923.816
+[ 7.    0.06  0.13]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 12:14:00 sell 88 shares at 118.215. money:10456.016
+2017-05-17 14:30:00 buy 81 shares at 128.780. money:24.836
+耗时62秒
+current price:$222.980 Now have 81 shares, $24.836 cash, total value: 18086.216
+[ 7.    0.06  0.14]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 13:02:00 sell 88 shares at 119.170. money:10540.056
+2017-05-17 14:30:00 buy 81 shares at 128.780. money:108.876
+耗时62秒
+current price:$222.980 Now have 81 shares, $108.876 cash, total value: 18170.256
+[ 7.    0.07  0.05]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+2017-06-08 12:10:00 sell 80 shares at 157.360. money:12605.520
+2017-06-09 13:55:00 buy 84 shares at 148.340. money:144.960
+2017-06-09 14:46:00 buy 1 shares at 144.260. money:0.700
+2017-09-18 11:08:00 sell 85 shares at 189.033. money:16068.505
+2017-09-21 10:25:00 buy 90 shares at 177.590. money:85.405
+2018-01-03 12:34:00 sell 90 shares at 210.150. money:18998.905
+耗时62秒
+current price:$222.980 Now have 0 shares, $18998.905 cash, total value: 18998.905
+[ 7.    0.07  0.06]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+2017-06-08 15:17:00 sell 80 shares at 158.580. money:12703.120
+2017-06-09 13:55:00 buy 85 shares at 148.340. money:94.220
+2017-09-18 13:52:00 sell 85 shares at 190.760. money:16308.820
+2017-09-21 10:25:00 buy 91 shares at 177.590. money:148.130
+2018-01-03 14:26:00 sell 91 shares at 212.168. money:19455.418
+耗时62秒
+current price:$222.980 Now have 0 shares, $19455.418 cash, total value: 19455.418
+[ 7.    0.07  0.07]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+耗时62秒
+current price:$222.980 Now have 80 shares, $16.720 cash, total value: 17855.120
+[ 7.    0.07  0.08]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+耗时62秒
+current price:$222.980 Now have 80 shares, $16.720 cash, total value: 17855.120
+[ 7.    0.07  0.09]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+耗时62秒
+current price:$222.980 Now have 80 shares, $16.720 cash, total value: 17855.120
+[ 7.    0.07  0.1 ]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:33:00 sell 89 shares at 115.180. money:10300.820
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:111.060
+耗时62秒
+current price:$222.980 Now have 80 shares, $111.060 cash, total value: 17949.460
+[ 7.    0.07  0.11]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:37:00 sell 89 shares at 116.340. money:10404.060
+2017-05-17 15:58:00 buy 81 shares at 127.372. money:86.928
+耗时62秒
+current price:$222.980 Now have 81 shares, $86.928 cash, total value: 18148.308
+[ 7.    0.07  0.12]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:42:00 sell 89 shares at 117.440. money:10501.960
+2017-05-17 15:58:00 buy 82 shares at 127.372. money:57.456
+耗时62秒
+current price:$222.980 Now have 82 shares, $57.456 cash, total value: 18341.816
+[ 7.    0.07  0.13]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 12:14:00 sell 89 shares at 118.215. money:10570.935
+2017-05-17 15:58:00 buy 82 shares at 127.372. money:126.431
+耗时62秒
+current price:$222.980 Now have 82 shares, $126.431 cash, total value: 18410.791
+[ 7.    0.07  0.14]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 13:02:00 sell 89 shares at 119.170. money:10655.930
+2017-05-17 15:58:00 buy 83 shares at 127.372. money:84.054
+耗时62秒
+current price:$222.980 Now have 83 shares, $84.054 cash, total value: 18591.394
+[ 7.    0.08  0.05]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2017-09-18 11:08:00 sell 70 shares at 189.033. money:13277.890
+2017-09-25 09:36:00 buy 75 shares at 175.400. money:122.890
+2018-01-03 12:34:00 sell 75 shares at 210.150. money:15884.140
+耗时62秒
+current price:$222.980 Now have 0 shares, $15884.140 cash, total value: 15884.140
+[ 7.    0.08  0.06]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2017-09-18 13:52:00 sell 70 shares at 190.760. money:13398.780
+2017-09-25 09:36:00 buy 76 shares at 175.400. money:68.380
+2018-01-03 14:26:00 sell 76 shares at 212.168. money:16193.148
+耗时62秒
+current price:$222.980 Now have 0 shares, $16193.148 cash, total value: 16193.148
+[ 7.    0.08  0.07]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+耗时62秒
+current price:$222.980 Now have 70 shares, $45.580 cash, total value: 15654.180
+[ 7.    0.08  0.08]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+耗时62秒
+current price:$222.980 Now have 70 shares, $45.580 cash, total value: 15654.180
+[ 7.    0.08  0.09]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+耗时62秒
+current price:$222.980 Now have 70 shares, $45.580 cash, total value: 15654.180
+[ 7.    0.08  0.1 ]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:33:00 sell 90 shares at 115.180. money:10421.110
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:140.980
+2017-07-03 10:58:00 buy 1 shares at 140.779. money:0.201
+耗时62秒
+current price:$222.980 Now have 71 shares, $0.201 cash, total value: 15831.781
+[ 7.    0.08  0.11]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:37:00 sell 90 shares at 116.340. money:10525.510
+2017-06-09 14:02:00 buy 71 shares at 146.859. money:98.521
+耗时62秒
+current price:$222.980 Now have 71 shares, $98.521 cash, total value: 15930.101
+[ 7.    0.08  0.12]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:42:00 sell 90 shares at 117.440. money:10624.510
+2017-06-09 14:02:00 buy 72 shares at 146.859. money:50.662
+耗时62秒
+current price:$222.980 Now have 72 shares, $50.662 cash, total value: 16105.222
+[ 7.    0.08  0.13]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 12:14:00 sell 90 shares at 118.215. money:10694.260
+2017-06-09 14:02:00 buy 72 shares at 146.859. money:120.412
+耗时62秒
+current price:$222.980 Now have 72 shares, $120.412 cash, total value: 16174.972
+[ 7.    0.08  0.14]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 13:02:00 sell 90 shares at 119.170. money:10780.210
+2017-06-09 14:02:00 buy 73 shares at 146.859. money:59.503
+耗时62秒
+current price:$222.980 Now have 73 shares, $59.503 cash, total value: 16337.043
+[ 7.    0.09  0.05]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+2017-09-18 11:08:00 sell 71 shares at 189.033. money:13527.256
+2017-09-25 09:57:00 buy 77 shares at 173.722. money:150.662
+2018-01-03 12:34:00 sell 77 shares at 210.150. money:16332.212
+耗时62秒
+current price:$222.980 Now have 0 shares, $16332.212 cash, total value: 16332.212
+[ 7.    0.09  0.06]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+2017-09-18 13:52:00 sell 71 shares at 190.760. money:13649.873
+2017-09-25 09:57:00 buy 78 shares at 173.722. money:99.557
+2018-01-03 14:26:00 sell 78 shares at 212.168. money:16648.661
+耗时62秒
+current price:$222.980 Now have 0 shares, $16648.661 cash, total value: 16648.661
+[ 7.    0.09  0.07]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+耗时62秒
+current price:$222.980 Now have 71 shares, $105.913 cash, total value: 15937.493
+[ 7.    0.09  0.08]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+耗时62秒
+current price:$222.980 Now have 71 shares, $105.913 cash, total value: 15937.493
+[ 7.    0.09  0.09]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+耗时62秒
+current price:$222.980 Now have 71 shares, $105.913 cash, total value: 15937.493
+[ 7.    0.09  0.1 ]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:33:00 sell 91 shares at 115.180. money:10517.608
+2017-06-09 14:38:00 buy 72 shares at 145.285. money:57.088
+耗时62秒
+current price:$222.980 Now have 72 shares, $57.088 cash, total value: 16111.648
+[ 7.    0.09  0.11]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:37:00 sell 91 shares at 116.340. money:10623.168
+2017-06-09 14:38:00 buy 73 shares at 145.285. money:17.363
+耗时62秒
+current price:$222.980 Now have 73 shares, $17.363 cash, total value: 16294.903
+[ 7.    0.09  0.12]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:42:00 sell 91 shares at 117.440. money:10723.268
+2017-06-09 14:38:00 buy 73 shares at 145.285. money:117.463
+耗时62秒
+current price:$222.980 Now have 73 shares, $117.463 cash, total value: 16395.003
+[ 7.    0.09  0.13]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 12:14:00 sell 91 shares at 118.215. money:10793.793
+2017-06-09 14:38:00 buy 74 shares at 145.285. money:42.703
+耗时62秒
+current price:$222.980 Now have 74 shares, $42.703 cash, total value: 16543.223
+[ 7.    0.09  0.14]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 13:02:00 sell 91 shares at 119.170. money:10880.698
+2017-06-09 14:38:00 buy 74 shares at 145.285. money:129.608
+耗时62秒
+current price:$222.980 Now have 74 shares, $129.608 cash, total value: 16630.128
+[ 7.    0.1   0.05]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2017-09-18 11:08:00 sell 74 shares at 189.033. money:14002.058
+2017-09-25 11:02:00 buy 81 shares at 171.877. money:80.021
+2018-01-03 12:34:00 sell 81 shares at 210.150. money:17102.171
+耗时62秒
+current price:$222.980 Now have 0 shares, $17102.171 cash, total value: 17102.171
+[ 7.    0.1   0.06]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2017-09-18 13:52:00 sell 74 shares at 190.760. money:14129.856
+2017-09-25 11:02:00 buy 82 shares at 171.877. money:35.942
+2018-01-03 14:26:00 sell 82 shares at 212.168. money:17433.718
+耗时62秒
+current price:$222.980 Now have 0 shares, $17433.718 cash, total value: 17433.718
+[ 7.    0.1   0.07]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.616 cash, total value: 16514.136
+[ 7.    0.1   0.08]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.616 cash, total value: 16514.136
+[ 7.    0.1   0.09]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.616 cash, total value: 16514.136
+[ 7.   0.1  0.1]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:33:00 sell 92 shares at 115.180. money:10657.616
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:111.136
+耗时62秒
+current price:$222.980 Now have 74 shares, $111.136 cash, total value: 16611.656
+[ 7.    0.1   0.11]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:37:00 sell 92 shares at 116.340. money:10764.336
+2017-06-09 14:50:00 buy 75 shares at 142.520. money:75.336
+耗时62秒
+current price:$222.980 Now have 75 shares, $75.336 cash, total value: 16798.836
+[ 7.    0.1   0.12]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:42:00 sell 92 shares at 117.440. money:10865.536
+2017-06-09 14:50:00 buy 76 shares at 142.520. money:34.016
+耗时62秒
+current price:$222.980 Now have 76 shares, $34.016 cash, total value: 16980.496
+[ 7.    0.1   0.13]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 12:14:00 sell 92 shares at 118.215. money:10936.836
+2017-06-09 14:50:00 buy 76 shares at 142.520. money:105.316
+耗时62秒
+current price:$222.980 Now have 76 shares, $105.316 cash, total value: 17051.796
+[ 7.    0.1   0.14]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 13:02:00 sell 92 shares at 119.170. money:11024.696
+2017-06-09 14:50:00 buy 77 shares at 142.520. money:50.656
+耗时62秒
+current price:$222.980 Now have 77 shares, $50.656 cash, total value: 17220.116
+[ 8.    0.03  0.05]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12189.676
+2017-06-09 12:03:00 buy 78 shares at 154.835. money:112.546
+2017-09-18 11:08:00 sell 78 shares at 189.033. money:14857.120
+2017-09-19 09:40:00 buy 80 shares at 185.250. money:37.120
+2018-01-03 12:34:00 sell 80 shares at 210.150. money:16849.120
+2018-01-05 09:35:00 buy 79 shares at 211.470. money:142.990
+耗时62秒
+current price:$222.980 Now have 79 shares, $142.990 cash, total value: 17758.410
+[ 8.    0.03  0.06]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 15:17:00 sell 77 shares at 158.580. money:12283.616
+2017-06-09 12:03:00 buy 79 shares at 154.835. money:51.651
+2017-09-18 13:52:00 sell 79 shares at 190.760. money:15121.691
+2017-09-19 09:40:00 buy 81 shares at 185.250. money:116.441
+2018-01-03 14:26:00 sell 81 shares at 212.168. money:17302.049
+2018-01-05 09:35:00 buy 81 shares at 211.470. money:172.979
+耗时62秒
+current price:$222.980 Now have 81 shares, $172.979 cash, total value: 18234.359
+[ 8.    0.03  0.07]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+耗时62秒
+current price:$222.980 Now have 77 shares, $72.956 cash, total value: 17242.416
+[ 8.    0.03  0.08]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+耗时62秒
+current price:$222.980 Now have 77 shares, $72.956 cash, total value: 17242.416
+[ 8.    0.03  0.09]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:33:00 sell 85 shares at 115.180. money:9868.675
+2017-05-12 10:33:00 buy 78 shares at 126.047. money:37.009
+耗时62秒
+current price:$222.980 Now have 78 shares, $37.009 cash, total value: 17429.449
+[ 8.    0.03  0.1 ]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:34:00 sell 85 shares at 115.840. money:9924.775
+2017-05-12 10:33:00 buy 78 shares at 126.047. money:93.109
+耗时62秒
+current price:$222.980 Now have 78 shares, $93.109 cash, total value: 17485.549
+[ 8.    0.03  0.11]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:38:00 sell 85 shares at 116.700. money:9997.875
+2017-05-12 10:33:00 buy 79 shares at 126.047. money:40.162
+耗时62秒
+current price:$222.980 Now have 79 shares, $40.162 cash, total value: 17655.582
+[ 8.    0.03  0.12]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 10:26:00 sell 85 shares at 117.790. money:10090.525
+2017-05-12 10:33:00 buy 80 shares at 126.047. money:6.765
+耗时62秒
+current price:$222.980 Now have 80 shares, $6.765 cash, total value: 17845.165
+[ 8.    0.03  0.13]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 12:31:00 sell 85 shares at 118.873. money:10182.580
+2017-05-12 10:33:00 buy 80 shares at 126.047. money:98.820
+耗时62秒
+current price:$222.980 Now have 80 shares, $98.820 cash, total value: 17937.220
+[ 8.    0.03  0.14]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 13:28:00 sell 85 shares at 119.970. money:10275.825
+2017-05-12 10:33:00 buy 81 shares at 126.047. money:66.018
+耗时62秒
+current price:$222.980 Now have 81 shares, $66.018 cash, total value: 18127.398
+[ 8.    0.04  0.05]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2017-06-08 12:10:00 sell 75 shares at 157.360. money:11848.702
+2017-06-09 12:36:00 buy 77 shares at 153.150. money:56.152
+2017-09-18 11:08:00 sell 77 shares at 189.033. money:14611.693
+2017-09-21 09:31:00 buy 80 shares at 180.840. money:144.493
+2018-01-03 12:34:00 sell 80 shares at 210.150. money:16956.493
+耗时62秒
+current price:$222.980 Now have 0 shares, $16956.493 cash, total value: 16956.493
+[ 8.    0.04  0.06]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2017-06-08 15:17:00 sell 75 shares at 158.580. money:11940.202
+2017-06-09 12:36:00 buy 77 shares at 153.150. money:147.652
+2017-06-09 13:59:00 buy 1 shares at 147.620. money:0.032
+2017-09-18 13:52:00 sell 78 shares at 190.760. money:14879.312
+2017-09-21 09:31:00 buy 82 shares at 180.840. money:50.432
+2018-01-03 14:26:00 sell 82 shares at 212.168. money:17448.208
+耗时62秒
+current price:$222.980 Now have 0 shares, $17448.208 cash, total value: 17448.208
+[ 8.    0.04  0.07]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+耗时62秒
+current price:$222.980 Now have 75 shares, $46.702 cash, total value: 16770.202
+[ 8.    0.04  0.08]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+耗时62秒
+current price:$222.980 Now have 75 shares, $46.702 cash, total value: 16770.202
+[ 8.    0.04  0.09]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:33:00 sell 86 shares at 115.180. money:9992.862
+2017-05-17 10:39:00 buy 76 shares at 131.400. money:6.462
+耗时62秒
+current price:$222.980 Now have 76 shares, $6.462 cash, total value: 16952.942
+[ 8.    0.04  0.1 ]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:34:00 sell 86 shares at 115.840. money:10049.622
+2017-05-17 10:39:00 buy 76 shares at 131.400. money:63.222
+耗时62秒
+current price:$222.980 Now have 76 shares, $63.222 cash, total value: 17009.702
+[ 8.    0.04  0.11]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:38:00 sell 86 shares at 116.700. money:10123.582
+2017-05-17 10:39:00 buy 77 shares at 131.400. money:5.782
+耗时62秒
+current price:$222.980 Now have 77 shares, $5.782 cash, total value: 17175.242
+[ 8.    0.04  0.12]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 10:26:00 sell 86 shares at 117.790. money:10217.322
+2017-05-17 10:39:00 buy 77 shares at 131.400. money:99.522
+耗时62秒
+current price:$222.980 Now have 77 shares, $99.522 cash, total value: 17268.982
+[ 8.    0.04  0.13]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 12:31:00 sell 86 shares at 118.873. money:10310.460
+2017-05-17 10:39:00 buy 78 shares at 131.400. money:61.260
+耗时62秒
+current price:$222.980 Now have 78 shares, $61.260 cash, total value: 17453.700
+[ 8.    0.04  0.14]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 13:28:00 sell 86 shares at 119.970. money:10404.802
+2017-05-17 10:39:00 buy 79 shares at 131.400. money:24.202
+耗时62秒
+current price:$222.980 Now have 79 shares, $24.202 cash, total value: 17639.622
+[ 8.    0.05  0.05]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12175.610
+2017-06-09 13:11:00 buy 80 shares at 151.045. money:92.010
+2017-09-18 11:08:00 sell 80 shares at 189.033. money:15214.650
+2017-09-21 09:31:00 buy 84 shares at 180.840. money:24.090
+2018-01-03 12:34:00 sell 84 shares at 210.150. money:17676.690
+耗时62秒
+current price:$222.980 Now have 0 shares, $17676.690 cash, total value: 17676.690
+[ 8.    0.05  0.06]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2017-06-08 15:17:00 sell 77 shares at 158.580. money:12269.550
+2017-06-09 13:11:00 buy 81 shares at 151.045. money:34.905
+2017-09-18 13:52:00 sell 81 shares at 190.760. money:15486.465
+2017-09-21 09:31:00 buy 85 shares at 180.840. money:115.065
+2018-01-03 14:26:00 sell 85 shares at 212.168. money:18149.345
+耗时62秒
+current price:$222.980 Now have 0 shares, $18149.345 cash, total value: 18149.345
+[ 8.    0.05  0.07]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+耗时62秒
+current price:$222.980 Now have 77 shares, $58.890 cash, total value: 17228.350
+[ 8.    0.05  0.08]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+耗时62秒
+current price:$222.980 Now have 77 shares, $58.890 cash, total value: 17228.350
+[ 8.    0.05  0.09]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:33:00 sell 88 shares at 115.180. money:10135.990
+2017-05-17 11:04:00 buy 78 shares at 129.660. money:22.510
+耗时62秒
+current price:$222.980 Now have 78 shares, $22.510 cash, total value: 17414.950
+[ 8.    0.05  0.1 ]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:34:00 sell 88 shares at 115.840. money:10194.070
+2017-05-17 11:04:00 buy 78 shares at 129.660. money:80.590
+耗时62秒
+current price:$222.980 Now have 78 shares, $80.590 cash, total value: 17473.030
+[ 8.    0.05  0.11]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:38:00 sell 88 shares at 116.700. money:10269.750
+2017-05-17 11:04:00 buy 79 shares at 129.660. money:26.610
+耗时62秒
+current price:$222.980 Now have 79 shares, $26.610 cash, total value: 17642.030
+[ 8.    0.05  0.12]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 10:26:00 sell 88 shares at 117.790. money:10365.670
+2017-05-17 11:04:00 buy 79 shares at 129.660. money:122.530
+耗时62秒
+current price:$222.980 Now have 79 shares, $122.530 cash, total value: 17737.950
+[ 8.    0.05  0.13]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 12:31:00 sell 88 shares at 118.873. money:10460.974
+2017-05-17 11:04:00 buy 80 shares at 129.660. money:88.174
+耗时62秒
+current price:$222.980 Now have 80 shares, $88.174 cash, total value: 17926.574
+[ 8.    0.05  0.14]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 13:28:00 sell 88 shares at 119.970. money:10557.510
+2017-05-17 11:04:00 buy 81 shares at 129.660. money:55.050
+耗时62秒
+current price:$222.980 Now have 81 shares, $55.050 cash, total value: 18116.430
+[ 8.    0.06  0.05]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2017-06-08 12:10:00 sell 78 shares at 157.360. money:12324.896
+2017-06-09 13:13:00 buy 82 shares at 149.862. money:36.212
+2017-09-18 11:08:00 sell 82 shares at 189.033. money:15536.918
+2017-09-21 09:32:00 buy 86 shares at 179.272. money:119.526
+2018-01-03 12:34:00 sell 86 shares at 210.150. money:18192.426
+耗时62秒
+current price:$222.980 Now have 0 shares, $18192.426 cash, total value: 18192.426
+[ 8.    0.06  0.06]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2017-06-08 15:17:00 sell 78 shares at 158.580. money:12420.056
+2017-06-09 13:13:00 buy 82 shares at 149.862. money:131.372
+2017-09-18 13:52:00 sell 82 shares at 190.760. money:15773.692
+2017-09-21 09:32:00 buy 87 shares at 179.272. money:177.028
+2017-09-25 09:33:00 buy 1 shares at 176.043. money:0.985
+2018-01-03 14:26:00 sell 88 shares at 212.168. money:18671.769
+耗时62秒
+current price:$222.980 Now have 0 shares, $18671.769 cash, total value: 18671.769
+[ 8.    0.06  0.07]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+耗时62秒
+current price:$222.980 Now have 78 shares, $50.816 cash, total value: 17443.256
+[ 8.    0.06  0.08]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+耗时62秒
+current price:$222.980 Now have 78 shares, $50.816 cash, total value: 17443.256
+[ 8.    0.06  0.09]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:33:00 sell 88 shares at 115.180. money:10188.936
+2017-05-17 14:30:00 buy 79 shares at 128.780. money:15.316
+耗时62秒
+current price:$222.980 Now have 79 shares, $15.316 cash, total value: 17630.736
+[ 8.    0.06  0.1 ]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:34:00 sell 88 shares at 115.840. money:10247.016
+2017-05-17 14:30:00 buy 79 shares at 128.780. money:73.396
+耗时62秒
+current price:$222.980 Now have 79 shares, $73.396 cash, total value: 17688.816
+[ 8.    0.06  0.11]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:38:00 sell 88 shares at 116.700. money:10322.696
+2017-05-17 14:30:00 buy 80 shares at 128.780. money:20.296
+耗时62秒
+current price:$222.980 Now have 80 shares, $20.296 cash, total value: 17858.696
+[ 8.    0.06  0.12]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 10:26:00 sell 88 shares at 117.790. money:10418.616
+2017-05-17 14:30:00 buy 80 shares at 128.780. money:116.216
+耗时62秒
+current price:$222.980 Now have 80 shares, $116.216 cash, total value: 17954.616
+[ 8.    0.06  0.13]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 12:31:00 sell 88 shares at 118.873. money:10513.920
+2017-05-17 14:30:00 buy 81 shares at 128.780. money:82.740
+耗时62秒
+current price:$222.980 Now have 81 shares, $82.740 cash, total value: 18144.120
+[ 8.    0.06  0.14]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 13:28:00 sell 88 shares at 119.970. money:10610.456
+2017-05-17 14:30:00 buy 82 shares at 128.780. money:50.496
+耗时62秒
+current price:$222.980 Now have 82 shares, $50.496 cash, total value: 18334.856
+[ 8.    0.07  0.05]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+2017-06-08 12:10:00 sell 80 shares at 157.360. money:12605.520
+2017-06-09 13:55:00 buy 84 shares at 148.340. money:144.960
+2017-06-09 14:46:00 buy 1 shares at 144.260. money:0.700
+2017-09-18 11:08:00 sell 85 shares at 189.033. money:16068.505
+2017-09-21 10:25:00 buy 90 shares at 177.590. money:85.405
+2018-01-03 12:34:00 sell 90 shares at 210.150. money:18998.905
+耗时62秒
+current price:$222.980 Now have 0 shares, $18998.905 cash, total value: 18998.905
+[ 8.    0.07  0.06]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+2017-06-08 15:17:00 sell 80 shares at 158.580. money:12703.120
+2017-06-09 13:55:00 buy 85 shares at 148.340. money:94.220
+2017-09-18 13:52:00 sell 85 shares at 190.760. money:16308.820
+2017-09-21 10:25:00 buy 91 shares at 177.590. money:148.130
+2018-01-03 14:26:00 sell 91 shares at 212.168. money:19455.418
+耗时62秒
+current price:$222.980 Now have 0 shares, $19455.418 cash, total value: 19455.418
+[ 8.    0.07  0.07]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+耗时62秒
+current price:$222.980 Now have 80 shares, $16.720 cash, total value: 17855.120
+[ 8.    0.07  0.08]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+耗时62秒
+current price:$222.980 Now have 80 shares, $16.720 cash, total value: 17855.120
+[ 8.    0.07  0.09]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:33:00 sell 89 shares at 115.180. money:10300.820
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:111.060
+耗时62秒
+current price:$222.980 Now have 80 shares, $111.060 cash, total value: 17949.460
+[ 8.    0.07  0.1 ]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:34:00 sell 89 shares at 115.840. money:10359.560
+2017-05-17 15:58:00 buy 81 shares at 127.372. money:42.428
+耗时62秒
+current price:$222.980 Now have 81 shares, $42.428 cash, total value: 18103.808
+[ 8.    0.07  0.11]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:38:00 sell 89 shares at 116.700. money:10436.100
+2017-05-17 15:58:00 buy 81 shares at 127.372. money:118.968
+耗时62秒
+current price:$222.980 Now have 81 shares, $118.968 cash, total value: 18180.348
+[ 8.    0.07  0.12]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 10:26:00 sell 89 shares at 117.790. money:10533.110
+2017-05-17 15:58:00 buy 82 shares at 127.372. money:88.606
+耗时62秒
+current price:$222.980 Now have 82 shares, $88.606 cash, total value: 18372.966
+[ 8.    0.07  0.13]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 12:31:00 sell 89 shares at 118.873. money:10629.497
+2017-05-17 15:58:00 buy 83 shares at 127.372. money:57.621
+耗时62秒
+current price:$222.980 Now have 83 shares, $57.621 cash, total value: 18564.961
+[ 8.    0.07  0.14]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 13:28:00 sell 89 shares at 119.970. money:10727.130
+2017-05-17 15:58:00 buy 84 shares at 127.372. money:27.882
+耗时62秒
+current price:$222.980 Now have 84 shares, $27.882 cash, total value: 18758.202
+[ 8.    0.08  0.05]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2017-09-18 11:08:00 sell 70 shares at 189.033. money:13277.890
+2017-09-25 09:36:00 buy 75 shares at 175.400. money:122.890
+2018-01-03 12:34:00 sell 75 shares at 210.150. money:15884.140
+耗时62秒
+current price:$222.980 Now have 0 shares, $15884.140 cash, total value: 15884.140
+[ 8.    0.08  0.06]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2017-09-18 13:52:00 sell 70 shares at 190.760. money:13398.780
+2017-09-25 09:36:00 buy 76 shares at 175.400. money:68.380
+2018-01-03 14:26:00 sell 76 shares at 212.168. money:16193.148
+耗时62秒
+current price:$222.980 Now have 0 shares, $16193.148 cash, total value: 16193.148
+[ 8.    0.08  0.07]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+耗时62秒
+current price:$222.980 Now have 70 shares, $45.580 cash, total value: 15654.180
+[ 8.    0.08  0.08]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+耗时62秒
+current price:$222.980 Now have 70 shares, $45.580 cash, total value: 15654.180
+[ 8.    0.08  0.09]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:33:00 sell 90 shares at 115.180. money:10421.110
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:140.980
+2017-07-03 10:58:00 buy 1 shares at 140.779. money:0.201
+耗时62秒
+current price:$222.980 Now have 71 shares, $0.201 cash, total value: 15831.781
+[ 8.    0.08  0.1 ]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:34:00 sell 90 shares at 115.840. money:10480.510
+2017-06-09 14:02:00 buy 71 shares at 146.859. money:53.521
+耗时62秒
+current price:$222.980 Now have 71 shares, $53.521 cash, total value: 15885.101
+[ 8.    0.08  0.11]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:38:00 sell 90 shares at 116.700. money:10557.910
+2017-06-09 14:02:00 buy 71 shares at 146.859. money:130.921
+耗时62秒
+current price:$222.980 Now have 71 shares, $130.921 cash, total value: 15962.501
+[ 8.    0.08  0.12]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 10:26:00 sell 90 shares at 117.790. money:10656.010
+2017-06-09 14:02:00 buy 72 shares at 146.859. money:82.162
+耗时62秒
+current price:$222.980 Now have 72 shares, $82.162 cash, total value: 16136.722
+[ 8.    0.08  0.13]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 12:31:00 sell 90 shares at 118.873. money:10753.480
+2017-06-09 14:02:00 buy 73 shares at 146.859. money:32.773
+耗时62秒
+current price:$222.980 Now have 73 shares, $32.773 cash, total value: 16310.313
+[ 8.    0.08  0.14]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 13:28:00 sell 90 shares at 119.970. money:10852.210
+2017-06-09 14:02:00 buy 73 shares at 146.859. money:131.503
+耗时62秒
+current price:$222.980 Now have 73 shares, $131.503 cash, total value: 16409.043
+[ 8.    0.09  0.05]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+2017-09-18 11:08:00 sell 71 shares at 189.033. money:13527.256
+2017-09-25 09:57:00 buy 77 shares at 173.722. money:150.662
+2018-01-03 12:34:00 sell 77 shares at 210.150. money:16332.212
+耗时62秒
+current price:$222.980 Now have 0 shares, $16332.212 cash, total value: 16332.212
+[ 8.    0.09  0.06]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+2017-09-18 13:52:00 sell 71 shares at 190.760. money:13649.873
+2017-09-25 09:57:00 buy 78 shares at 173.722. money:99.557
+2018-01-03 14:26:00 sell 78 shares at 212.168. money:16648.661
+耗时62秒
+current price:$222.980 Now have 0 shares, $16648.661 cash, total value: 16648.661
+[ 8.    0.09  0.07]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+耗时62秒
+current price:$222.980 Now have 71 shares, $105.913 cash, total value: 15937.493
+[ 8.    0.09  0.08]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+耗时62秒
+current price:$222.980 Now have 71 shares, $105.913 cash, total value: 15937.493
+[ 8.    0.09  0.09]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:33:00 sell 91 shares at 115.180. money:10517.608
+2017-06-09 14:38:00 buy 72 shares at 145.285. money:57.088
+耗时62秒
+current price:$222.980 Now have 72 shares, $57.088 cash, total value: 16111.648
+[ 8.    0.09  0.1 ]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:34:00 sell 91 shares at 115.840. money:10577.668
+2017-06-09 14:38:00 buy 72 shares at 145.285. money:117.148
+耗时62秒
+current price:$222.980 Now have 72 shares, $117.148 cash, total value: 16171.708
+[ 8.    0.09  0.11]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:38:00 sell 91 shares at 116.700. money:10655.928
+2017-06-09 14:38:00 buy 73 shares at 145.285. money:50.123
+耗时62秒
+current price:$222.980 Now have 73 shares, $50.123 cash, total value: 16327.663
+[ 8.    0.09  0.12]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 10:26:00 sell 91 shares at 117.790. money:10755.118
+2017-06-09 14:38:00 buy 74 shares at 145.285. money:4.028
+耗时62秒
+current price:$222.980 Now have 74 shares, $4.028 cash, total value: 16504.548
+[ 8.    0.09  0.13]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 12:31:00 sell 91 shares at 118.873. money:10853.671
+2017-06-09 14:38:00 buy 74 shares at 145.285. money:102.581
+耗时62秒
+current price:$222.980 Now have 74 shares, $102.581 cash, total value: 16603.101
+[ 8.    0.09  0.14]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 13:28:00 sell 91 shares at 119.970. money:10953.498
+2017-06-09 14:38:00 buy 75 shares at 145.285. money:57.123
+耗时62秒
+current price:$222.980 Now have 75 shares, $57.123 cash, total value: 16780.623
+[ 8.    0.1   0.05]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2017-09-18 11:08:00 sell 74 shares at 189.033. money:14002.058
+2017-09-25 11:02:00 buy 81 shares at 171.877. money:80.021
+2018-01-03 12:34:00 sell 81 shares at 210.150. money:17102.171
+耗时62秒
+current price:$222.980 Now have 0 shares, $17102.171 cash, total value: 17102.171
+[ 8.    0.1   0.06]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2017-09-18 13:52:00 sell 74 shares at 190.760. money:14129.856
+2017-09-25 11:02:00 buy 82 shares at 171.877. money:35.942
+2018-01-03 14:26:00 sell 82 shares at 212.168. money:17433.718
+耗时62秒
+current price:$222.980 Now have 0 shares, $17433.718 cash, total value: 17433.718
+[ 8.    0.1   0.07]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.616 cash, total value: 16514.136
+[ 8.    0.1   0.08]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.616 cash, total value: 16514.136
+[ 8.    0.1   0.09]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:33:00 sell 92 shares at 115.180. money:10657.616
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:111.136
+耗时62秒
+current price:$222.980 Now have 74 shares, $111.136 cash, total value: 16611.656
+[ 8.   0.1  0.1]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:34:00 sell 92 shares at 115.840. money:10718.336
+2017-06-09 14:50:00 buy 75 shares at 142.520. money:29.336
+耗时62秒
+current price:$222.980 Now have 75 shares, $29.336 cash, total value: 16752.836
+[ 8.    0.1   0.11]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:38:00 sell 92 shares at 116.700. money:10797.456
+2017-06-09 14:50:00 buy 75 shares at 142.520. money:108.456
+耗时62秒
+current price:$222.980 Now have 75 shares, $108.456 cash, total value: 16831.956
+[ 8.    0.1   0.12]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 10:26:00 sell 92 shares at 117.790. money:10897.736
+2017-06-09 14:50:00 buy 76 shares at 142.520. money:66.216
+耗时62秒
+current price:$222.980 Now have 76 shares, $66.216 cash, total value: 17012.696
+[ 8.    0.1   0.13]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 12:31:00 sell 92 shares at 118.873. money:10997.372
+2017-06-09 14:50:00 buy 77 shares at 142.520. money:23.332
+耗时62秒
+current price:$222.980 Now have 77 shares, $23.332 cash, total value: 17192.792
+[ 8.    0.1   0.14]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 13:28:00 sell 92 shares at 119.970. money:11098.296
+2017-06-09 14:50:00 buy 77 shares at 142.520. money:124.256
+耗时62秒
+current price:$222.980 Now have 77 shares, $124.256 cash, total value: 17293.716
+[ 9.    0.03  0.05]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12189.676
+2017-06-09 12:03:00 buy 78 shares at 154.835. money:112.546
+2017-09-18 11:08:00 sell 78 shares at 189.033. money:14857.120
+2017-09-19 09:40:00 buy 80 shares at 185.250. money:37.120
+2018-01-03 12:34:00 sell 80 shares at 210.150. money:16849.120
+2018-01-05 09:35:00 buy 79 shares at 211.470. money:142.990
+耗时62秒
+current price:$222.980 Now have 79 shares, $142.990 cash, total value: 17758.410
+[ 9.    0.03  0.06]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+2017-06-08 15:17:00 sell 77 shares at 158.580. money:12283.616
+2017-06-09 12:03:00 buy 79 shares at 154.835. money:51.651
+2017-09-18 13:52:00 sell 79 shares at 190.760. money:15121.691
+2017-09-19 09:40:00 buy 81 shares at 185.250. money:116.441
+2018-01-03 14:26:00 sell 81 shares at 212.168. money:17302.049
+2018-01-05 09:35:00 buy 81 shares at 211.470. money:172.979
+耗时62秒
+current price:$222.980 Now have 81 shares, $172.979 cash, total value: 18234.359
+[ 9.    0.03  0.07]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:31:00 sell 85 shares at 114.120. money:9778.575
+2017-05-12 10:33:00 buy 77 shares at 126.047. money:72.956
+耗时62秒
+current price:$222.980 Now have 77 shares, $72.956 cash, total value: 17242.416
+[ 9.    0.03  0.08]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:33:00 sell 85 shares at 115.180. money:9868.675
+2017-05-12 10:33:00 buy 78 shares at 126.047. money:37.009
+耗时62秒
+current price:$222.980 Now have 78 shares, $37.009 cash, total value: 17429.449
+[ 9.    0.03  0.09]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:37:00 sell 85 shares at 116.340. money:9967.275
+2017-05-12 10:33:00 buy 79 shares at 126.047. money:9.562
+耗时62秒
+current price:$222.980 Now have 79 shares, $9.562 cash, total value: 17624.982
+[ 9.    0.03  0.1 ]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 09:42:00 sell 85 shares at 117.440. money:10060.775
+2017-05-12 10:33:00 buy 79 shares at 126.047. money:103.062
+耗时62秒
+current price:$222.980 Now have 79 shares, $103.062 cash, total value: 17718.482
+[ 9.    0.03  0.11]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 12:14:00 sell 85 shares at 118.215. money:10126.650
+2017-05-12 10:33:00 buy 80 shares at 126.047. money:42.890
+耗时62秒
+current price:$222.980 Now have 80 shares, $42.890 cash, total value: 17881.290
+[ 9.    0.03  0.12]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 13:04:00 sell 85 shares at 119.390. money:10226.525
+2017-05-12 10:33:00 buy 81 shares at 126.047. money:16.718
+耗时62秒
+current price:$222.980 Now have 81 shares, $16.718 cash, total value: 18078.098
+[ 9.    0.03  0.13]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 13:37:00 sell 85 shares at 120.290. money:10303.025
+2017-05-12 10:33:00 buy 81 shares at 126.047. money:93.218
+耗时62秒
+current price:$222.980 Now have 81 shares, $93.218 cash, total value: 18154.598
+[ 9.    0.03  0.14]
+2017-02-08 09:49:00 buy 85 shares at 116.725. money:78.375
+2017-05-10 15:47:00 sell 85 shares at 121.350. money:10393.125
+2017-05-12 10:33:00 buy 82 shares at 126.047. money:57.271
+耗时62秒
+current price:$222.980 Now have 82 shares, $57.271 cash, total value: 18341.631
+[ 9.    0.04  0.05]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2017-06-08 12:10:00 sell 75 shares at 157.360. money:11848.702
+2017-06-09 12:36:00 buy 77 shares at 153.150. money:56.152
+2017-09-18 11:08:00 sell 77 shares at 189.033. money:14611.693
+2017-09-21 09:31:00 buy 80 shares at 180.840. money:144.493
+2018-01-03 12:34:00 sell 80 shares at 210.150. money:16956.493
+耗时62秒
+current price:$222.980 Now have 0 shares, $16956.493 cash, total value: 16956.493
+[ 9.    0.04  0.06]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+2017-06-08 15:17:00 sell 75 shares at 158.580. money:11940.202
+2017-06-09 12:36:00 buy 77 shares at 153.150. money:147.652
+2017-06-09 13:59:00 buy 1 shares at 147.620. money:0.032
+2017-09-18 13:52:00 sell 78 shares at 190.760. money:14879.312
+2017-09-21 09:31:00 buy 82 shares at 180.840. money:50.432
+2018-01-03 14:26:00 sell 82 shares at 212.168. money:17448.208
+耗时62秒
+current price:$222.980 Now have 0 shares, $17448.208 cash, total value: 17448.208
+[ 9.    0.04  0.07]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:31:00 sell 86 shares at 114.120. money:9901.702
+2017-05-17 10:39:00 buy 75 shares at 131.400. money:46.702
+耗时62秒
+current price:$222.980 Now have 75 shares, $46.702 cash, total value: 16770.202
+[ 9.    0.04  0.08]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:33:00 sell 86 shares at 115.180. money:9992.862
+2017-05-17 10:39:00 buy 76 shares at 131.400. money:6.462
+耗时62秒
+current price:$222.980 Now have 76 shares, $6.462 cash, total value: 16952.942
+[ 9.    0.04  0.09]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:37:00 sell 86 shares at 116.340. money:10092.622
+2017-05-17 10:39:00 buy 76 shares at 131.400. money:106.222
+耗时62秒
+current price:$222.980 Now have 76 shares, $106.222 cash, total value: 17052.702
+[ 9.    0.04  0.1 ]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 09:42:00 sell 86 shares at 117.440. money:10187.222
+2017-05-17 10:39:00 buy 77 shares at 131.400. money:69.422
+耗时62秒
+current price:$222.980 Now have 77 shares, $69.422 cash, total value: 17238.882
+[ 9.    0.04  0.11]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 12:14:00 sell 86 shares at 118.215. money:10253.872
+2017-05-17 10:39:00 buy 78 shares at 131.400. money:4.672
+耗时62秒
+current price:$222.980 Now have 78 shares, $4.672 cash, total value: 17397.112
+[ 9.    0.04  0.12]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 13:04:00 sell 86 shares at 119.390. money:10354.922
+2017-05-17 10:39:00 buy 78 shares at 131.400. money:105.722
+耗时62秒
+current price:$222.980 Now have 78 shares, $105.722 cash, total value: 17498.162
+[ 9.    0.04  0.13]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 13:37:00 sell 86 shares at 120.290. money:10432.322
+2017-05-17 10:39:00 buy 79 shares at 131.400. money:51.722
+耗时62秒
+current price:$222.980 Now have 79 shares, $51.722 cash, total value: 17667.142
+[ 9.    0.04  0.14]
+2017-02-09 15:48:00 buy 86 shares at 115.263. money:87.382
+2017-05-10 15:47:00 sell 86 shares at 121.350. money:10523.482
+2017-05-17 10:39:00 buy 80 shares at 131.400. money:11.482
+耗时62秒
+current price:$222.980 Now have 80 shares, $11.482 cash, total value: 17849.882
+[ 9.    0.05  0.05]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2017-06-08 12:10:00 sell 77 shares at 157.360. money:12175.610
+2017-06-09 13:11:00 buy 80 shares at 151.045. money:92.010
+2017-09-18 11:08:00 sell 80 shares at 189.033. money:15214.650
+2017-09-21 09:31:00 buy 84 shares at 180.840. money:24.090
+2018-01-03 12:34:00 sell 84 shares at 210.150. money:17676.690
+耗时62秒
+current price:$222.980 Now have 0 shares, $17676.690 cash, total value: 17676.690
+[ 9.    0.05  0.06]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+2017-06-08 15:17:00 sell 77 shares at 158.580. money:12269.550
+2017-06-09 13:11:00 buy 81 shares at 151.045. money:34.905
+2017-09-18 13:52:00 sell 81 shares at 190.760. money:15486.465
+2017-09-21 09:31:00 buy 85 shares at 180.840. money:115.065
+2018-01-03 14:26:00 sell 85 shares at 212.168. money:18149.345
+耗时62秒
+current price:$222.980 Now have 0 shares, $18149.345 cash, total value: 18149.345
+[ 9.    0.05  0.07]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10042.710
+2017-05-17 11:04:00 buy 77 shares at 129.660. money:58.890
+耗时62秒
+current price:$222.980 Now have 77 shares, $58.890 cash, total value: 17228.350
+[ 9.    0.05  0.08]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:33:00 sell 88 shares at 115.180. money:10135.990
+2017-05-17 11:04:00 buy 78 shares at 129.660. money:22.510
+耗时62秒
+current price:$222.980 Now have 78 shares, $22.510 cash, total value: 17414.950
+[ 9.    0.05  0.09]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:37:00 sell 88 shares at 116.340. money:10238.070
+2017-05-17 11:04:00 buy 78 shares at 129.660. money:124.590
+耗时62秒
+current price:$222.980 Now have 78 shares, $124.590 cash, total value: 17517.030
+[ 9.    0.05  0.1 ]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 09:42:00 sell 88 shares at 117.440. money:10334.870
+2017-05-17 11:04:00 buy 79 shares at 129.660. money:91.730
+耗时62秒
+current price:$222.980 Now have 79 shares, $91.730 cash, total value: 17707.150
+[ 9.    0.05  0.11]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 12:14:00 sell 88 shares at 118.215. money:10403.070
+2017-05-17 11:04:00 buy 80 shares at 129.660. money:30.270
+耗时62秒
+current price:$222.980 Now have 80 shares, $30.270 cash, total value: 17868.670
+[ 9.    0.05  0.12]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 13:04:00 sell 88 shares at 119.390. money:10506.470
+2017-05-17 11:04:00 buy 81 shares at 129.660. money:4.010
+耗时62秒
+current price:$222.980 Now have 81 shares, $4.010 cash, total value: 18065.390
+[ 9.    0.05  0.13]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 13:37:00 sell 88 shares at 120.290. money:10585.670
+2017-05-17 11:04:00 buy 81 shares at 129.660. money:83.210
+耗时62秒
+current price:$222.980 Now have 81 shares, $83.210 cash, total value: 18144.590
+[ 9.    0.05  0.14]
+2017-02-10 09:53:00 buy 87 shares at 113.830. money:96.790
+2017-02-24 09:30:00 buy 1 shares at 96.640. money:0.150
+2017-05-10 15:47:00 sell 88 shares at 121.350. money:10678.950
+2017-05-17 11:04:00 buy 82 shares at 129.660. money:46.830
+耗时62秒
+current price:$222.980 Now have 82 shares, $46.830 cash, total value: 18331.190
+[ 9.    0.06  0.05]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2017-06-08 12:10:00 sell 78 shares at 157.360. money:12324.896
+2017-06-09 13:13:00 buy 82 shares at 149.862. money:36.212
+2017-09-18 11:08:00 sell 82 shares at 189.033. money:15536.918
+2017-09-21 09:32:00 buy 86 shares at 179.272. money:119.526
+2018-01-03 12:34:00 sell 86 shares at 210.150. money:18192.426
+耗时62秒
+current price:$222.980 Now have 0 shares, $18192.426 cash, total value: 18192.426
+[ 9.    0.06  0.06]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+2017-06-08 15:17:00 sell 78 shares at 158.580. money:12420.056
+2017-06-09 13:13:00 buy 82 shares at 149.862. money:131.372
+2017-09-18 13:52:00 sell 82 shares at 190.760. money:15773.692
+2017-09-21 09:32:00 buy 87 shares at 179.272. money:177.028
+2017-09-25 09:33:00 buy 1 shares at 176.043. money:0.985
+2018-01-03 14:26:00 sell 88 shares at 212.168. money:18671.769
+耗时62秒
+current price:$222.980 Now have 0 shares, $18671.769 cash, total value: 18671.769
+[ 9.    0.06  0.07]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:31:00 sell 88 shares at 114.120. money:10095.656
+2017-05-17 14:30:00 buy 78 shares at 128.780. money:50.816
+耗时62秒
+current price:$222.980 Now have 78 shares, $50.816 cash, total value: 17443.256
+[ 9.    0.06  0.08]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:33:00 sell 88 shares at 115.180. money:10188.936
+2017-05-17 14:30:00 buy 79 shares at 128.780. money:15.316
+耗时62秒
+current price:$222.980 Now have 79 shares, $15.316 cash, total value: 17630.736
+[ 9.    0.06  0.09]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:37:00 sell 88 shares at 116.340. money:10291.016
+2017-05-17 14:30:00 buy 79 shares at 128.780. money:117.396
+耗时62秒
+current price:$222.980 Now have 79 shares, $117.396 cash, total value: 17732.816
+[ 9.    0.06  0.1 ]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 09:42:00 sell 88 shares at 117.440. money:10387.816
+2017-05-17 14:30:00 buy 80 shares at 128.780. money:85.416
+耗时62秒
+current price:$222.980 Now have 80 shares, $85.416 cash, total value: 17923.816
+[ 9.    0.06  0.11]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 12:14:00 sell 88 shares at 118.215. money:10456.016
+2017-05-17 14:30:00 buy 81 shares at 128.780. money:24.836
+耗时62秒
+current price:$222.980 Now have 81 shares, $24.836 cash, total value: 18086.216
+[ 9.    0.06  0.12]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 13:04:00 sell 88 shares at 119.390. money:10559.416
+2017-05-17 14:30:00 buy 81 shares at 128.780. money:128.236
+2017-05-17 14:40:00 buy 1 shares at 128.190. money:0.046
+耗时62秒
+current price:$222.980 Now have 82 shares, $0.046 cash, total value: 18284.406
+[ 9.    0.06  0.13]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 13:37:00 sell 88 shares at 120.290. money:10638.616
+2017-05-17 14:30:00 buy 82 shares at 128.780. money:78.656
+耗时62秒
+current price:$222.980 Now have 82 shares, $78.656 cash, total value: 18363.016
+[ 9.    0.06  0.14]
+2017-02-10 10:00:00 buy 88 shares at 113.033. money:53.096
+2017-05-10 15:47:00 sell 88 shares at 121.350. money:10731.896
+2017-05-17 14:30:00 buy 83 shares at 128.780. money:43.156
+耗时62秒
+current price:$222.980 Now have 83 shares, $43.156 cash, total value: 18550.496
+[ 9.    0.07  0.05]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+2017-06-08 12:10:00 sell 80 shares at 157.360. money:12605.520
+2017-06-09 13:55:00 buy 84 shares at 148.340. money:144.960
+2017-06-09 14:46:00 buy 1 shares at 144.260. money:0.700
+2017-09-18 11:08:00 sell 85 shares at 189.033. money:16068.505
+2017-09-21 10:25:00 buy 90 shares at 177.590. money:85.405
+2018-01-03 12:34:00 sell 90 shares at 210.150. money:18998.905
+耗时62秒
+current price:$222.980 Now have 0 shares, $18998.905 cash, total value: 18998.905
+[ 9.    0.07  0.06]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+2017-06-08 15:17:00 sell 80 shares at 158.580. money:12703.120
+2017-06-09 13:55:00 buy 85 shares at 148.340. money:94.220
+2017-09-18 13:52:00 sell 85 shares at 190.760. money:16308.820
+2017-09-21 10:25:00 buy 91 shares at 177.590. money:148.130
+2018-01-03 14:26:00 sell 91 shares at 212.168. money:19455.418
+耗时62秒
+current price:$222.980 Now have 0 shares, $19455.418 cash, total value: 19455.418
+[ 9.    0.07  0.07]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:16.720
+耗时62秒
+current price:$222.980 Now have 80 shares, $16.720 cash, total value: 17855.120
+[ 9.    0.07  0.08]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:33:00 sell 89 shares at 115.180. money:10300.820
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:111.060
+耗时62秒
+current price:$222.980 Now have 80 shares, $111.060 cash, total value: 17949.460
+[ 9.    0.07  0.09]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:37:00 sell 89 shares at 116.340. money:10404.060
+2017-05-17 15:58:00 buy 81 shares at 127.372. money:86.928
+耗时62秒
+current price:$222.980 Now have 81 shares, $86.928 cash, total value: 18148.308
+[ 9.    0.07  0.1 ]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:42:00 sell 89 shares at 117.440. money:10501.960
+2017-05-17 15:58:00 buy 82 shares at 127.372. money:57.456
+耗时62秒
+current price:$222.980 Now have 82 shares, $57.456 cash, total value: 18341.816
+[ 9.    0.07  0.11]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 12:14:00 sell 89 shares at 118.215. money:10570.935
+2017-05-17 15:58:00 buy 82 shares at 127.372. money:126.431
+耗时62秒
+current price:$222.980 Now have 82 shares, $126.431 cash, total value: 18410.791
+[ 9.    0.07  0.12]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 13:04:00 sell 89 shares at 119.390. money:10675.510
+2017-05-17 15:58:00 buy 83 shares at 127.372. money:103.634
+耗时62秒
+current price:$222.980 Now have 83 shares, $103.634 cash, total value: 18610.974
+[ 9.    0.07  0.13]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 13:37:00 sell 89 shares at 120.290. money:10755.610
+2017-05-17 15:58:00 buy 84 shares at 127.372. money:56.362
+耗时62秒
+current price:$222.980 Now have 84 shares, $56.362 cash, total value: 18786.682
+[ 9.    0.07  0.14]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 15:47:00 sell 89 shares at 121.350. money:10849.950
+2017-05-17 15:58:00 buy 85 shares at 127.372. money:23.330
+耗时62秒
+current price:$222.980 Now have 85 shares, $23.330 cash, total value: 18976.630
+[ 9.    0.08  0.05]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2017-09-18 11:08:00 sell 70 shares at 189.033. money:13277.890
+2017-09-25 09:36:00 buy 75 shares at 175.400. money:122.890
+2018-01-03 12:34:00 sell 75 shares at 210.150. money:15884.140
+耗时62秒
+current price:$222.980 Now have 0 shares, $15884.140 cash, total value: 15884.140
+[ 9.    0.08  0.06]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+2017-09-18 13:52:00 sell 70 shares at 190.760. money:13398.780
+2017-09-25 09:36:00 buy 76 shares at 175.400. money:68.380
+2018-01-03 14:26:00 sell 76 shares at 212.168. money:16193.148
+耗时62秒
+current price:$222.980 Now have 0 shares, $16193.148 cash, total value: 16193.148
+[ 9.    0.08  0.07]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10325.710
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:45.580
+耗时62秒
+current price:$222.980 Now have 70 shares, $45.580 cash, total value: 15654.180
+[ 9.    0.08  0.08]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:33:00 sell 90 shares at 115.180. money:10421.110
+2017-06-09 14:02:00 buy 70 shares at 146.859. money:140.980
+2017-07-03 10:58:00 buy 1 shares at 140.779. money:0.201
+耗时62秒
+current price:$222.980 Now have 71 shares, $0.201 cash, total value: 15831.781
+[ 9.    0.08  0.09]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:37:00 sell 90 shares at 116.340. money:10525.510
+2017-06-09 14:02:00 buy 71 shares at 146.859. money:98.521
+耗时62秒
+current price:$222.980 Now have 71 shares, $98.521 cash, total value: 15930.101
+[ 9.    0.08  0.1 ]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 09:42:00 sell 90 shares at 117.440. money:10624.510
+2017-06-09 14:02:00 buy 72 shares at 146.859. money:50.662
+耗时62秒
+current price:$222.980 Now have 72 shares, $50.662 cash, total value: 16105.222
+[ 9.    0.08  0.11]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 12:14:00 sell 90 shares at 118.215. money:10694.260
+2017-06-09 14:02:00 buy 72 shares at 146.859. money:120.412
+耗时62秒
+current price:$222.980 Now have 72 shares, $120.412 cash, total value: 16174.972
+[ 9.    0.08  0.12]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 13:04:00 sell 90 shares at 119.390. money:10800.010
+2017-06-09 14:02:00 buy 73 shares at 146.859. money:79.303
+耗时62秒
+current price:$222.980 Now have 73 shares, $79.303 cash, total value: 16356.843
+[ 9.    0.08  0.13]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 13:37:00 sell 90 shares at 120.290. money:10881.010
+2017-06-09 14:02:00 buy 74 shares at 146.859. money:13.444
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.444 cash, total value: 16513.964
+[ 9.    0.08  0.14]
+2017-02-13 10:08:00 buy 90 shares at 110.501. money:54.910
+2017-05-10 15:47:00 sell 90 shares at 121.350. money:10976.410
+2017-06-09 14:02:00 buy 74 shares at 146.859. money:108.844
+耗时62秒
+current price:$222.980 Now have 74 shares, $108.844 cash, total value: 16609.364
+[ 9.    0.09  0.05]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+2017-09-18 11:08:00 sell 71 shares at 189.033. money:13527.256
+2017-09-25 09:57:00 buy 77 shares at 173.722. money:150.662
+2018-01-03 12:34:00 sell 77 shares at 210.150. money:16332.212
+耗时62秒
+current price:$222.980 Now have 0 shares, $16332.212 cash, total value: 16332.212
+[ 9.    0.09  0.06]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+2017-09-18 13:52:00 sell 71 shares at 190.760. money:13649.873
+2017-09-25 09:57:00 buy 78 shares at 173.722. money:99.557
+2018-01-03 14:26:00 sell 78 shares at 212.168. money:16648.661
+耗时62秒
+current price:$222.980 Now have 0 shares, $16648.661 cash, total value: 16648.661
+[ 9.    0.09  0.07]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:31:00 sell 91 shares at 114.120. money:10421.148
+2017-06-09 14:38:00 buy 71 shares at 145.285. money:105.913
+耗时62秒
+current price:$222.980 Now have 71 shares, $105.913 cash, total value: 15937.493
+[ 9.    0.09  0.08]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:33:00 sell 91 shares at 115.180. money:10517.608
+2017-06-09 14:38:00 buy 72 shares at 145.285. money:57.088
+耗时62秒
+current price:$222.980 Now have 72 shares, $57.088 cash, total value: 16111.648
+[ 9.    0.09  0.09]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:37:00 sell 91 shares at 116.340. money:10623.168
+2017-06-09 14:38:00 buy 73 shares at 145.285. money:17.363
+耗时62秒
+current price:$222.980 Now have 73 shares, $17.363 cash, total value: 16294.903
+[ 9.    0.09  0.1 ]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 09:42:00 sell 91 shares at 117.440. money:10723.268
+2017-06-09 14:38:00 buy 73 shares at 145.285. money:117.463
+耗时62秒
+current price:$222.980 Now have 73 shares, $117.463 cash, total value: 16395.003
+[ 9.    0.09  0.11]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 12:14:00 sell 91 shares at 118.215. money:10793.793
+2017-06-09 14:38:00 buy 74 shares at 145.285. money:42.703
+耗时62秒
+current price:$222.980 Now have 74 shares, $42.703 cash, total value: 16543.223
+[ 9.    0.09  0.12]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 13:04:00 sell 91 shares at 119.390. money:10900.718
+2017-06-09 14:38:00 buy 75 shares at 145.285. money:4.343
+耗时62秒
+current price:$222.980 Now have 75 shares, $4.343 cash, total value: 16727.843
+[ 9.    0.09  0.13]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 13:37:00 sell 91 shares at 120.290. money:10982.618
+2017-06-09 14:38:00 buy 75 shares at 145.285. money:86.243
+耗时62秒
+current price:$222.980 Now have 75 shares, $86.243 cash, total value: 16809.743
+[ 9.    0.09  0.14]
+2017-02-13 10:46:00 buy 91 shares at 109.492. money:36.228
+2017-05-10 15:47:00 sell 91 shares at 121.350. money:11079.078
+2017-06-09 14:38:00 buy 76 shares at 145.285. money:37.418
+耗时62秒
+current price:$222.980 Now have 76 shares, $37.418 cash, total value: 16983.898
+[ 9.    0.1   0.05]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2017-09-18 11:08:00 sell 74 shares at 189.033. money:14002.058
+2017-09-25 11:02:00 buy 81 shares at 171.877. money:80.021
+2018-01-03 12:34:00 sell 81 shares at 210.150. money:17102.171
+耗时62秒
+current price:$222.980 Now have 0 shares, $17102.171 cash, total value: 17102.171
+[ 9.    0.1   0.06]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+2017-09-18 13:52:00 sell 74 shares at 190.760. money:14129.856
+2017-09-25 11:02:00 buy 82 shares at 171.877. money:35.942
+2018-01-03 14:26:00 sell 82 shares at 212.168. money:17433.718
+耗时62秒
+current price:$222.980 Now have 0 shares, $17433.718 cash, total value: 17433.718
+[ 9.    0.1   0.07]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:31:00 sell 92 shares at 114.120. money:10560.096
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:13.616
+耗时62秒
+current price:$222.980 Now have 74 shares, $13.616 cash, total value: 16514.136
+[ 9.    0.1   0.08]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:33:00 sell 92 shares at 115.180. money:10657.616
+2017-06-09 14:50:00 buy 74 shares at 142.520. money:111.136
+耗时62秒
+current price:$222.980 Now have 74 shares, $111.136 cash, total value: 16611.656
+[ 9.    0.1   0.09]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:37:00 sell 92 shares at 116.340. money:10764.336
+2017-06-09 14:50:00 buy 75 shares at 142.520. money:75.336
+耗时62秒
+current price:$222.980 Now have 75 shares, $75.336 cash, total value: 16798.836
+[ 9.   0.1  0.1]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 09:42:00 sell 92 shares at 117.440. money:10865.536
+2017-06-09 14:50:00 buy 76 shares at 142.520. money:34.016
+耗时62秒
+current price:$222.980 Now have 76 shares, $34.016 cash, total value: 16980.496
+[ 9.    0.1   0.11]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 12:14:00 sell 92 shares at 118.215. money:10936.836
+2017-06-09 14:50:00 buy 76 shares at 142.520. money:105.316
+耗时62秒
+current price:$222.980 Now have 76 shares, $105.316 cash, total value: 17051.796
+[ 9.    0.1   0.12]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 13:04:00 sell 92 shares at 119.390. money:11044.936
+2017-06-09 14:50:00 buy 77 shares at 142.520. money:70.896
+耗时62秒
+current price:$222.980 Now have 77 shares, $70.896 cash, total value: 17240.356
+[ 9.    0.1   0.13]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 13:37:00 sell 92 shares at 120.290. money:11127.736
+2017-06-09 14:50:00 buy 78 shares at 142.520. money:11.176
+耗时62秒
+current price:$222.980 Now have 78 shares, $11.176 cash, total value: 17403.616
+[ 9.    0.1   0.14]
+2017-02-13 12:25:00 buy 92 shares at 108.032. money:61.056
+2017-05-10 15:47:00 sell 92 shares at 121.350. money:11225.256
+2017-06-09 14:50:00 buy 78 shares at 142.520. money:108.696
+耗时62秒
+current price:$222.980 Now have 78 shares, $108.696 cash, total value: 17501.136
+[ 5.    0.07  0.06]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:47.870
+2017-06-08 15:17:00 sell 80 shares at 158.580. money:12734.270
+2017-06-09 13:55:00 buy 85 shares at 148.340. money:125.370
+2017-09-18 13:52:00 sell 85 shares at 190.760. money:16339.970
+2017-09-21 10:25:00 buy 92 shares at 177.590. money:1.690
+2018-01-03 12:49:00 sell 92 shares at 211.610. money:19469.810
+耗时62秒
+current price:$222.980 Now have 0 shares, $19469.810 cash, total value: 19469.810
+[ 5.25  0.07  0.06]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:47.870
+2017-06-08 15:17:00 sell 80 shares at 158.580. money:12734.270
+2017-06-09 13:55:00 buy 85 shares at 148.340. money:125.370
+2017-09-18 13:52:00 sell 85 shares at 190.760. money:16339.970
+2017-09-21 10:25:00 buy 92 shares at 177.590. money:1.690
+2018-01-03 12:49:00 sell 92 shares at 211.610. money:19469.810
+耗时62秒
+current price:$222.980 Now have 0 shares, $19469.810 cash, total value: 19469.810
+[ 5.      0.0735  0.06  ]
+2017-02-13 10:04:00 buy 89 shares at 111.225. money:100.975
+2017-02-23 10:55:00 buy 1 shares at 100.850. money:0.125
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10270.925
+2017-06-09 13:59:00 buy 69 shares at 147.620. money:85.145
+2017-09-18 13:52:00 sell 69 shares at 190.760. money:13247.585
+2017-09-25 09:37:00 buy 75 shares at 175.340. money:97.085
+2018-01-03 12:49:00 sell 75 shares at 211.610. money:15967.835
+耗时62秒
+current price:$222.980 Now have 0 shares, $15967.835 cash, total value: 15967.835
+[ 5.     0.07   0.063]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-17 15:58:00 buy 80 shares at 127.372. money:47.870
+2017-06-08 15:39:00 sell 80 shares at 159.190. money:12783.070
+2017-06-09 13:55:00 buy 86 shares at 148.340. money:25.830
+2018-01-03 14:26:00 sell 86 shares at 212.168. money:18272.278
+耗时61秒
+current price:$222.980 Now have 0 shares, $18272.278 cash, total value: 18272.278
+[ 5.16666667  0.0665      0.062     ]
+2017-02-13 09:32:00 buy 89 shares at 111.960. money:35.560
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10192.240
+2017-05-17 14:47:00 buy 79 shares at 127.792. money:96.672
+2017-06-08 15:38:00 sell 79 shares at 158.905. money:12650.167
+2017-06-09 13:39:00 buy 84 shares at 149.017. money:132.739
+2018-01-03 12:52:00 sell 84 shares at 211.880. money:17930.659
+耗时62秒
+current price:$222.980 Now have 0 shares, $17930.659 cash, total value: 17930.659
+[ 5.125    0.06825  0.0615 ]
+2017-02-13 09:58:00 buy 89 shares at 111.800. money:49.800
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10206.480
+2017-05-17 15:51:00 buy 80 shares at 127.561. money:1.600
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12709.600
+2017-06-09 13:40:00 buy 85 shares at 148.705. money:69.675
+2018-01-03 12:52:00 sell 85 shares at 211.880. money:18079.475
+耗时62秒
+current price:$222.980 Now have 0 shares, $18079.475 cash, total value: 18079.475
+[ 5.04166667  0.07175     0.0605    ]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 15:33:00 sell 80 shares at 158.710. money:12776.030
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:80.710
+2017-09-18 13:54:00 sell 86 shares at 190.930. money:16500.690
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:13.090
+2018-01-03 12:49:00 sell 94 shares at 211.610. money:19904.430
+耗时61秒
+current price:$222.980 Now have 0 shares, $19904.430 cash, total value: 19904.430
+[ 5.      0.0735  0.06  ]
+2017-02-13 10:04:00 buy 89 shares at 111.225. money:100.975
+2017-02-23 10:55:00 buy 1 shares at 100.850. money:0.125
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10270.925
+2017-06-09 13:59:00 buy 69 shares at 147.620. money:85.145
+2017-09-18 13:52:00 sell 69 shares at 190.760. money:13247.585
+2017-09-25 09:37:00 buy 75 shares at 175.340. money:97.085
+2018-01-03 12:49:00 sell 75 shares at 211.610. money:15967.835
+耗时62秒
+current price:$222.980 Now have 0 shares, $15967.835 cash, total value: 15967.835
+[ 5.19444444  0.07116667  0.05733333]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 13:02:00 sell 80 shares at 158.190. money:12734.430
+2017-06-09 13:55:00 buy 85 shares at 148.340. money:125.530
+2017-09-18 13:44:00 sell 85 shares at 190.350. money:16305.280
+2017-09-25 09:36:00 buy 92 shares at 175.400. money:168.480
+2018-01-03 12:40:00 sell 92 shares at 211.040. money:19584.160
+耗时61秒
+current price:$222.980 Now have 0 shares, $19584.160 cash, total value: 19584.160
+[ 4.90740741  0.07194444  0.05855556]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 13:52:00 sell 80 shares at 158.365. money:12748.430
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:53.110
+2017-09-18 13:48:00 sell 86 shares at 190.555. money:16440.840
+2017-09-25 09:36:00 buy 93 shares at 175.400. money:128.640
+2018-01-03 12:47:00 sell 93 shares at 211.300. money:19779.540
+耗时62秒
+current price:$222.980 Now have 0 shares, $19779.540 cash, total value: 19779.540
+[ 5.09567901  0.07324074  0.05759259]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-06-09 13:59:00 buy 69 shares at 147.620. money:62.530
+2017-09-18 13:44:00 sell 69 shares at 190.350. money:13196.680
+2017-09-25 09:36:00 buy 75 shares at 175.400. money:41.680
+2018-01-03 12:40:00 sell 75 shares at 211.040. money:15869.680
+耗时62秒
+current price:$222.980 Now have 0 shares, $15869.680 cash, total value: 15869.680
+[ 5.02391975  0.07081019  0.05939815]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-17 15:59:00 buy 80 shares at 127.289. money:54.510
+2017-06-08 13:57:00 sell 80 shares at 158.540. money:12737.710
+2017-06-09 13:55:00 buy 85 shares at 148.340. money:128.810
+2017-09-18 13:51:00 sell 85 shares at 190.717. money:16339.755
+2017-09-25 09:36:00 buy 93 shares at 175.400. money:27.555
+2018-01-03 12:49:00 sell 93 shares at 211.610. money:19707.285
+耗时61秒
+current price:$222.980 Now have 0 shares, $19707.285 cash, total value: 19707.285
+[ 4.78755144  0.07183642  0.0616358 ]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12787.230
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:91.910
+2018-01-03 12:52:00 sell 86 shares at 211.880. money:18313.590
+耗时61秒
+current price:$222.980 Now have 0 shares, $18313.590 cash, total value: 18313.590
+[ 5.09272119  0.0713341   0.05840895]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 13:52:00 sell 80 shares at 158.365. money:12748.430
+2017-06-09 13:58:00 buy 85 shares at 148.290. money:143.780
+2017-06-09 14:50:00 buy 1 shares at 142.520. money:1.260
+2017-09-18 13:47:00 sell 86 shares at 190.490. money:16383.400
+2017-09-25 09:36:00 buy 93 shares at 175.400. money:71.200
+2018-01-03 12:47:00 sell 93 shares at 211.300. money:19722.100
+耗时61秒
+current price:$222.980 Now have 0 shares, $19722.100 cash, total value: 19722.100
+[ 5.00394376  0.07254218  0.05891152]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 13:53:00 sell 80 shares at 158.470. money:12762.259
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:66.939
+2017-09-18 13:49:00 sell 86 shares at 190.580. money:16456.819
+2017-09-25 09:36:00 buy 93 shares at 175.400. money:144.619
+2018-01-03 12:47:00 sell 93 shares at 211.300. money:19795.519
+耗时61秒
+current price:$222.980 Now have 0 shares, $19795.519 cash, total value: 19795.519
+[ 4.87595736  0.07282365  0.06023577]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:19:00 sell 80 shares at 158.630. money:12780.310
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:84.990
+2017-09-18 13:54:00 sell 86 shares at 190.930. money:16504.970
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:17.370
+2018-01-03 12:49:00 sell 94 shares at 211.610. money:19908.710
+耗时62秒
+current price:$222.980 Now have 0 shares, $19908.710 cash, total value: 19908.710
+[ 4.76757545  0.07356842  0.06114918]
+2017-02-13 10:04:00 buy 89 shares at 111.225. money:100.975
+2017-02-23 10:55:00 buy 1 shares at 100.850. money:0.125
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10270.925
+2017-06-09 13:59:00 buy 69 shares at 147.620. money:85.145
+2018-01-03 12:51:00 sell 69 shares at 211.710. money:14693.135
+耗时61秒
+current price:$222.980 Now have 0 shares, $14693.135 cash, total value: 14693.135
+[ 5.04030445  0.07279944  0.0612093 ]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2018-01-03 12:52:00 sell 86 shares at 211.880. money:18324.270
+耗时61秒
+current price:$222.980 Now have 0 shares, $18324.270 cash, total value: 18324.270
+[ 4.94063167  0.07215819  0.05921899]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 13:53:00 sell 80 shares at 158.470. money:12756.830
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:61.510
+2017-09-18 13:51:00 sell 86 shares at 190.717. money:16463.172
+2017-09-25 09:36:00 buy 93 shares at 175.400. money:150.972
+2018-01-03 12:48:00 sell 93 shares at 211.340. money:19805.592
+耗时61秒
+current price:$222.980 Now have 0 shares, $19805.592 cash, total value: 19805.592
+[ 4.90156004  0.07194571  0.06105832]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12787.230
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:91.910
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16514.470
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:26.870
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19927.610
+耗时62秒
+current price:$222.980 Now have 0 shares, $19927.610 cash, total value: 19927.610
+[ 4.85036818  0.07164748  0.06213172]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 15:38:00 sell 80 shares at 158.905. money:12791.630
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:96.310
+2018-01-03 14:20:00 sell 86 shares at 211.920. money:18321.430
+耗时62秒
+current price:$222.980 Now have 0 shares, $18321.430 cash, total value: 18321.430
+[ 4.93882438  0.07218804  0.06197706]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 15:38:00 sell 80 shares at 158.905. money:12791.630
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:96.310
+2018-01-03 12:52:00 sell 86 shares at 211.880. money:18317.990
+耗时61秒
+current price:$222.980 Now have 0 shares, $18317.990 cash, total value: 18317.990
+[ 4.94017985  0.07216566  0.05990851]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 13:59:00 sell 80 shares at 158.560. money:12764.030
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:68.710
+2017-09-18 13:52:00 sell 86 shares at 190.760. money:16474.070
+2017-09-25 09:36:00 buy 93 shares at 175.400. money:161.870
+2018-01-03 12:49:00 sell 93 shares at 211.610. money:19841.600
+耗时62秒
+current price:$222.980 Now have 0 shares, $19841.600 cash, total value: 19841.600
+[ 4.9392762   0.07218058  0.06128755]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12787.230
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:91.910
+2018-01-03 12:52:00 sell 86 shares at 211.880. money:18313.590
+耗时62秒
+current price:$222.980 Now have 0 shares, $18313.590 cash, total value: 18313.590
+[ 4.93995393  0.07216939  0.06025327]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 15:19:00 sell 80 shares at 158.630. money:12769.630
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:74.310
+2017-09-18 13:54:00 sell 86 shares at 190.930. money:16494.290
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:6.690
+2018-01-03 12:49:00 sell 94 shares at 211.610. money:19898.030
+耗时61秒
+current price:$222.980 Now have 0 shares, $19898.030 cash, total value: 19898.030
+[ 4.93950211  0.07217685  0.06094279]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 15:33:00 sell 80 shares at 158.710. money:12776.030
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:80.710
+2017-09-18 13:54:00 sell 86 shares at 190.930. money:16500.690
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:13.090
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19913.830
+耗时62秒
+current price:$222.980 Now have 0 shares, $19913.830 cash, total value: 19913.830
+[ 4.76967967  0.0728808   0.06099125]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.63368618  0.07344621  0.06123687]
+2017-02-13 10:04:00 buy 89 shares at 111.225. money:100.975
+2017-02-23 10:55:00 buy 1 shares at 100.850. money:0.125
+2017-05-10 09:31:00 sell 90 shares at 114.120. money:10270.925
+2017-06-09 13:59:00 buy 69 shares at 147.620. money:85.145
+2018-01-03 12:52:00 sell 69 shares at 211.880. money:14704.865
+耗时62秒
+current price:$222.980 Now have 0 shares, $14704.865 cash, total value: 14704.865
+[ 4.86453719  0.07184527  0.06175914]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12787.230
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:91.910
+2018-01-03 12:52:00 sell 86 shares at 211.880. money:18313.590
+耗时62秒
+current price:$222.980 Now have 0 shares, $18313.590 cash, total value: 18313.590
+[ 4.87310232  0.07257905  0.06061661]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:33:00 sell 80 shares at 158.710. money:12781.459
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:86.139
+2017-09-18 13:54:00 sell 86 shares at 190.930. money:16506.119
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:18.519
+2018-01-03 12:49:00 sell 94 shares at 211.610. money:19909.859
+耗时61秒
+current price:$222.980 Now have 0 shares, $19909.859 cash, total value: 19909.859
+[ 4.86739223  0.07208986  0.06137829]
+2017-02-13 09:59:00 buy 89 shares at 111.450. money:80.950
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10237.630
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:79.230
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12787.230
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:91.910
+2018-01-03 12:52:00 sell 86 shares at 211.880. money:18313.590
+耗时62秒
+current price:$222.980 Now have 0 shares, $18313.590 cash, total value: 18313.590
+[ 4.8716748   0.07245675  0.06080703]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:33:00 sell 80 shares at 158.710. money:12781.459
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:86.139
+2017-09-18 13:54:00 sell 86 shares at 190.930. money:16506.119
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:18.519
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19919.259
+耗时62秒
+current price:$222.980 Now have 0 shares, $19919.259 cash, total value: 19919.259
+[ 4.75577423  0.07267866  0.06096161]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:33:00 sell 80 shares at 158.710. money:12781.459
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:86.139
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16508.699
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:21.099
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19921.839
+耗时61秒
+current price:$222.980 Now have 0 shares, $19921.839 cash, total value: 19921.839
+[ 4.7463345   0.0725467   0.06120042]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12792.659
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:97.339
+2018-01-03 12:51:00 sell 86 shares at 211.710. money:18304.399
+耗时62秒
+current price:$222.980 Now have 0 shares, $18304.399 cash, total value: 18304.399
+[ 4.84033972  0.07247924  0.06090538]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:33:00 sell 80 shares at 158.710. money:12781.459
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:86.139
+2017-09-18 13:54:00 sell 86 shares at 190.930. money:16506.119
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:18.519
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19919.259
+耗时62秒
+current price:$222.980 Now have 0 shares, $19919.259 cash, total value: 19919.259
+[ 4.83561986  0.07241326  0.06102478]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12792.659
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:97.339
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16519.899
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:32.299
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19933.039
+耗时61秒
+current price:$222.980 Now have 0 shares, $19933.039 cash, total value: 19933.039
+[ 4.76272695  0.07277973  0.06097643]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.82067724  0.07266878  0.06089914]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:33:00 sell 80 shares at 158.710. money:12781.459
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:86.139
+2017-09-18 13:54:00 sell 86 shares at 190.930. money:16506.119
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:18.519
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19919.259
+耗时62秒
+current price:$222.980 Now have 0 shares, $19919.259 cash, total value: 19919.259
+[ 4.75800709  0.07271375  0.06109584]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12792.659
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:97.339
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16519.899
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:32.299
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19933.039
+耗时62秒
+current price:$222.980 Now have 0 shares, $19933.039 cash, total value: 19933.039
+[ 4.77367462  0.07270251  0.06104666]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12792.659
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:97.339
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16519.899
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:32.299
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19933.039
+耗时61秒
+current price:$222.980 Now have 0 shares, $19933.039 cash, total value: 19933.039
+[ 4.8050097   0.07268002  0.06094831]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:33:00 sell 80 shares at 158.710. money:12781.459
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:86.139
+2017-09-18 13:54:00 sell 86 shares at 190.930. money:16506.119
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:18.519
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19919.259
+耗时62秒
+current price:$222.980 Now have 0 shares, $19919.259 cash, total value: 19919.259
+[ 4.78150839  0.07269689  0.06102207]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12792.659
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:97.339
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16519.899
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:32.299
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19933.039
+耗时61秒
+current price:$222.980 Now have 0 shares, $19933.039 cash, total value: 19933.039
+[ 4.76620331  0.07283027  0.06098384]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.80264977  0.07264703  0.06100802]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12792.659
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:97.339
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16519.899
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:32.299
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19933.039
+耗时61秒
+current price:$222.980 Now have 0 shares, $19933.039 cash, total value: 19933.039
+[ 4.77167715  0.07279166  0.06101896]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.73572366  0.07302146  0.06098801]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.75245519  0.07292785  0.06099301]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.78591824  0.07274064  0.06100302]
+2017-02-13 10:02:00 buy 89 shares at 111.389. money:86.379
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10243.059
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:84.659
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12792.659
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:97.339
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16519.899
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:32.299
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19933.039
+耗时62秒
+current price:$222.980 Now have 0 shares, $19933.039 cash, total value: 19933.039
+[ 4.76082095  0.07288105  0.06099551]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76794149  0.07285554  0.06098754]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.77067841  0.07283623  0.0610051 ]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76106743  0.07290433  0.06099213]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.77779896  0.07281072  0.06099713]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76525031  0.07288093  0.06099338]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76881058  0.07286817  0.0609894 ]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.77017904  0.07285852  0.06099818]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76537355  0.07289257  0.06099169]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.77373932  0.07284576  0.06099419]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76746499  0.07288087  0.06099232]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76924513  0.07287449  0.06099032]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76992936  0.07286966  0.06099471]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76752661  0.07288669  0.06099147]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.7717095   0.07286328  0.06099272]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76857233  0.07288083  0.06099178]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.7694624   0.07287765  0.06099079]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76980452  0.07287523  0.06099298]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76860314  0.07288375  0.06099136]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.77069458  0.07287204  0.06099198]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.769126    0.07288082  0.06099152]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76957104  0.07287923  0.06099102]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.7697421   0.07287802  0.06099212]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76914141  0.07288227  0.0609913 ]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.77018713  0.07287642  0.06099162]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76940284  0.07288081  0.06099138]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76962536  0.07288002  0.06099113]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76971089  0.07287941  0.06099168]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76941054  0.07288154  0.06099128]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.7699334   0.07287861  0.06099143]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76954126  0.07288081  0.06099132]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76965252  0.07288041  0.06099119]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76969528  0.07288011  0.06099147]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76954511  0.07288117  0.06099126]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76980654  0.07287971  0.06099134]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76961047  0.07288081  0.06099128]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.7696661   0.07288061  0.06099122]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76968748  0.07288046  0.06099136]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时61秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76961239  0.07288099  0.06099126]
+2017-02-13 10:03:00 buy 89 shares at 111.330. money:91.630
+2017-05-10 09:31:00 sell 89 shares at 114.120. money:10248.310
+2017-05-18 09:33:00 buy 80 shares at 126.980. money:89.910
+2017-06-08 15:34:00 sell 80 shares at 158.850. money:12797.910
+2017-06-09 13:59:00 buy 86 shares at 147.620. money:102.590
+2017-09-18 13:55:00 sell 86 shares at 190.960. money:16525.150
+2017-09-25 09:36:00 buy 94 shares at 175.400. money:37.550
+2018-01-03 12:51:00 sell 94 shares at 211.710. money:19938.290
+耗时62秒
+current price:$222.980 Now have 0 shares, $19938.290 cash, total value: 19938.290
+[ 4.76967967  0.0728808   0.06099125]
+
+Process finished with exit code 0
