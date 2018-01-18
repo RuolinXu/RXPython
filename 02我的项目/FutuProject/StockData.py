@@ -20,6 +20,7 @@ class StockData(object):
         self.todate = todate
         self.stockdata_df = self.__dataFrame_from_db()
         self.time_array = self.stockdata_df.index.values
+        self.stockdata_od = self.__orderdict_from_db()
         # self.__sorted_rs = self.__load_sorted_rs()
         # self.days_dict = self.__init_days_dict()
         # self.__sorted_rs = None  # free some memory
@@ -36,49 +37,47 @@ class StockData(object):
         # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
         db.close()
         sorted_rs = sorted(rs, key=lambda a: a[6])  # sorted by time
+        if len(sorted_rs) < 1:
+            return None
         data_frame = pd.DataFrame(sorted_rs, columns=["Open", "Low", "High", "Close", "Volume", "Turnover", "KLTime"])
         return data_frame.set_index(['KLTime'])
 
-    # def __load_sorted_rs(self):
-    #     db = SQLite3DB(DB_PATH)
-    #     db.open()
-    #     rs = db.table("KLine1M") \
-    #         .select("Open", "Low", "High", "Close", "Volume", "Turnover", "KLTime") \
-    #         .where(DataCondition(("=", "AND"), StockCode=self.stockcode),
-    #                DataCondition((">", "AND"), KLTime=self.fromdate),
-    #                DataCondition(("<", "AND"), KLTime=self.todate)) \
-    #         .fetchall()
-    #     # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
-    #     db.close()
-    #     sorted_rs = sorted(rs, key=lambda a: a[6])  # sorted by time
-    #     return sorted_rs
-    #
-    # def __init_days_dict(self):
-    #     if len(self.__sorted_rs) < 1:
-    #         return None
-    #     stock_nametuple = namedtuple(self.stockcode.split('.')[1],
-    #                                  ('Open', 'Low', 'High', 'Close', 'Volume', 'Turnover', 'KLTime'))
-    #     # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
-    #     days_dict = OrderedDict((x[6], stock_nametuple(x[0], x[1], x[2], x[3], x[4], x[5], x[6]))
-    #                             for x in self.__sorted_rs)
-    #
-    #     return days_dict
-    #
+    def __orderdict_from_db(self):
+        db = SQLite3DB(DB_PATH)
+        db.open()
+        rs = db.table("KLine1M") \
+            .select("Open", "Low", "High", "Close", "Volume", "Turnover", "KLTime") \
+            .where(DataCondition(("=", "AND"), StockCode=self.stockcode),
+                   DataCondition((">", "AND"), KLTime=self.fromdate),
+                   DataCondition(("<", "AND"), KLTime=self.todate)) \
+            .fetchall()
+        # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
+        db.close()
+        sorted_rs = sorted(rs, key=lambda a: a[6])  # sorted by time
+        if len(sorted_rs) < 1:
+            return None
+        stock_nametuple = namedtuple(self.stockcode.split('.')[1],
+                                     ('Open', 'Low', 'High', 'Close', 'Volume', 'Turnover', 'KLTime'))
+        # 0=Open 1=Low 2=High 3=Close 4=Volume 5=Turnover 6=KLTime
+        stockdata_od = OrderedDict((x[6], stock_nametuple(x[0], x[1], x[2], x[3], x[4], x[5], x[6]))
+                                for x in sorted_rs)
+
+        return stockdata_od
+
     def __iter__(self):
-        for key in self.stockdata_df.iterrows():
-            yield key
-    #
-    # def __getitem__(self, ind):
-    #     time_key = self.time_array[ind]
-    #     return self.stockdata_df.loc[time_key]
+        for key in self.stockdata_od:
+            yield self.stockdata_od[key]
+
+    def __getitem__(self, ind):
+        time_key = self.time_array[ind]
+        return self.stockdata_od[time_key]
 
     def __str__(self):
-        count = len(self.time_array)
-        if count < 1:
+        if len(self.time_array) < 1:
             return 'No Data!'
         start = self.time_array[1]
         end = self.time_array[-1]
-        return self.stockcode + ":from " + start + " to " + end + "\ntotal count:" + str(count)
+        return str(self.stockdata_od[start]) + '\n...\n' + str(self.stockdata_od[end])
 
     def update_db(self):
         """调用富途接口，把数据添加到数据库 """

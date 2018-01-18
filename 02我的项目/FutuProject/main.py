@@ -1,7 +1,7 @@
 from StockData import StockData
-from Analyst import *
+from Analyst import AnalystB
 from Operator import Operator
-
+from datetime import datetime
 
 class TradeLoopBack:
     """
@@ -16,22 +16,26 @@ class TradeLoopBack:
         """
             以时间驱动，完成交易回测
         """
+        start_time = datetime.now()
         for x in self.stock_data:
-            print(x[0])
-            self.__operator.buy_strategy(self.__analyst, x)
-            self.__operator.sell_strategy(self.__analyst, x)
-        # return self.__operator.get_records()
+            # print(x.KLTime)
+            cur_time, cur_price = x.KLTime, x.Close
+            self.__operator.buy_strategy(self.__analyst, cur_time, cur_price)
+            self.__operator.sell_strategy(self.__analyst, cur_time, cur_price)
+        end_time = datetime.now()
+        self.__operator.get_value(self.stock_data[-1].Close)
+        print("耗时%d秒" % (end_time - start_time).seconds)
 
 
 if __name__ == '__main__':
-    sd = StockData("US.NVDA", todate='2017-10-14 09:33:00')
+    sd = StockData("US.NVDA")
     # ay = Analyst(sd)
     ayB = AnalystB(sd, b_rate=-0.05, s_rate=0.10)
-    op = Operator(10000,0)
+    op = Operator(10000, 0)
 
     trade = TradeLoopBack(sd, op, ayB)
     trade.execute_trade()
-    op.get_value(sd[-1].Close)      # 报告当前账户情况
+    # op.get_value(sd[-1].Close)      # 报告当前账户情况
 
     # kp_array = ay.get_kp_array(todate='2017-02-14 10:40:00')
     # print(kp_array)

@@ -289,6 +289,9 @@ class AnalystB:
         self.b_rate = b_rate
         self.s_rate = s_rate
         self.days = -50
+        self.__status_cache_key = ""
+        self.__status_cache = None
+
 
     def can_buy(self, kltime):
         return self.__buy_sell_report(what='buy', kltime=kltime)
@@ -296,18 +299,30 @@ class AnalystB:
     def can_sell(self, kltime):
         return self.__buy_sell_report(what='sell', kltime=kltime)
 
-    def __buy_sell_report(self, what, kltime):
-        t_now = datetime.strptime(kltime[0:10], '%Y-%m-%d')
+    def __getstatus_cache(self, key):
+        if self.__status_cache_key != key or self.__status_cache is None:
+            self.__status_cache_key = key
+            self.__status_cache = self.__getstatus(key)
+        return self.__status_cache
+
+    def __getstatus(self, time_key):
+        t_now = datetime.strptime(time_key, '%Y-%m-%d')
         from_time = t_now + timedelta(days=self.days)
         from_t = from_time.strftime('%Y-%m-%d %H:%M:%S')
         to_t = t_now.strftime('%Y-%m-%d %H:%M:%S')
         range_df = self.data_df.query("index > @from_t and index < @to_t ")
         if len(range_df.index) < 1:
             # print("Not enough data, keep watching...%s" % kltime)
-            return False
+            return 0, ""
         # 获取前高点
         _high = range_df.High.max()
         _high_time = range_df.query("High == @_high").index[0]
+        return _high, _high_time
+
+    def __buy_sell_report(self, what, kltime):
+        # 获取前高点
+        _high, _high_time = self.__getstatus_cache(kltime[0:10])
+
         def report():
             print("前高点为:%s %.03f." % (_high_time, _high))
             print("when price <= %.03f, you can buy \nwhen price >= %.03f, you can sell"
