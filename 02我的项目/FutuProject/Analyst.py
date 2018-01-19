@@ -10,7 +10,6 @@ class AnalystBase:
         self.stockdata = stockdata
         self.days_dict = stockdata.days_dict
         self._time_array = [x for x in self.days_dict.keys()]
-        self.data_frame = stockdata.data_frame
         self.__kpm_cache = None
         self.__cache = None
 
@@ -137,13 +136,6 @@ class AnalystBase:
         plt.figure(figsize=(16, 9))
         plt.plot(ind_array, price_array)
         plt.show()
-
-    def print_a(self,start, KLTime):
-        print(self.data_frame.iloc[0:10])
-        print(self.data_frame.loc[start:KLTime])
-        print(len(self.data_frame))
-        print(len(self.days_dict))
-        # print(self.data_frame.loc['2017-02-02 12:32:00':KLTime]['High'].max())
 
 
 class AnalystA(AnalystBase):
@@ -291,7 +283,6 @@ class AnalystB:
         self.days = days*-1
         self.__status_cache_key = ""
         self.__status_cache = None
-
 
     def can_buy(self, kltime):
         return self.__buy_sell_report(what='buy', kltime=kltime)

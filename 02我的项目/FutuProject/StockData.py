@@ -160,11 +160,9 @@ class StockData(object):
 
 if __name__ == '__main__':
     # d = StockData('US.BABA')
-    d = StockData('US.NVDA')
-    for x in d[:3]:
-        print(x)
+    d = StockData('US.BABA')
     # print(d.time_array[1])                    # print data summary
-    # d.update_db()
+    d.update_db()
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
     # df = d.stockdata_df
