@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 from collections import namedtuple
 import numpy as np
 import matplotlib.pyplot as plt
+from RedisHelper import *
 
 
 class AnalystBase:
@@ -283,6 +284,7 @@ class AnalystB:
         self.days = days*-1
         self.__status_cache_key = ""
         self.__status_cache = None
+        self.__redis = RedisHelper()
 
     def can_buy(self, kltime):
         return self.__buy_sell_report(what='buy', kltime=kltime)
