@@ -277,14 +277,14 @@ class AnalystB:
     大于前高点 某个百分点 卖出
     小于前高点 某个百分点 买入
     """
-    def __init__(self, stockdata, days, b_rate=-0.09, s_rate=0.15):
+    def __init__(self, g_cache, stockdata, days, b_rate=-0.09, s_rate=0.15):
         self.data_df = stockdata.stockdata_df
         self.b_rate = b_rate
         self.s_rate = s_rate
         self.days = days*-1
         self.__status_cache_key = ""
-        self.__status_cache = None
-        self.__redis = RedisHelper()
+        self.__status_cache = g_cache
+        # self.__redis = RedisHelper()
 
     def can_buy(self, kltime):
         return self.__buy_sell_report(what='buy', kltime=kltime)
@@ -293,10 +293,10 @@ class AnalystB:
         return self.__buy_sell_report(what='sell', kltime=kltime)
 
     def __getstatus_cache(self, key):
-        if self.__status_cache_key != key or self.__status_cache is None:
-            self.__status_cache_key = key
-            self.__status_cache = self.__getstatus(key)
-        return self.__status_cache
+        if key not in self.__status_cache:
+            self.__status_cache[key] = self.__getstatus(key[1])
+        # a = self.__redis.get(key)
+        return self.__status_cache[key]
 
     def __getstatus(self, time_key):
         t_now = datetime.strptime(time_key, '%Y-%m-%d')
@@ -314,7 +314,7 @@ class AnalystB:
 
     def __buy_sell_report(self, what, kltime):
         # 获取前高点
-        _high, _high_time = self.__getstatus_cache(kltime[0:10])
+        _high, _high_time = self.__getstatus_cache((str(self.days), kltime[0:10]))
 
         def report():
             print("前高点为:%s %.03f." % (_high_time, _high))
@@ -322,8 +322,8 @@ class AnalystB:
                   % ((_high * (1 + self.b_rate)), (_high * (1 + self.s_rate))))
 
         # 取当前价 防止下标溢出
-        cur_price = self.data_df.loc[kltime].Close
-
+        cur_price = round(self.data_df.loc[kltime].Close, 3)
+        # print('high = %s, b_rate = %s cur_price:%s' % (_high, self.b_rate, cur_price))
         def can_buy():
             if cur_price <= (_high * (1 + self.b_rate)):
                 return True

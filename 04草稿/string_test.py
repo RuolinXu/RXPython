@@ -6,6 +6,7 @@ print(name.center(50, '-'))
 
 intab = "aeiou"
 outtab = "12345"
+print(intab+outtab)                      # 字符拼接
 print(name.translate(str.maketrans(intab, outtab)))  # 字符映射
 
 print(name.find("name"))

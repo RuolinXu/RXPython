@@ -25,10 +25,12 @@ class RedisHelper:
 if __name__ == '__main__':
     r = RedisHelper()
     a = [1,2,3,4,5,6,7]
-    b="hellllllll"
-    r.set('kkk', a)
-    r.clear()
-    f = r.get('kkk')
-    print(r.hasKey('kkk'))
+    b = "hellllllll"
+    c = ('50', '2018-01-01')
+    # r.set(c, a)
+    # r.clear()
+    f = r.get(c)
+    print(c[1])
+    print(r.hasKey(c))
     print(eval(f))
 

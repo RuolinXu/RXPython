@@ -3,6 +3,9 @@ from Analyst import AnalystB
 from Operator import Operator
 from datetime import datetime
 
+G_cache = {}
+
+
 class TradeLoopBack:
     """
         交易回测系统
@@ -32,9 +35,10 @@ def stock_days(params):
     b_rate = params[1]*-1
     s_rate = params[2]
     print(params)
+    print(len(G_cache))
     sd = StockData('US.BABA')
-    ay = AnalystB(sd,days,b_rate,s_rate)
-    op = Operator(10000,0)
+    ay = AnalystB(G_cache, sd, days, b_rate, s_rate)
+    op = Operator(10000, 0)
     trade = TradeLoopBack(sd, op, ay)
     trade.execute_trade()
     return op.get_value(sd[-1].Close) * -1
@@ -45,25 +49,16 @@ if __name__ == '__main__':
     # sd = StockData("US.BABA")
     # print(type(sd))
     # ay = Analyst(sd)
-    # ayB = AnalystB(sd,5, b_rate=-0.04, s_rate=0.137)
+    # ayB = AnalystB(G_cache, sd,5, b_rate=-0.04, s_rate=0.137)
     # op = Operator(10000, 0)
 
     # trade = TradeLoopBack(sd, op, ayB)
     # trade.execute_trade()
     # op.get_value(sd[-1].Close)      # 报告当前账户情况
 
-    # import scipy.optimize as sco
-    # opt_global = sco.brute(stock_days, ((5, 10, 1), (0.03, 0.1, 0.01), (0.05, 0.15, 0.01)))
-    # print(opt_global)
-
-    a,b = (1,2)
-    print(a)
-    from RedisHelper import *
-    import pickle
-    r = RedisHelper()
-    r.set('kkk', (1,2))
-    a,b =eval(r.get('kkk'))
-    print(b)
+    import scipy.optimize as sco
+    opt_global = sco.brute(stock_days, ((5, 10, 1), (0.03, 0.1, 0.01), (0.05, 0.15, 0.01)))
+    print(opt_global)
 
 
     # kp_array = ay.get_kp_array(todate='2017-02-14 10:40:00')
