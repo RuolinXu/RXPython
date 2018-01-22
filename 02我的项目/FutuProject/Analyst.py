@@ -286,16 +286,23 @@ class AnalystB:
         self.__status_cache = g_cache
         # self.__redis = RedisHelper()
 
-    def can_buy(self, kltime):
-        return self.__buy_sell_report(what='buy', kltime=kltime)
+    def can_buy(self, cur_time, cur_price):
+        _high, _high_time = self.__getstatus_cache((self.days, cur_time[0:10]))
+        cur_price = cur_price
+        if cur_price <= (_high * (1 + self.b_rate)):
+            return True
+        return False
 
-    def can_sell(self, kltime):
-        return self.__buy_sell_report(what='sell', kltime=kltime)
+    def can_sell(self, cur_time, cur_price):
+        _high, _high_time = self.__getstatus_cache((self.days, cur_time[0:10]))
+        cur_price = cur_price
+        if cur_price > (_high * (1 + self.s_rate)):
+            return True
+        return False
 
     def __getstatus_cache(self, key):
         if key not in self.__status_cache:
             self.__status_cache[key] = self.__getstatus(key[1])
-        # a = self.__redis.get(key)
         return self.__status_cache[key]
 
     def __getstatus(self, time_key):
@@ -311,48 +318,6 @@ class AnalystB:
         _high = range_df.High.max()
         _high_time = range_df.query("High == @_high").index[0]
         return _high, _high_time
-
-    def __buy_sell_report(self, what, kltime):
-        # 获取前高点
-        _high, _high_time = self.__getstatus_cache((str(self.days), kltime[0:10]))
-
-        def report():
-            print("前高点为:%s %.03f." % (_high_time, _high))
-            print("when price <= %.03f, you can buy \nwhen price >= %.03f, you can sell"
-                  % ((_high * (1 + self.b_rate)), (_high * (1 + self.s_rate))))
-
-        # 取当前价 防止下标溢出
-        cur_price = round(self.data_df.loc[kltime].Close, 3)
-        # print('high = %s, b_rate = %s cur_price:%s' % (_high, self.b_rate, cur_price))
-        def can_buy():
-            if cur_price <= (_high * (1 + self.b_rate)):
-                return True
-            return False
-
-        def can_sell():
-            if cur_price >= (_high * (1 + self.s_rate)):
-                return True
-            return False
-
-        if what == 'buy':
-            b = can_buy()
-            s = can_sell()
-            if b is True and s is False:
-                return True
-            else:
-                return False
-        elif what == 'sell':
-            b = can_buy()
-            s = can_sell()
-            if s is True and b is False:
-                return True
-            else:
-                return False
-        else:
-            return report()
-
-    def get_report(self, kltime='2100-01-01'):
-        self.__buy_sell_report(what='report', kltime=kltime)
 
 
 class AnalystC(AnalystBase):

@@ -19,15 +19,15 @@ class TradeLoopBack:
         """
             以时间驱动，完成交易回测
         """
-        start_time = datetime.now()
+        start_t = datetime.now()
         for x in self.stock_data:
             # print(x.KLTime)
             cur_time, cur_price = x.KLTime, x.Close
             self.__operator.buy_strategy(self.__analyst, cur_time, cur_price)
             self.__operator.sell_strategy(self.__analyst, cur_time, cur_price)
-        end_time = datetime.now()
         # self.__operator.get_value(self.stock_data[-1].Close)
-        print("耗时%d秒" % (end_time - start_time).seconds)
+        end_t = datetime.now()
+        print("耗时%d秒" % (end_t - start_t).seconds)
 
 
 def stock_days(params):
@@ -44,7 +44,6 @@ def stock_days(params):
     return op.get_value(sd[-1].Close) * -1
 
 
-
 if __name__ == '__main__':
     # sd = StockData("US.BABA")
     # print(type(sd))
@@ -57,7 +56,10 @@ if __name__ == '__main__':
     # op.get_value(sd[-1].Close)      # 报告当前账户情况
 
     import scipy.optimize as sco
+    start_time = datetime.now()
     opt_global = sco.brute(stock_days, ((5, 10, 1), (0.03, 0.1, 0.01), (0.05, 0.15, 0.01)))
+    end_time = datetime.now()
+    print("耗时%d秒" % (end_time - start_time).seconds)
     print(opt_global)
 
 
