@@ -35,7 +35,6 @@ def stock_days(params):
     b_rate = params[1]*-1
     s_rate = params[2]
     print(params)
-    print(len(G_cache))
     sd = StockData('US.BABA')
     ay = AnalystB(G_cache, sd, days, b_rate, s_rate)
     op = Operator(10000, 0)

@@ -124,6 +124,9 @@ class StockData(object):
                     tmplist.append(row['time_key'])
                     count += 1
         db.commit()
+        db.execute("""
+        
+        """)
         print("%d rows inserted!" % count)
         db.close()
 

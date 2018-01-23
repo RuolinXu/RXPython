@@ -26,3 +26,5 @@ print("123".isnumeric())            # 判断是否只包含数字
 print("Aaron Fan".istitle())        # 判断首字母是否全部为大写
 print(name.isprintable())           # 判断这个东西是否可以打印，用到的时候再去详细查下吧
 print("AARON FAN".isupper())        # 判断是否全部大写
+
+print('sssssss {} ssssss {}llll{}'.format(1,2,3))

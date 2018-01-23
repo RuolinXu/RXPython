@@ -9,8 +9,8 @@ from RedisHelper import *
 class AnalystBase:
     def __init__(self, stockdata):
         self.stockdata = stockdata
-        self.days_dict = stockdata.days_dict
-        self._time_array = [x for x in self.days_dict.keys()]
+        self.days_dict = stockdata.stockdata_od
+        self._time_array = [x for x in self.stockdata_od.keys()]
         self.__kpm_cache = None
         self.__cache = None
 
@@ -137,6 +137,28 @@ class AnalystBase:
         plt.figure(figsize=(16, 9))
         plt.plot(ind_array, price_array)
         plt.show()
+
+    def get_statics(self, fromdate='2000-01-01', todate='2100-01-01'):
+        buying = []
+        fake_buying = []
+        selling = []
+        fake_selling = []
+        normal = []
+        p_nametuple = namedtuple('stock', ('Ind', 'Price', 'KLTime', 'D'))
+        for key in self.days_dict:
+            if key > todate:
+                break
+            if fromdate < key < todate:
+                _ind = self._time_array.index(key)
+                _open = self.days_dict[key].Open
+                _low = self.days_dict[key].Low
+                _high = self.days_dict[key].High
+                _close = self.days_dict[key].Close
+                _volume = self.days_dict[key].Volumn
+                _turnover = self.days_dict[key].Turnover
+                _ktime = self.days_dict[key].KLTime
+                if _close > _open and _volume / (_high - _low)
+        pass
 
 
 class AnalystA(AnalystBase):
@@ -320,8 +342,49 @@ class AnalystB:
         return _high, _high_time
 
 
-class AnalystC(AnalystBase):
-    def __init__(self, stockdata):
-        AnalystBase.__init__(self, stockdata)
+class AnalystC:
+    """已完成
+    大于前低点 某个百分点 卖出
+    小于前高点 某个百分点 买入
+    """
+    def __init__(self, g_cache, stockdata, days, b_rate=-0.09, s_rate=0.15):
+        self.data_df = stockdata.stockdata_df
+        self.b_rate = b_rate
+        self.s_rate = s_rate
+        self.days = days*-1
+        self.__status_cache_key = ""
+        self.__status_cache = g_cache
+        # self.__redis = RedisHelper()
+
+    def can_buy(self, cur_time, cur_price):
+        _high = self.__getstatus_cache((self.days, cur_time[0:10]))
+        cur_price = cur_price
+        if cur_price <= (_high * (1 + self.b_rate)):
+            return True
+        return False
+
+    def can_sell(self, cur_time, cur_price):
+        _high = self.__getstatus_cache((self.days, cur_time[0:10]))
+        cur_price = cur_price
+        if cur_price > (_high * (1 + self.s_rate)):
+            return True
+        return False
+
+    def __getstatus_cache(self, key):
+        if key not in self.__status_cache:
+            self.__status_cache[key] = self.__getstatus(key[1])
+        return self.__status_cache[key]
+
+    def __getstatus(self, time_key):
+        t_now = datetime.strptime(time_key, '%Y-%m-%d')
+        from_time = t_now + timedelta(days=self.days)
+        from_t = from_time.strftime('%Y-%m-%d %H:%M:%S')
+        to_t = t_now.strftime('%Y-%m-%d %H:%M:%S')
+        range_df = self.data_df.query("index > @from_t and index < @to_t ")
+        if len(range_df.index) < 1:
+            return 0
+        # 获取前高点
+        _high = range_df.High.max()
+        return _high
 
 
