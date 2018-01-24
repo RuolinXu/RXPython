@@ -145,19 +145,22 @@ class AnalystBase:
         fake_selling = []
         normal = []
         p_nametuple = namedtuple('stock', ('Ind', 'Price', 'KLTime', 'D'))
+        filter(lambda x: fromdate < x.Index < todate, self.days_dict)
         for key in self.days_dict:
             if key > todate:
                 break
             if fromdate < key < todate:
                 _ind = self._time_array.index(key)
-                _open = self.days_dict[key].Open
-                _low = self.days_dict[key].Low
-                _high = self.days_dict[key].High
-                _close = self.days_dict[key].Close
-                _volume = self.days_dict[key].Volumn
-                _turnover = self.days_dict[key].Turnover
+                tmp = self.days_dict[key]
+                _open = tmp.Open
+                _low = tmp.Low
+                _high = tmp.High
+                _close = tmp.Close
+                _volume = tmp.Volumn
+                _turnover = tmp.Turnover
                 _ktime = self.days_dict[key].KLTime
-                if _close > _open and _volume / (_high - _low)
+                if _close > _open and _volume / (_high - _low):
+                    pass
         pass
 
 

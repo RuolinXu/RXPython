@@ -160,12 +160,21 @@ class StockData(object):
         # t = datetime.strptime(to_time, '%Y-%m-%d %H:%M:%S').strftime('%m-%d %H_%M')
         # plt.savefig(r'D:\pics\%s -- %s.jpg' % (f, t))
 
+    def foo(self, fromdate, todate):
+        # dd = self.stockdata_od[1]
+        df = self.stockdata_od
+        dd = filter(lambda x: fromdate < x.value.KLTime < todate, self.stockdata_od)
+        print([x for x in dd])
+
+
+
 
 if __name__ == '__main__':
     # d = StockData('US.BABA')
     d = StockData('US.BABA')
     # print(d.time_array[1])                    # print data summary
-    d.update_db()
+    # d.update_db()
+    d.foo('2017-01-31 09:39:00', '2017-02-21 09:39:00')
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
     # df = d.stockdata_df
@@ -187,15 +196,11 @@ if __name__ == '__main__':
     # print(df3)
     # d.get_kline_view('2017-01-31 10:31:00', '2017-01-31 12:31:00','xxx')
 
-
-
-
-
     # print(d[0])         # print first line
     # print(d[0].Close)         # print second line
     # c = d.get_change_array()  # get change_array default close
     # print(c[0:3])               # print result
-    # for x in d:
+    # for x in d.stockdata_od:
     #     print(x)
     # a = d[1]
     # print(a)
