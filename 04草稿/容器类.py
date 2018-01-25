@@ -51,14 +51,14 @@ def pandas_test():
                        'C': np.random.randn(8),
                        'D': np.random.randn(8)
                        })
-    print(df)
+    print('here:{}'.format(type(df['A'])))
     print('分组统计')
     print(df.groupby(['A', 'B']).sum())
 
 
 if __name__ == '__main__':
-    dic_test()
-    # pandas_test()
+    # dic_test()
+    pandas_test()
 
 
 

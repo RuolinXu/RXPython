@@ -161,12 +161,20 @@ class StockData(object):
         # plt.savefig(r'D:\pics\%s -- %s.jpg' % (f, t))
 
     def foo(self, fromdate, todate):
+        """
+        总成交量TV 上涨成交量UV 下跌成交量DV 上涨成交均价UP 下跌成交均价DP 上涨数量UC 下跌数量 DC
+        高低价价差平均HLD  上涨每分成交量UVHLP平均  下跌每分成交量
+        上涨每分成交量UVHLP 最大前十明细   （时间 VHLP  HL Volumn UP  ）
+        """
         # dd = self.stockdata_od[1]
+
         df = self.stockdata_df[fromdate: todate]
+
         df['VHLP'] = df.eval('Volume / 100*(High-Low)')    # 每分钱成交量
-        print(df['VHLP'].max())
-        print(df[df.Close > df.Open].sort_values('VHLP', ascending=False).ix[:10, ['Open', 'Close', 'VHLP']])
-        # print(df)
+        # df['AVGPrice'] = df.eval('Turnover / Volume')    # 成交均价
+        print(df)
+        print(df[df.Close > df.Open].sort_values('VHLP', ascending=False).ix[:10, ])
+        # print(df)  ['Open', 'Close', 'VHLP']
 
 
 
