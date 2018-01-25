@@ -162,9 +162,11 @@ class StockData(object):
 
     def foo(self, fromdate, todate):
         # dd = self.stockdata_od[1]
-        df = self.stockdata_od
-        dd = filter(lambda x: fromdate < x.value.KLTime < todate, self.stockdata_od)
-        print([x for x in dd])
+        df = self.stockdata_df[fromdate: todate]
+        df['VHLP'] = df.eval('Volume / 100*(High-Low)')    # 每分钱成交量
+        print(df['VHLP'].max())
+        print(df[df.Close > df.Open].sort_values('VHLP', ascending=False).ix[:10, ['Open', 'Close', 'VHLP']])
+        # print(df)
 
 
 
@@ -174,7 +176,7 @@ if __name__ == '__main__':
     d = StockData('US.BABA')
     # print(d.time_array[1])                    # print data summary
     # d.update_db()
-    d.foo('2017-01-31 09:39:00', '2017-02-21 09:39:00')
+    d.foo('2017-01-31 15:39:00', '2017-02-01 09:39:00')
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
     # df = d.stockdata_df
