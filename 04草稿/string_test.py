@@ -6,6 +6,10 @@ print(name.center(50, '-'))
 
 intab = "aeiou"
 outtab = "12345"
+print('1234567890\t\t1234567890')
+print('%10s\t\t%10s' % (12345, 23456))
+print('%10.3f\t\t%-10s' % (123.4567, 23456))   # 左对齐 固定宽度  小数位数
+
 print(intab+outtab)                      # 字符拼接
 print(name.translate(str.maketrans(intab, outtab)))  # 字符映射
 
