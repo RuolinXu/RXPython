@@ -167,9 +167,10 @@ class StockData(object):
         """
         pd.options.mode.chained_assignment = None  # default='warn'
         df = self.stockdata_df[fromdate: todate]
-        df['VHLP'] = round(df.eval('Volume / 100*(High-Low)'), 3)    # 每分钱成交量
+        df['VHLP'] = round(df.eval('Volume / (100*(High-Low))'), 1)    # 每分钱成交量
         df['AvgP'] = round(df.eval('Turnover / Volume'), 3)          # 成交均价
         df['HLD'] = df.eval('High-Low')    # 振幅
+        df['IsUp'] = df.eval('Close > Open')
 
         TV = df['Volume'].sum()
         Udf, Ddf = df[df.Close > df.Open], df[df.Close < df.Open]
@@ -179,7 +180,7 @@ class StockData(object):
         DP = round(Ddf['Turnover'].sum() / Ddf['Volume'].sum(), 3)
         HLD = round(df['HLD'].mean(), 3)
         UVHLP, DVHLP = round(Udf['VHLP'].mean(), 3), round(Ddf['VHLP'].mean(), 3)
-        print('%s  %s - %s 的分析：' % (self.stockcode, fromdate, todate))
+        print('%s  %s - %s 的分析：' % (self.stockcode, df.index.values[0], df.index.values[-1]))
         print('*'*100)
         # print('总成交量TV\t上涨成交量UV\t下跌成交量DV\t上涨成交均价UP\t下跌成交均价DP\t上涨数量UC\t下跌数量DC')
         print('%12s\t%12s\t%12s\t%8s\t%8s\t%10s\t%10s'
@@ -201,7 +202,7 @@ class StockData(object):
             print('*' * 100)
         if df.shape[0] > 10:
             print('振幅最大的前10：（查看是否拉升或打压）')
-            print(df.sort_values('HLD', ascending=False).ix[:10, ['VHLP', 'Volume', 'HLD', 'Open', 'Close']])
+            print(df.sort_values('HLD', ascending=False).ix[:10, ['VHLP', 'Volume', 'HLD', 'Low', 'High', 'IsUp']])
             print('*' * 100)
         # print(df[df.Close > df.Open].sort_values('VHLP', ascending=False).ix[:10, ])
         # print(df)  ['Open', 'Close', 'VHLP']
@@ -212,7 +213,7 @@ if __name__ == '__main__':
     d = StockData('US.BABA')
     # print(d.time_array[1])                    # print data summary
     # d.update_db()
-    d.foo('2017-12-01 09:30:00', '2018-01-01 09:30:00')
+    d.foo('2018-01-16 09:30:00', '2018-01-16 16:00:00')
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
     # df = d.stockdata_df

@@ -27,7 +27,7 @@ def pandas_test():
 
     df1 = df.set_index(['b'])  # 设置索引列
     print('打印设置了索引的DataFrame {}'.format(df1))
-
+    print(df1.index.values[0])
     print('打印a列 {}'.format(df1['a']))
     print('打印某一索引行的a列 {}'.format(df1.loc['2017-01-01']['a']))
     print('打印某一索引行的a c 列 {}'.format(df1.loc['2017-01-01', ['a', 'c']]))
@@ -54,6 +54,9 @@ def pandas_test():
     print('here:{}'.format(type(df['A'])))
     print('分组统计')
     print(df.groupby(['A', 'B']).sum())
+
+
+
 
 
 if __name__ == '__main__':
