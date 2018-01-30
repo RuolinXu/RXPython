@@ -167,26 +167,31 @@ class StockData(object):
         """
         pd.options.mode.chained_assignment = None  # default='warn'
         df = self.stockdata_df[fromdate: todate]
-        df['VHLP'] = round(df.eval('Volume / (100*(High-Low))'), 1)    # 每分钱成交量
-        df['AvgP'] = round(df.eval('Turnover / Volume'), 3)          # 成交均价
-        df['HLD'] = df.eval('High-Low')    # 振幅
+        df['VHLP'] = round(df.eval('Volume / (100*(High-Low))'), 1)     # 每分钱成交量
+        df['AvgP'] = round(df.eval('Turnover / Volume'), 3)             # 成交均价
+        df['HLD'] = df.eval('High-Low')                                 # 振幅
         df['IsUp'] = df.eval('Close > Open')
+        df['UpShadow'] = df.apply(lambda x: (x.High-x.Close) if x.IsUp else (x.High - x.Open), axis=1)
+        df['DownShadow'] = df.apply(lambda x: (x.Low - x.Open) if x.IsUp else (x.Low - x.Close), axis=1)
 
-        TV = df['Volume'].sum()
-        Udf, Ddf = df[df.Close > df.Open], df[df.Close < df.Open]
-        UC, DC = Udf.shape[0], Ddf.shape[0]
-        UV, DV = Udf['Volume'].sum(), Ddf['Volume'].sum()
-        UP = round(Udf['Turnover'].sum() / Udf['Volume'].sum(), 3)
-        DP = round(Ddf['Turnover'].sum() / Ddf['Volume'].sum(), 3)
-        HLD = round(df['HLD'].mean(), 3)
-        UVHLP, DVHLP = round(Udf['VHLP'].mean(), 3), round(Ddf['VHLP'].mean(), 3)
+        TV = df['Volume'].sum()                                         # 总成交量
+        Udf, Ddf = df[df.Close > df.Open], df[df.Close < df.Open]       # 分割阳线 阴线
+        UC, DC = Udf.shape[0], Ddf.shape[0]                             # 计算数量
+        UV, DV = Udf['Volume'].sum(), Ddf['Volume'].sum()               # 计算阳线 阴线成交量总量
+        UP = round(Udf['Turnover'].sum() / Udf['Volume'].sum(), 3)      # 阳线成交均价
+        DP = round(Ddf['Turnover'].sum() / Ddf['Volume'].sum(), 3)      # 阴线成交均价
+        HLD = round(df['HLD'].mean(), 3)                                # 高低价差平均
+        UVHLP, DVHLP = round(Udf['VHLP'].mean(), 3), round(Ddf['VHLP'].mean(), 3)   # 阳线 阴险高低价差平均
+        UpShadowS, DownShadowS = df['UpShadow'].sum(), df['DownShadow'].sum()  # 上影线 下影线加总
         print('%s  %s - %s 的分析：' % (self.stockcode, df.index.values[0], df.index.values[-1]))
         print('*'*100)
         # print('总成交量TV\t上涨成交量UV\t下跌成交量DV\t上涨成交均价UP\t下跌成交均价DP\t上涨数量UC\t下跌数量DC')
-        print('%12s\t%12s\t%12s\t%8s\t%8s\t%10s\t%10s'
-              % ('Total Volume', 'Up Volume', 'Down Volume',
-                 'Up Price', 'Down Price', 'Up Count', 'Down Count'))
-        print('%12d\t%12d\t%12d\t%8.3f\t%8.3f\t%10d\t%10d\n' % (TV, UV, DV, UP, DP, UC, DC))
+        print('%12s\t%12s\t%12s\t%8s\t%10s\t%10s\t%10s'
+              % ('Total_Volume', 'Up_Volume', 'Down_Volume',
+                 'Up_Price', 'Down_Price', 'Up_Count', 'Down_Count'))
+        print('%12d\t%12d\t%12d\t%8.3f\t%10.3f\t%10d\t%10d\n' % (TV, UV, DV, UP, DP, UC, DC))
+        print('%12s\t%14s' % ('UpShadow_Sum', 'DownShadow_Sum'))
+        print('%12.3f\t%14.3f\n' % (UpShadowS, DownShadowS))
         print('高低价价差平均HLD  上涨每分成交量UVHLP平均  下跌每分成交量DVHLP平均')
         print('{}\t\t\t\t{}\t\t\t\t{}'.format(HLD, UVHLP, DVHLP))
         # print('%12s\t%17s\t%17s' % ('HL Range Avg', 'Up Penny Volume', 'Down Penny Volume'))
@@ -202,18 +207,20 @@ class StockData(object):
             print('*' * 100)
         if df.shape[0] > 10:
             print('振幅最大的前10：（查看是否拉升或打压）')
-            print(df.sort_values('HLD', ascending=False).ix[:10, ['VHLP', 'Volume', 'HLD', 'Low', 'High', 'IsUp']])
+            print(df.sort_values('HLD', ascending=False).ix[:10, ['VHLP', 'Volume', 'HLD', 'IsUp']])
             print('*' * 100)
+            print('上影线最大的前10：（查看上涨意愿）')
+            print(df.sort_values('UpShadow', ascending=False).ix[:10, ['VHLP', 'UpShadow', 'High', 'AvgP', 'IsUp']])
         # print(df[df.Close > df.Open].sort_values('VHLP', ascending=False).ix[:10, ])
         # print(df)  ['Open', 'Close', 'VHLP']
 
 
 if __name__ == '__main__':
-    # d = StockData('US.BABA')
+    # d = StockData('US.NVDA')
     d = StockData('US.BABA')
     # print(d.time_array[1])                    # print data summary
     # d.update_db()
-    d.foo('2018-01-16 09:30:00', '2018-01-16 16:00:00')
+    d.foo('2018-01-29 09:30:00', '2018-01-29 16:00:00')
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
     # df = d.stockdata_df

@@ -6,7 +6,7 @@ pplist = [x for x in range(10)]
 
 from itertools import groupby
 
-lst= [
+lst = [
     2648, 2648, 2648, 63370, 63370, 425, 425, 120,
     120, 217, 217, 189, 189, 128, 128, 115, 115, 197,
     19752, 152, 152, 275, 275, 1716, 1716, 131, 131,
@@ -16,8 +16,8 @@ lst= [
 ]
 
 for i in range(max(lst)/10):
-    a= i*10
-    b= (i+1)*10
+    a = i*10
+    b = (i+1)*10
     print('{}-{}: {} '.format(a, b, len([pp for pp in lst if pp>=a and pp<b]) ))
 
 # for k, g in groupby(sorted(lst), key=lambda x: x//50):
@@ -35,5 +35,4 @@ for i in range(max(lst)/10):
 # # print(tmp[0])
 # tmp = [iter(lst)] * 2
 # print([x for x in tmp])
-
 

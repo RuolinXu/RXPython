@@ -11,6 +11,9 @@ def dic_test():
     print("值：{}".format(dic.values()))
     dic.clear()   # 清空字典
 
+def lamX(x):
+    print(x.a)
+    return x.sum()
 
 def pandas_test():
     import pandas as pd
@@ -26,34 +29,37 @@ def pandas_test():
     print('打印DataFrame\n{}'.format(df))
 
     df1 = df.set_index(['b'])  # 设置索引列
-    print('打印设置了索引的DataFrame {}'.format(df1))
-    print(df1.index.values[0])
-    print('打印a列 {}'.format(df1['a']))
-    print('打印某一索引行的a列 {}'.format(df1.loc['2017-01-01']['a']))
-    print('打印某一索引行的a c 列 {}'.format(df1.loc['2017-01-01', ['a', 'c']]))
-    print('使用布尔索引 {}'.format(df1[df1.a > 5]))
-    print('对水平轴统计 {}'.format(df1.mean(0)))
-    print('对纵轴统计 {}'.format(df1['a'].mean(0)))
-
-    print('按a列排序:\n{}'.format(df1.sort_values('a', ascending=False)))
-
-    print('按索引排序:\n{}'.format(df1.sort_index(ascending=False)))
-
-    # DataFrame.iterrows() 迭代(iterate)覆盖整个DataFrame的行中，返回(index, Series)对
-    arr1 = [x[1]['a'] for x in df1.iterrows()]
-    print(arr1)
-
-    for x in df1['a']:
-        print(x)
-
-    df = pd.DataFrame({'A': ['foo', 'bar', 'foo', 'bar', 'foo', 'bar', 'foo', 'bar'],
-                       'B': ['one', 'one', 'two', 'one', 'one', 'two', 'one', 'two'],
-                       'C': np.random.randn(8),
-                       'D': np.random.randn(8)
-                       })
-    print('here:{}'.format(type(df['A'])))
-    print('分组统计')
-    print(df.groupby(['A', 'B']).sum())
+    print('打印设置了索引的DataFrame\n {}'.format(df1))
+    print('*'*50)
+    df1['EE'] = df1.apply(lamX, axis=1)
+    print(df1)
+    # print(df1.index.values[0])     # 获取索引列表 值
+    # print('打印a列 {}'.format(df1['a']))
+    # print('打印某一索引行的a列 {}'.format(df1.loc['2017-01-01']['a']))
+    # print('打印某一索引行的a c 列 {}'.format(df1.loc['2017-01-01', ['a', 'c']]))
+    # print('使用布尔索引 {}'.format(df1[df1.a > 5]))
+    # print('对水平轴统计 {}'.format(df1.mean(0)))
+    # print('对纵轴统计 {}'.format(df1['a'].mean(0)))
+    #
+    # print('按a列排序:\n{}'.format(df1.sort_values('a', ascending=False)))
+    #
+    # print('按索引排序:\n{}'.format(df1.sort_index(ascending=False)))
+    #
+    # # DataFrame.iterrows() 迭代(iterate)覆盖整个DataFrame的行中，返回(index, Series)对
+    # arr1 = [x[1]['a'] for x in df1.iterrows()]
+    # print(arr1)
+    #
+    # for x in df1['a']:
+    #     print(x)
+    #
+    # df = pd.DataFrame({'A': ['foo', 'bar', 'foo', 'bar', 'foo', 'bar', 'foo', 'bar'],
+    #                    'B': ['one', 'one', 'two', 'one', 'one', 'two', 'one', 'two'],
+    #                    'C': np.random.randn(8),
+    #                    'D': np.random.randn(8)
+    #                    })
+    # print('here:{}'.format(type(df['A'])))
+    # print('分组统计')
+    # print(df.groupby(['A', 'B']).sum())
 
 
 
