@@ -135,7 +135,8 @@ class StockData(object):
         ax1 = fig.add_axes([0.1, 0.4, 0.85, 0.5])   # [left, bottom, width, height]
         ax2 = fig.add_axes([0.1, 0.1, 0.85, 0.3])
 
-        df = self.stockdata_df.query("index > @from_time and index < @to_time ")
+        # df = self.stockdata_df.query("index > @from_time and index < @to_time ")
+        df = self.stockdata_df[from_time: to_time]
         i_length = len(df)
         qutotes = [(i, x[1]['Open'], x[1]['Close'], x[1]['High'], x[1]['Low'])
                    for i, x in zip(range(i_length), df.iterrows())]
@@ -225,8 +226,8 @@ if __name__ == '__main__':
     d = StockData('US.BABA')
     # print(d.time_array[1])                    # print data summary
     # d.update_db()
-    d.foo('2017-11-27 09:30:00', '2017-11-27 16:00:00')
-    d.get_kline_view('2017-11-27 09:30:00', '2017-11-27 16:00:00', '')
+    d.foo('2018-01-30 09:30:00', '2018-01-30 16:00:00')
+    d.get_kline_view('2018-01-30 09:30:00', '2018-01-30 16:00:00', '')
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
     # df = d.stockdata_df
