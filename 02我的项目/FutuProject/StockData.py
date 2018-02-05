@@ -209,8 +209,8 @@ class StockData(object):
             print(Ddf.sort_values('VHLP', ascending=False).ix[:10, ['VHLP', 'Volume', 'AvgP', 'HLD']])
             print('*' * 100)
         if df.shape[0] > 10:
-            print('振幅最大的前10：（查看是否拉升或打压）')
-            print(df.sort_values('HLD', ascending=False).ix[:10, ['VHLP', 'Volume', 'HLD', 'IsUp']])
+            print('VHLP最小的前10：（查看是否拉升或打压）')
+            print(df.sort_values('VHLP', ascending=True).ix[:10, ['VHLP', 'Volume', 'HLD', 'IsUp', 'Open', 'Close']])
             print('*' * 100)
             print('上影线最大的前10：（查看上涨意愿）')
             print(df.sort_values('UpShadow', ascending=False).ix[:10, ['VHLP', 'UpShadow', 'High', 'AvgP', 'IsUp']])
@@ -222,11 +222,11 @@ class StockData(object):
 
 
 if __name__ == '__main__':
-    # d = StockData('US.NVDA')
+    # d = StockData('US.NVDA')BABA
     d = StockData('US.NVDA')
     # print(d.time_array[1])                    # print data summary
-    d.update_db()
-    # d.foo('2018-01-31 09:30:00', '2018-01-31 16:00:00')
+    # d.update_db()
+    d.foo('2018-02-02 09:30:00', '2018-02-02 16:00:00')
     # d.get_kline_view('2018-01-30 09:30:00', '2018-01-30 16:00:00', '')
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
