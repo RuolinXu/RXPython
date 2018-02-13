@@ -3,7 +3,8 @@ name = 'my \tname is {name}, age is {age}.'
 
 # 一共打印50个字符，把原始字符串放到中间，两边不够的用“-”补上
 print(name.center(50, '-'))
-
+ss = ''' %s 123 ''' % 'hello'
+print(ss)
 intab = "aeiou"
 outtab = "12345"
 print('1234567890\t\t1234567890')

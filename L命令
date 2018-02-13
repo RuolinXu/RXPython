@@ -278,3 +278,10 @@ order by StockCode, date(KLTime)
 
 
 
+XXXXXX 到 XXXX 区间
+buying :    count     price   chengjiaojiner% 
+
+
+
+
+每月月初记录初始金额，当月盈利20%以上离场止盈，当月亏损7%应止损离场整理。

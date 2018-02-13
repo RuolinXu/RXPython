@@ -124,9 +124,13 @@ class StockData(object):
                     count += 1
         db.commit()
         db.execute("""
-        
-        """)
-        print("%d rows inserted!" % count)
+        delete from KLine1M where id in (
+          select max(id) from KLine1M 
+          group by StockCode,KLTime 
+          having (StockCode='%s' and count(*) >1)
+        )
+        """ % self.stockcode)
+        print("%s %d rows inserted!" % (self.stockcode, count))
         db.close()
 
     def get_kline_view(self, from_time, to_time, title):
@@ -226,7 +230,7 @@ if __name__ == '__main__':
     d = StockData('US.NVDA')
     # print(d.time_array[1])                    # print data summary
     # d.update_db()
-    d.foo('2018-02-02 09:30:00', '2018-02-02 16:00:00')
+    d.foo('2018-02-07 09:30:00', '2018-02-13 16:00:00')
     # d.get_kline_view('2018-01-30 09:30:00', '2018-01-30 16:00:00', '')
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
