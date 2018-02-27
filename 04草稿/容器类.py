@@ -32,7 +32,10 @@ def pandas_test():
     print('打印设置了索引的DataFrame\n {}'.format(df1))
     print('*'*50)
     df1['EE'] = df1.apply(lamX, axis=1)
-    print(df1)
+    print('======================')
+    print(df1.a)
+    print('======================')
+    print(df1.a.shift(1))
     # print(df1.index.values[0])     # 获取索引列表 值
     # print('打印a列 {}'.format(df1['a']))
     # print('打印某一索引行的a列 {}'.format(df1.loc['2017-01-01']['a']))

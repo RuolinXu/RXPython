@@ -39,6 +39,7 @@ class StockData(object):
         if len(sorted_rs) < 1:
             return None
         data_frame = pd.DataFrame(sorted_rs, columns=["Open", "Low", "High", "Close", "Volume", "Turnover", "KLTime"])
+        data_frame['KLTime'] = pd.to_datetime(data_frame['KLTime'], format='%Y-%m-%d %H:%M:%S')
         return data_frame.set_index(['KLTime'])
 
     def __orderdict_from_db(self):
@@ -230,8 +231,11 @@ if __name__ == '__main__':
     d = StockData('US.NVDA')
     # print(d.time_array[1])                    # print data summary
     # d.update_db()
-    d.foo('2018-02-07 09:30:00', '2018-02-13 16:00:00')
+    # d.foo('2018-02-21 09:30:00', '2018-02-23 16:00:00')
     # d.get_kline_view('2018-01-30 09:30:00', '2018-01-30 16:00:00', '')
+
+    d1 = d.stockdata_df.resample('5T').mean()  # T分钟 D日
+    print(d1['Open'])
 
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
     # df = d.stockdata_df

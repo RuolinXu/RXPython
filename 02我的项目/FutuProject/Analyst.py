@@ -2,6 +2,7 @@ from functools import reduce
 from datetime import datetime, timedelta
 from collections import namedtuple
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 from RedisHelper import *
 
@@ -10,14 +11,14 @@ class AnalystBase:
     def __init__(self, stockdata):
         self.stockdata = stockdata
         self.days_dict = stockdata.stockdata_od
-        self._time_array = [x for x in self.stockdata_od.keys()]
+        self._time_array = [x for x in self.days_dict.keys()]
         self.__kpm_cache = None
         self.__cache = None
 
     @classmethod
     def _get_change_array(cls, tar, base):
         pp_array = [(p1, p2) for p1, p2 in zip(base[:-1], tar[1:])]
-        change_array = list(map(lambda pp: reduce(lambda a, b: (b - a) / a, pp), pp_array))
+        change_array = list(map(lambda pp: reduce(lambda a, b: round((b - a) / a, 4), pp), pp_array))
         change_array.insert(0, 0)
         return change_array
 
@@ -44,10 +45,10 @@ class AnalystBase:
         if self.__kpm_cache is None:
             self.__kpm_cache = []
         if len(self.__kpm_cache) < 2:
-            self.__kpm_cache = self._get_kp_array(todate=todate, rate=rate)
+            self.__kpm_cache = self.get_kp_array(todate=todate, rate=rate)
         else:
             fromdate = self.__kpm_cache[-2].KLTime
-            tmp = self._get_kp_array(fromdate=fromdate, todate=todate, rate=rate)
+            tmp = self.get_kp_array(fromdate=fromdate, todate=todate, rate=rate)
             if len(tmp) > 0:
                 self.__kpm_cache.pop()
                 for x in tmp[1:]:
@@ -56,11 +57,11 @@ class AnalystBase:
 
     def get_kp_array_cache(self, kltime):
         if self.__cache is None:
-            self.__cache = self._get_kp_array()
+            self.__cache = self.get_kp_array()
         rst = list(filter(lambda x: x.KLTime < kltime, self.__cache))
         return sorted(rst, key=lambda x: x.KLTime)
 
-    def _get_kp_array(self, fromdate='2000-01-01', todate='2100-01-01', rate=0.03):
+    def get_kp_array(self, fromdate='2000-01-01', todate='2100-01-01', rate=0.03):
         """返回走势骨架
         :param fromdate:
         :param todate:
@@ -104,11 +105,61 @@ class AnalystBase:
                         continue
         return kp_array
 
+    def get_kp_df(self, fromdate='2000-01-01', todate='2100-01-01', rate=0.03, cache=True):
+        """返回走势骨架
+        :param fromdate:
+        :param todate:
+        :param rate:涨幅基数
+        :return: namedtuple_list('Ind', 'Price', 'KLTime', 'D')
+        """
+        if cache:
+            data_frame = pd.read_csv('./kp_df.csv', parse_dates=True, index_col=0)
+            return data_frame
+
+        p_nametuple = namedtuple('stock', ('Ind', 'Price', 'KLTime', 'D'))
+        kp_array = []
+        for key in self.days_dict:
+            if key > todate:
+                break
+            if fromdate < key < todate:
+                _ind = self._time_array.index(key)
+                _open = self.days_dict[key].Open
+                _low = self.days_dict[key].Low
+                _high = self.days_dict[key].High
+                _ktime = self.days_dict[key].KLTime
+                if len(kp_array) == 0:
+                    kp_array.append(p_nametuple(_ind, _open, _ktime, 0))
+                    continue
+                if kp_array[-1].D == 0:
+                    if _high > (kp_array[-1].Price * (1 + rate)):
+                        kp_array.append(p_nametuple(_ind, _high, _ktime, 1))
+                        continue
+                    if _low < (kp_array[-1].Price * (1 - rate)):
+                        kp_array.append(p_nametuple(_ind, _low, _ktime, -1))
+                        continue
+                if kp_array[-1].D == 1:
+                    if _high > kp_array[-1].Price:
+                        kp_array[-1] = p_nametuple(_ind, _high, _ktime, 1)
+                        continue
+                    elif _low < (kp_array[-1].Price * (1 - rate)):
+                        kp_array.append(p_nametuple(_ind, _low, _ktime, -1))
+                        continue
+                if kp_array[-1].D == -1:
+                    if _low < kp_array[-1].Price:
+                        kp_array[-1] = p_nametuple(_ind, _low, _ktime, -1)
+                        continue
+                    elif _high > (kp_array[-1].Price * (1 + rate)):
+                        kp_array.append(p_nametuple(_ind, _high, _ktime, 1))
+                        continue
+        data_frame = pd.DataFrame(kp_array, columns=['Ind', 'Price', 'KLTime', 'D']).set_index(['KLTime'])
+        data_frame.to_csv('./kp_df.csv', index=True)
+        return data_frame
+
     def get_keypoint_report(self, kp_array):
         price_array = np.array([x.Price for x in kp_array])
         ind_array = np.array([x.Ind for x in kp_array])
-        change_array = self.__get_change_array(price_array, price_array)
-        interval_array = self.__get_interval_array(ind_array, ind_array)
+        change_array = self._get_change_array(price_array, price_array)
+        interval_array = self._get_interval_array(ind_array, ind_array)
         if kp_array[1].D == 1:      # 如果第一个节点是涨
             up_change_array = np.array(change_array[1::2])
             up_interval_array = np.array(interval_array[1::2])
@@ -124,19 +175,21 @@ class AnalystBase:
         print("平均跌幅%f,最大跌幅%f,最小跌幅%f, 平均周期%f分钟" %
               (down_change_array.mean(), down_change_array.min(), down_change_array.max(), down_interval_array.mean()))
         print(change_array)
+        cats = pd.qcut(down_change_array, 10)
+        cats.value_counts()
 
-        if kp_array[-1].D == 1:  # 如果最后一个节点是涨 显示下一节点的目标价
-            price_tar = kp_array[-1].Price * (1 + down_change_array.mean())
-            time_delta = down_interval_array.mean()
-        if kp_array[-1].D == -1:
-            price_tar = kp_array[-1].Price * (1 + up_change_array.mean())
-            time_delta = up_interval_array.mean()
-
-        time_str = self._gettime_add_ind(kp_array[-1].KLTime, time_delta)
-        print("目标价%f,时间点%s" % (price_tar, time_str))
-        plt.figure(figsize=(16, 9))
-        plt.plot(ind_array, price_array)
-        plt.show()
+        # if kp_array[-1].D == 1:  # 如果最后一个节点是涨 显示下一节点的目标价
+        #     price_tar = kp_array[-1].Price * (1 + down_change_array.mean())
+        #     time_delta = down_interval_array.mean()
+        # if kp_array[-1].D == -1:
+        #     price_tar = kp_array[-1].Price * (1 + up_change_array.mean())
+        #     time_delta = up_interval_array.mean()
+        # time_str = self._gettime_add_ind(kp_array[-1].KLTime, time_delta)
+        # print("目标价%f,时间点%s" % (price_tar, time_str))
+        #
+        # plt.figure(figsize=(16, 9))
+        # plt.plot(ind_array, price_array)
+        # plt.show()
 
     def get_statics(self, fromdate='2000-01-01', todate='2100-01-01'):
         buying = []
