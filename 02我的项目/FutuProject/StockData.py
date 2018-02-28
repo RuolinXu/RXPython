@@ -18,7 +18,7 @@ class StockData(object):
         self.fromdate = fromdate
         self.todate = todate
         self.stockdata_df = self.__dataframe_from_db()
-        self.time_array = self.stockdata_df.index.values
+        self.time_array = [str(x) for x in self.stockdata_df.index.to_pydatetime()]  # self.stockdata_df.index.values
         self.stockdata_od = self.__orderdict_from_db()
         # self.__sorted_rs = self.__load_sorted_rs()
         # self.days_dict = self.__init_days_dict()
@@ -228,15 +228,20 @@ class StockData(object):
 
 if __name__ == '__main__':
     # d = StockData('US.NVDA')BABA
-    d = StockData('US.NVDA')
-    # print(d.time_array[1])                    # print data summary
+    d = StockData('US.BABA')
+    # t1 = d.stockdata_df.index.to_pydatetime()
+    # print(str(t1[0]))                    # print data summary
+
     # d.update_db()
-    # d.foo('2018-02-21 09:30:00', '2018-02-23 16:00:00')
+    # d.foo('2018-02-26 09:30:00', '2018-02-28 16:00:00')
     # d.get_kline_view('2018-01-30 09:30:00', '2018-01-30 16:00:00', '')
 
-    d1 = d.stockdata_df.resample('5T').mean()  # T分钟 D日
-    print(d1['Open'])
+    # d1 = d.stockdata_df.resample('5T').mean()  # T分钟 D日
+    # print(d1['Open'])
 
+    d2 = d.stockdata_df  # T分钟 D日
+    d2['pct_change'] = d2['Close'].pct_change()
+    print(d2.filter(['Close','Open','pct_change']))
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
     # df = d.stockdata_df
     # print(df[df.index < '2017-02-01 09:31:00'])    #
