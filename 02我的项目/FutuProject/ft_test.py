@@ -7,10 +7,10 @@ if __name__ == '__main__':
     # ret_code, data = qt.get_market_snapshot(['US.NVDA'])
     # data.to_csv("index_sh.txt", index=True, sep=' ', columns=data.columns)
     # print(data)
-    # ret_code, ret_data = quote_ctx.get_plate_list('US', 'CONCEPT')
-    # ret_code, ret_data = quote_ctx.get_plate_stock('US.200305')
+    # ret_code, ret_data = quote_ctx.get_plate_list('HK', 'CONCEPT')
+    # ret_code, ret_data = quote_ctx.get_plate_stock('HK.BK1110')
 
-    ret_code, ret_data = quote_ctx.get_history_kline('US.BABA', start='1990-01-01', end='2020-01-01', ktype='K_DAY',
+    ret_code, ret_data = quote_ctx.get_history_kline('US.BABA', start='1990-01-01', end='2100-01-01', ktype='K_DAY',
                                                      autype='qfq')
     print(ret_data)
     quote_ctx.close()

@@ -309,7 +309,7 @@ if __name__ == '__main__':
     # # 取一条id小于100并且staff_reserved为1的staff_name记录
     # print(rs)
 
-    rs = db.table("KLine1M").select("StockCode","Kline_High","Kline_KLTime").fetchone()
+    rs = db.table("KLine1M").select("StockCode", "Kline_High","Kline_KLTime").fetchone()
     print(rs)
 
     db.close()  # 关闭数据库
