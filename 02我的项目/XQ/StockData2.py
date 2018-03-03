@@ -3,7 +3,7 @@ from futuquant.futuquant.open_context import *
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.finance as mpf
-# from .RegUtil import *
+from XQ.RegUtil import *
 
 DB_PATH = r'../FutuProject/StockDB.db'
 
@@ -234,6 +234,10 @@ class StockData2:
         ax2.axis([-1, i_length + 1, 0, df["Volume"].max() + 10])
         # plt.title("%s ---- %s" % (from_time, to_time))
         plt.title(title)
+        _, y = regress_y(df['Close'], mode=False, show=False)
+        # print(y)
+        plt.sca(ax1)
+        plt.plot(range(0, len(y)), y)
         plt.show()
         # f = datetime.strptime(from_time, '%Y-%m-%d %H:%M:%S').strftime('%m-%d %H_%M')
         # t = datetime.strptime(to_time, '%Y-%m-%d %H:%M:%S').strftime('%m-%d %H_%M')
@@ -247,8 +251,8 @@ class StockData2:
 
 if __name__ == '__main__':
     # create_db_table()
-    StockData2.update_db_kline1M()
+    # StockData2.update_db_kline1M()
     # StockData2.update_db_klineDAY()
-    # pd = StockData2.kline_pd_from_db('US.BABA', ktype='K_DAY')
-    # StockData2.view_kline(pd, start='2017-05-01')
+    pd = StockData2.kline_pd_from_db('US.BABA', ktype='K_DAY')
+    StockData2.view_kline(pd, start='2017-05-01')
     pass
