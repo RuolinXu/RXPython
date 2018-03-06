@@ -251,8 +251,8 @@ class StockData2:
 
 if __name__ == '__main__':
     # create_db_table()
-    # StockData2.update_db_kline1M()
-    # StockData2.update_db_klineDAY()
-    pd = StockData2.kline_pd_from_db('US.BABA', ktype='K_DAY')
-    StockData2.view_kline(pd, start='2017-05-01')
+    StockData2.update_db_kline1M()
+    StockData2.update_db_klineDAY()
+    # pd = StockData2.kline_pd_from_db('US.BABA', ktype='K_DAY')
+    # StockData2.view_kline(pd, start='2017-05-01')
     pass
