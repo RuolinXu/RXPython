@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from XQ.StockData2 import StockData2
+import warnings
+warnings.filterwarnings('ignore')
+warnings.simplefilter('ignore')
 
 
 def gen_symbol_kl(symbol, start='2000-01-01', end='2100-01-01'):
@@ -144,33 +147,147 @@ def regress_process(estimator, train_x, train_y_regress, test_x,
     # 使用训练好的模型预测测试集对应的y，即根据usFB的走势特征预测股价涨跌幅度
     test_y_prdict_regress = estimator.predict(test_x)
 
-    # 绘制usFB实际股价涨跌幅度
+    # 绘制实际股价涨跌幅度
     plt.plot(test_y_regress.cumsum())
-    # 绘制通过模型预测的usFB股价涨跌幅度
+    # 绘制通过模型预测的股价涨跌幅度
     plt.plot(test_y_prdict_regress.cumsum())
 
     # 针对训练集数据做交叉验证
     from sklearn import cross_validation
-    scores = cross_validation.cross_val_score(estimator, train_x,
-                                              train_y_regress, cv=10,
-                                              scoring='mean_squared_error')
+    scores = cross_validation.cross_val_score(estimator, train_x, train_y_regress,
+                                              cv=10, scoring='mean_squared_error')
     # mse开方 -> rmse
     mean_sc = -np.mean(np.sqrt(-scores))
     print('{} RMSE: {}'.format(estimator.__class__.__name__, mean_sc))
 
 
+def classification_process(estimator, train_x, train_y_classification,
+                           test_x, test_y_classification):
+    from sklearn import metrics
+    # 训练数据，这里分类要所以要使用y_classification
+    estimator.fit(train_x, train_y_classification)
+    # 使用训练好的分类模型预测测试集对应的y，即根据usFB的走势特征预测涨跌
+    test_y_predict_classification = estimator.predict(test_x)
+    # 通过metrics.accuracy_score度量预测涨跌的准确率
+    print("{} accuracy = {:.2f}".format(
+        estimator.__class__.__name__,
+        metrics.accuracy_score(test_y_classification,
+                               test_y_predict_classification)))
+
+    from sklearn import cross_validation
+    # 针对训练集数据做交叉验证scoring='accuracy'，cv＝10
+    scores = cross_validation.cross_val_score(estimator, train_x, train_y_classification,
+                                              cv=10, scoring='accuracy')
+    # 所有交叉验证的分数取平均值
+    mean_sc = np.mean(scores)
+    print('cross validation accuracy mean: {:.2f}'.format(mean_sc))
+
+
+def train_test_split_xy(estimator, x, y, test_size=0.5, random_state=0, show=True):
+    # 通过train_test_split将原始训练集随机切割为新训练集与测试集
+    from sklearn import metrics
+    from sklearn import cross_validation
+    train_x, test_x, train_y, test_y = \
+        cross_validation.train_test_split(x, y, test_size=test_size, random_state=random_state)
+
+    if show:
+        print(x.shape, y.shape)
+        print(train_x.shape, train_y.shape)
+        print(test_x.shape, test_y.shape)
+
+    clf = estimator.fit(train_x, train_y)
+    predictions = clf.predict(test_x)
+
+    if show:
+        # 度量准确率
+        print("accuracy = %.2f" %
+              (metrics.accuracy_score(test_y, predictions)))
+
+        # 度量查准率
+        print("precision_score = %.2f" %
+              (metrics.precision_score(test_y, predictions)))
+
+        # 度量回收率
+        print("recall_score = %.2f" %
+              (metrics.recall_score(test_y, predictions)))
+
+    confusion_matrix = metrics.confusion_matrix(test_y, predictions)
+    # print("Confusion Matrix ", confusion_matrix)
+    print("          Predicted")
+    print("         |  0  |  1  |")
+    print("         |-----|-----|")
+    print("       0 | %3d | %3d |" % (confusion_matrix[0, 0],
+                                      confusion_matrix[0, 1]))
+    print("Actual   |-----|-----|")
+    print("       1 | %3d | %3d |" % (confusion_matrix[1, 0],
+                                      confusion_matrix[1, 1]))
+    print("         |-----|-----|")
+    print("")
+    print(metrics.classification_report(test_y, predictions))
+
+    return test_y, predictions
+
+
 def foo():
     train_x, train_y_regress, train_y_classification, stockdata_feature = gen_train_sets()
-    test_x, test_y_regress, test_y_classification, symbol_kl_feature_test = gen_test_sets('US.BABA')
+    test_x, test_y_regress, test_y_classification, symbol_kl_feature_test = gen_test_sets('US.NVDA')
+
     # 实例化线性回归对象estimator
     from sklearn.linear_model import LinearRegression
     estimator = LinearRegression()
+
+    # pipeline套上 degree=3 ＋ LinearRegression
+    # from sklearn.pipeline import make_pipeline
+    # from sklearn.preprocessing import PolynomialFeatures
+    # from sklearn.linear_model import LinearRegression
+    # estimator = make_pipeline(PolynomialFeatures(degree=2),
+    #                           LinearRegression())
+
+    # AdaBoost
+    # from sklearn.ensemble import AdaBoostRegressor
+    # estimator = AdaBoostRegressor(n_estimators=100)
+
+    # RandomForest
+    # from sklearn.ensemble import RandomForestRegressor
+    # estimator = RandomForestRegressor(n_estimators=100)
+
     # 将回归模型对象，训练集x，训练集连续y值，测试集x，测试集连续y传入
-    regress_process(estimator, train_x, train_y_regress, test_x,
-                    test_y_regress)
+    regress_process(estimator, train_x, train_y_regress, test_x, test_y_regress)
     plt.show()
 
 
-if __name__ == '__main__':
-    foo()
+def goo():
+    train_x, train_y_regress, train_y_classification, stockdata_feature = gen_train_sets()
+    test_x, test_y_regress, test_y_classification, symbol_kl_feature_test = gen_test_sets('US.NVDA')
 
+    # from sklearn.linear_model import LogisticRegression
+    # estimator = LogisticRegression(C=1.0, penalty='l1', tol=1e-6)
+
+    # from sklearn.svm import SVC
+    # estimator = SVC(kernel='rbf')
+
+    from sklearn.ensemble import RandomForestClassifier
+    estimator = RandomForestClassifier(n_estimators=100)
+
+    classification_process(estimator, train_x, train_y_classification,
+                           test_x, test_y_classification)
+
+
+def hoo():
+    train_x, train_y_regress, train_y_classification, stockdata_feature = gen_train_sets()
+    # from sklearn.linear_model import LogisticRegression
+    # estimator = LogisticRegression(C=1.0, penalty='l1', tol=1e-6)
+
+    # from sklearn.svm import SVC
+    # estimator = SVC(kernel='rbf')
+
+    from sklearn.ensemble import RandomForestClassifier
+    estimator = RandomForestClassifier(n_estimators=100)
+
+    train_test_split_xy(estimator, train_x, train_y_classification)
+
+
+if __name__ == '__main__':
+    # foo()
+    # woo()
+    hoo()
