@@ -1,6 +1,7 @@
 from SQLite3DB import SQLite3DB, DataCondition
 from futuquant.futuquant.open_context import *
 import pandas as pd
+from pandas.core import datetools
 import matplotlib.pyplot as plt
 import matplotlib.finance as mpf
 from XQ.RegUtil import *
@@ -80,7 +81,7 @@ class StockData2:
         if len(sorted_rs) < 1:
             return None
         data_frame = pd.DataFrame(sorted_rs, columns=["Open", "Low", "High", "Close", "Volume", "Turnover", "KLTime"])
-        data_frame['KLTime'] = pd.to_datetime(data_frame['KLTime'], format='%Y-%m-%d %H:%M:%S')
+        data_frame['KLTime'] = datetools.to_datetime(data_frame['KLTime'], format='%Y-%m-%d %H:%M:%S')
         return data_frame.set_index(['KLTime'])
 
     @classmethod
@@ -195,14 +196,14 @@ class StockData2:
 
     @classmethod
     def update_db_kline1M(cls):
-        symbol_list = ['US.BABA', 'US.NVDA']
+        symbol_list = ['US.BABA', 'US.NVDA', 'US.AAOI']
         for x in symbol_list:
             cls._update_db_1M(x)
         pass
 
     @classmethod
     def update_db_klineDAY(cls):
-        symbol_list = ['US.BABA', 'US.NVDA']
+        symbol_list = ['US.BABA', 'US.NVDA', 'US.INTC', 'US.AAPL', 'US.TSLA', 'US.GS', 'US.JPM', 'US.BZUN']
         for x in symbol_list:
             cls._update_db_DAY(x)
         pass
@@ -252,7 +253,7 @@ class StockData2:
 if __name__ == '__main__':
     # create_db_table()
     StockData2.update_db_kline1M()
-    StockData2.update_db_klineDAY()
+    # StockData2.update_db_klineDAY()
     # pd = StockData2.kline_pd_from_db('US.BABA', ktype='K_DAY')
     # StockData2.view_kline(pd, start='2017-05-01')
     pass

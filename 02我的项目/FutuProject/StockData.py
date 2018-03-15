@@ -221,27 +221,28 @@ class StockData(object):
             print(df.sort_values('UpShadow', ascending=False).ix[:10, ['VHLP', 'UpShadow', 'High', 'AvgP', 'IsUp']])
             print('*' * 100)
             print('下影线最大的前10：（查看下跌意愿）')
-            print(df.sort_values('DownShadow', ascending=True).ix[:10, ['VHLP', 'DownShadow', 'Low', 'AvgP', 'IsUp']])
+            df1 = df.sort_values('DownShadow', ascending=True).ix[:10, ['VHLP', 'DownShadow', 'Low', 'AvgP', 'IsUp']]
+            print(df1.sort_index(ascending=False))
         # print(df[df.Close > df.Open].sort_values('VHLP', ascending=False).ix[:10, ])
         # print(df)  ['Open', 'Close', 'VHLP']
 
 
 if __name__ == '__main__':
     # d = StockData('US.NVDA')BABA
-    d = StockData('US.BABA')
+    d = StockData('US.AAOI')
     # t1 = d.stockdata_df.index.to_pydatetime()
     # print(str(t1[0]))                    # print data summary
 
     # d.update_db()
-    # d.foo('2018-02-26 09:30:00', '2018-02-28 16:00:00')
+    d.foo('2018-02-23 09:30:00', '2018-03-15 16:00:00')
     # d.get_kline_view('2018-01-30 09:30:00', '2018-01-30 16:00:00', '')
 
     # d1 = d.stockdata_df.resample('5T').mean()  # T分钟 D日
     # print(d1['Open'])
 
-    d2 = d.stockdata_df  # T分钟 D日
-    d2['pct_change'] = d2['Close'].pct_change()
-    print(d2.filter(['Close','Open','pct_change']))
+    # d2 = d.stockdata_df  # T分钟 D日
+    # d2['pct_change'] = d2['Close'].pct_change()
+    # print(d2.filter(['Close','Open','pct_change']))
     # print(d.stockdata_df.loc['2017-01-31 09:39:00']['Turnover'])
     # df = d.stockdata_df
     # print(df[df.index < '2017-02-01 09:31:00'])    #

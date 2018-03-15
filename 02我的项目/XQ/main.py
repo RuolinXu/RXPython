@@ -13,7 +13,7 @@ def gen_symbol_kl(symbol, start='2000-01-01', end='2100-01-01'):
 
 
 def gen_stockdata_dict():
-    choice_symbols = ['US.BABA', 'US.NVDA']
+    choice_symbols = ['US.BABA']
 
     stockdata_dict = {}
     for symbol in choice_symbols:
@@ -104,6 +104,7 @@ def gen_train_sets(show=False):
         stockdata_feature = symbol_kl_feature if stockdata_feature is None \
             else stockdata_feature.append(symbol_kl_feature)
 
+    print(stockdata_feature.head())
     # Dataframe -> matrix
     feature_np = stockdata_feature.as_matrix()
     # x特征矩阵
@@ -230,7 +231,7 @@ def train_test_split_xy(estimator, x, y, test_size=0.5, random_state=0, show=Tru
 
 def foo():
     train_x, train_y_regress, train_y_classification, stockdata_feature = gen_train_sets()
-    test_x, test_y_regress, test_y_classification, symbol_kl_feature_test = gen_test_sets('US.NVDA')
+    test_x, test_y_regress, test_y_classification, symbol_kl_feature_test = gen_test_sets('US.BABA')
 
     # 实例化线性回归对象estimator
     from sklearn.linear_model import LinearRegression
