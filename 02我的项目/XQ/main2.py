@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-# import pandas as pd
+import pandas as pd
 from XQ.StockData2 import StockData2
 from sklearn import model_selection, metrics
 import warnings
@@ -107,7 +107,7 @@ def gen_data_set(symbol, clsFunc=lambda x: np.where(x > 0, 1, 0), xList=[1], yIn
     # Dataframe -> matrix
     feature_np = symbol_kl_feature.as_matrix()
     # x特征矩阵
-    data_x = feature_np[:, xList]
+    data_x = feature_np[:, xList] if isinstance(xList, list) else feature_np[:, 1:]
     # 回归训练的连续值y
     data_y = feature_np[:, yIndex]
     # 分类训练的离散值y，之后分类技术使用
@@ -128,9 +128,9 @@ def regress_process(estimator, train_x, train_y_regress, test_x, test_y_regress)
     # 使用训练好的模型预测测试集对应的y，即根据usFB的走势特征预测股价涨跌幅度
     predictions = estimator.predict(test_x)
 
-    # 绘制实际股价涨跌幅度
+    # 绘制实际股价涨跌幅度  蓝
     plt.plot(test_y_regress.cumsum())
-    # 绘制通过模型预测的股价涨跌幅度
+    # 绘制通过模型预测的股价涨跌幅度   绿
     plt.plot(predictions.cumsum())
 
     # 针对训练集数据做交叉验证
@@ -176,7 +176,7 @@ def classification_process(estimator, train_x, train_y_classification, test_x, t
     print(metrics.classification_report(test_y_classification, predictions))
 
 
-def train_test_split_xy(x, y, test_size=0.5, random_state=0, show=False):
+def split_xy_train_test(x, y, test_size=0.5, random_state=0, show=False):
     # 通过train_test_split将原始训练集随机切割为新训练集与测试集
     train_x, test_x, train_y, test_y = \
         model_selection.train_test_split(x, y, test_size=test_size, random_state=random_state)
@@ -184,9 +184,60 @@ def train_test_split_xy(x, y, test_size=0.5, random_state=0, show=False):
     if show:
         print("xShape:{}, yShape{}".format(x.shape, y.shape))
         print("train_xShape:{},train_yShape{}".format(train_x.shape, train_y.shape))
-        print("test_xShape:{},test_yShape:{}".format(test_x.shape, test_y.shape))
+        print("test_xShape: {}, test_yShape: {}".format(test_x.shape, test_y.shape))
 
     return train_x, test_x, train_y, test_y
+
+
+def check_features_importance(estimator, features, train_x, train_y_classification):
+    def importances_coef_pd(estimator, x, y):
+        # 训练数据模型
+        estimator.fit(x, y)
+        if hasattr(estimator, 'feature_importances_'):
+            return pd.DataFrame(
+                {'feature': list(features.columns[1:]),
+                 'importance': estimator.feature_importances_}).sort_values('importance')
+
+        elif hasattr(estimator, 'coef_'):
+            return pd.DataFrame(
+                {"columns": list(features.columns)[1:], "coef": list(estimator.coef_.T)}).sort_values('coef')
+        else:
+            print('estimator not hasattr feature_importances_ or coef_!')
+
+    # 对训练后的模型特征的重要度进行判定，重要程度由小到大，表10-4所示
+    print('importances_coef_pd(estimator):\n', importances_coef_pd(estimator, train_x, train_y_classification))
+
+    def feature_selection(estimator, x, y):
+        """
+            支持度评级
+        """
+        from sklearn.feature_selection import RFE
+        selector = RFE(estimator)
+        selector.fit(x, y)
+        print('RFE selection')
+        print(pd.DataFrame(
+            {'support': selector.support_, 'ranking': selector.ranking_},
+            index=features.columns[1:]))
+
+    print('\nfeature_selection(estimator, train_x, train_y_classification):\n')
+    feature_selection(estimator, train_x, train_y_classification)
+
+# def decision_tree_classification_process(features, train_x, train_y_classification):
+#     from sklearn.tree import DecisionTreeClassifier,DecisionTreeRegressor
+#     from sklearn import tree
+#     import os
+#
+#     estimator = DecisionTreeRegressor(max_depth=2, random_state=1)
+#
+#     def graphviz_tree(estimator, features, x, y):
+#         if not hasattr(estimator, 'tree_'):
+#             print('only tree can graphviz!')
+#             return
+#         estimator.fit(x, y)
+#         tree.export_graphviz(estimator.tree_, out_file='graphviz.dot', feature_names=features)
+#         os.system('dot -T png graphviz.dot -o graphviz.png')
+#
+#     graphviz_tree(estimator, features.columns[1:], train_x, train_y_classification)
 
 
 def regress_process_test():
@@ -211,14 +262,14 @@ def regress_process_test():
     # from sklearn.ensemble import RandomForestRegressor
     # estimator = RandomForestRegressor(n_estimators=100)
 
-    train_x, test_x, train_y, test_y = train_test_split_xy(data_x, data_y, show=True)
+    train_x, test_x, train_y, test_y = split_xy_train_test(data_x, data_y, show=True)
     # 将回归模型对象，训练集x，训练集连续y值，测试集x，测试集连续y传入
     regress_process(estimator, train_x, train_y, test_x, test_y)
     plt.show()
 
 
 def classification_process_test_1():
-    data_x, data_y, data_y_classification, symbol_kl_feature = gen_data_set('US.BABA')
+    data_x, data_y, data_y_classification, symbol_kl_feature = gen_data_set('US.BABA', xList="All")
 
     # from sklearn.linear_model import LogisticRegression
     # estimator = LogisticRegression(C=1.0, penalty='l1', tol=1e-6)
@@ -229,9 +280,11 @@ def classification_process_test_1():
     from sklearn.ensemble import RandomForestClassifier
     estimator = RandomForestClassifier(n_estimators=100)
 
-    train_x, test_x, train_y, test_y = train_test_split_xy(data_x, data_y_classification)
+    # train_x, test_x, train_y, test_y = split_xy_train_test(data_x, data_y_classification)
 
-    classification_process(estimator, train_x, train_y, test_x, test_y)
+    # classification_process(estimator, train_x, train_y, test_x, test_y)
+
+    check_features_importance(estimator, symbol_kl_feature, data_x, data_y_classification)
 
 
 if __name__ == '__main__':
