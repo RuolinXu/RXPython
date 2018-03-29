@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="/static/code/highcharts.js"></script>
+    <script src="/static/code/highcharts-more.js"></script>
+    <script src="/static/code/modules/exporting.js"></script>
+</head>
+<body>
+<input id="symbol" type="text" value="US.BABA">
+from: <input id="fromtime" type="date">
+to: <input id="totime" type="date">
+<input type="button" value="GetData" onclick="GetData()">
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<script>
+    function makeChart1(data) {
+        var ranges = data.ranges, averages = data.averages;
+
+        Highcharts.chart('container', {
+            title: {
+                text: 'July temperatures'
+            },
+            xAxis: {
+                type: 'datetime'
+            },
+            yAxis: {
+                title: {
+                    text: null
+                }
+            },
+
+            tooltip: {
+                crosshairs: true,
+                shared: true,
+                valueSuffix: 'xxx°C'
+            },
+
+            legend: {
+            },
+
+            series: [{
+                name: 'Temperature',
+                data: averages,
+                zIndex: 1,
+                marker: {
+                    fillColor: 'white',
+                    lineWidth: 2,
+                    lineColor: Highcharts.getOptions().colors[0]
+                }
+            }, {
+                name: 'Range',
+                data: ranges,
+                type: 'arearange',
+                lineWidth: 0,
+                linkedTo: ':previous',
+                color: Highcharts.getOptions().colors[0],
+                fillOpacity: 0.3,
+                zIndex: 0,
+                marker: {
+                    enabled: false
+                }
+            }]
+        });
+    }
+    function GetData() {
+        d = {"sender":"Raymond","recipient":"Sylvia","amount":123};
+        $.ajax({
+        type: "post",
+        dataType: 'json',
+        url: "/chart1",
+        contentType: 'application/json',
+        data: JSON.stringify(d),
+        success: function (data) {
+            makeChart1(data);
+        }
+        });
+    }
+</script>
+</body>
+</html>

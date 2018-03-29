@@ -196,7 +196,7 @@ class StockData2:
 
     @classmethod
     def update_db_kline1M(cls):
-        symbol_list = ['US.BABA', 'US.NVDA', 'US.AAOI']
+        symbol_list = ['US.BABA', 'US.NVDA']
         for x in symbol_list:
             cls._update_db_1M(x)
         pass

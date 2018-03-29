@@ -180,6 +180,7 @@ class StockData(object):
         df['UpShadow'] = df.apply(lambda x: (x.High-x.Close) if x.IsUp else (x.High - x.Open), axis=1)
         df['DownShadow'] = df.apply(lambda x: (x.Low - x.Open) if x.IsUp else (x.Low - x.Close), axis=1)
         df['Solid'] = df.eval('Close - Open')
+        df['SP'] = round(df['AvgP'], 0)
 
         TV = df['Volume'].sum()                                         # 总成交量
         Udf, Ddf = df[df.Close > df.Open], df[df.Close < df.Open]       # 分割阳线 阴线
@@ -225,16 +226,17 @@ class StockData(object):
             print(df1.sort_index(ascending=False))
         # print(df[df.Close > df.Open].sort_values('VHLP', ascending=False).ix[:10, ])
         # print(df)  ['Open', 'Close', 'VHLP']
+        print(df.groupby(['SP'])['Volume'].sum())
 
 
 if __name__ == '__main__':
     # d = StockData('US.NVDA')BABA
-    d = StockData('US.AAOI')
+    d = StockData('US.NVDA')
     # t1 = d.stockdata_df.index.to_pydatetime()
     # print(str(t1[0]))                    # print data summary
 
     # d.update_db()
-    d.foo('2018-02-23 09:30:00', '2018-03-15 16:00:00')
+    d.foo('2018-03-19 09:30:00', '2018-03-27 16:00:00')
     # d.get_kline_view('2018-01-30 09:30:00', '2018-01-30 16:00:00', '')
 
     # d1 = d.stockdata_df.resample('5T').mean()  # T分钟 D日

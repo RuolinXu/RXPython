@@ -13,6 +13,42 @@ def get_symbol_kl(symbol, start='2000-01-01', end='2100-01-01', ktype='K_DAY'):
     return kline_pd
 
 
+def gen_feature(symbol_kl):
+    symbol_kl['Price'] = symbol_kl['Turnover'] / symbol_kl['Volume']
+    symbol_kl['regress_y'] = symbol_kl.Price.pct_change()
+    symbol_kl['volume_pct'] = symbol_kl.Volume.pct_change()
+    # 前天涨跌幅度
+    symbol_kl['feature_bf_yes_pct'] = 0
+    # 昨天涨跌幅度
+    symbol_kl['feature_yes_pct'] = 0
+    # 昨天成交涨跌幅度
+    symbol_kl['feature_yes_volume_pct'] = 0
+    # 前天成交涨跌幅度
+    symbol_kl['feature_bf_yes_volume_pct'] = 0
+
+    # 对齐特征，前天收盘价格即与今天的收盘错2个时间单位，[2:] = [:-2]
+    symbol_kl['feature_bf_yes_pct'][2:] = symbol_kl['regress_y'][:-2]
+    symbol_kl['feature_bf_yes_volume_pct'][2:] = symbol_kl['volume_pct'][:-2]
+    symbol_kl['feature_yes_pct'][1:] = symbol_kl['regress_y'][:-1]
+    symbol_kl['feature_yes_volume_pct'][1:] = symbol_kl['volume_pct'][:-1]
+
+    # import sklearn.preprocessing as preprocessing
+    # scaler = preprocessing.StandardScaler()
+    # symbol_kl['feature_bf_yes_pct'] = scaler.fit_transform(
+    #     symbol_kl['feature_bf_yes_pct'].values.reshape(1, -1))
+    # symbol_kl['feature_bf_yes_volume_pct'] = scaler.fit_transform(
+    #     symbol_kl['feature_bf_yes_volume_pct'].values.reshape(1, -1))
+    # symbol_kl['feature_yes_pct'] = scaler.fit_transform(
+    #     symbol_kl['feature_yes_pct'].values.reshape(1, -1))
+    # symbol_kl['feature_yes_volume_pct'] = scaler.fit_transform(
+    #     symbol_kl['feature_yes_volume_pct'].values.reshape(1, -1))
+
+    # 只筛选feature_开头的特征和regress_y，抛弃前两天数据，即[2:]
+    symbol_kl_feature = symbol_kl.filter(
+        regex='regress_y|feature_*')[3:]
+    return symbol_kl_feature
+
+
 def gen_symbol_kl_feature(symbol_kl):
     # y值使用close.pct_change即涨跌幅度
     symbol_kl['regress_y'] = symbol_kl.Close.pct_change()
@@ -102,7 +138,7 @@ def gen_data_set(symbol, clsFunc=lambda x: np.where(x > 0, 1, 0), xList=[1], yIn
     :return:
     """
     symbol_kl = get_symbol_kl(symbol, start=start, end=end, ktype=ktype)
-    symbol_kl_feature = gen_symbol_kl_feature(symbol_kl)
+    symbol_kl_feature = gen_feature(symbol_kl)
 
     # Dataframe -> matrix
     feature_np = symbol_kl_feature.as_matrix()
@@ -241,7 +277,7 @@ def check_features_importance(estimator, features, train_x, train_y_classificati
 
 
 def regress_process_test():
-    data_x, data_y, data_y_classification, symbol_kl_feature = gen_data_set('US.BABA')
+    data_x, data_y, data_y_classification, symbol_kl_feature = gen_data_set('US.BABA',xList='All')
 
     # 实例化线性回归对象estimator
     from sklearn.linear_model import LinearRegression
@@ -280,14 +316,30 @@ def classification_process_test_1():
     from sklearn.ensemble import RandomForestClassifier
     estimator = RandomForestClassifier(n_estimators=100)
 
-    # train_x, test_x, train_y, test_y = split_xy_train_test(data_x, data_y_classification)
+    train_x, test_x, train_y, test_y = split_xy_train_test(data_x, data_y_classification)
 
-    # classification_process(estimator, train_x, train_y, test_x, test_y)
+    classification_process(estimator, train_x, train_y, test_x, test_y)
 
-    check_features_importance(estimator, symbol_kl_feature, data_x, data_y_classification)
+    # check_features_importance(estimator, symbol_kl_feature, data_x, data_y_classification)
 
 
 if __name__ == '__main__':
     # regress_process_test()
-    classification_process_test_1()
+    # classification_process_test_1()
+    import math
+    # data_x, data_y, data_y_classification, symbol_kl_feature = gen_data_set('US.BABA', show=True)
+    a = get_symbol_kl('US.BABA', start='2017-01-01')
+    a['price'] = a['Turnover'] / a['Volume']
+    a['PChange'] = a.price.pct_change()
+    a['VChange'] = a.Turnover.pct_change()
+    a['Sin'] = math.sin(a['VChange'] + 1)
+    a['SinV'] = map(lambda x: math.sin(x), a['VChange'].values )
+    # a['Price2'] = a['Price'] *
+    print(a.filter(['Close','price','PChange','VChange','Sin','SinV']).head(20))
+
+    # data = get_symbol_kl('US.BABA', start='2017-01-01')
+    # data['pct'] = data.Close.pct_change()
+    # print(data.head)
+    # a = data['pct'].values
+    # print(a)
 
