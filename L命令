@@ -7,6 +7,7 @@ ls -alh
 ls -alS
 ls -alt
 mkdir playground
+mkdir -p ./a/b/c/d
 cd playground
 pwd
 
@@ -24,6 +25,8 @@ tar -xf tarfileName.tar -C path         // 解压到指定目录
 z gzip    .gz
 j bzip2   .bz2
 
+''	硬转义 
+""	软转义
 
 ======用户、组、权限管理======
 
@@ -108,10 +111,11 @@ Ctrl-b 左移
 Ctrl-d 删除光标字符
 Ctrl-u 前切到行首
 Ctrl-k 前切到行尾
+Ctrl-w 前切前一单词
 
 Ctrl-y 黏贴
 
-
+esc.    使用上一次命令参数  !$
 
 ======文件搜索======
 locate bin   // 
@@ -141,6 +145,9 @@ ls [选项] [路径]               显示远程目录列表
 lls [选项] [路径]              显示本地目录列表 
 put 本地路径                   上传文件 
 get 远程路径                   下载文件
+
+
+
 
 ======软件包管理======
 
@@ -189,6 +196,11 @@ dpkg -r <package>  			# 移除一个已安装的包裹。只是删掉数据和�
 dpkg -P <package>  			# 完全清除一个已安装的包裹。另外还删除所有的配制文件。
 
 
+su; chmod a+rwx /etc/fstab;
+/mnt/iso/01.iso /mnt/extract/01/ udf,iso9660 loop 0 0
+su; chmod a+rw /etc/apt/sources.list;
+deb file:/mnt/extract/01/ stretch main contrib
+su; mount -a;
 
 ======Git ======
 git init      				# 创建本地仓库

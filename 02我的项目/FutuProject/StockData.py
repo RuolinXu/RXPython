@@ -226,7 +226,10 @@ class StockData(object):
             print(df1.sort_index(ascending=False))
         # print(df[df.Close > df.Open].sort_values('VHLP', ascending=False).ix[:10, ])
         # print(df)  ['Open', 'Close', 'VHLP']
-        print(df.groupby(['SP'])['Volume'].sum())
+        aa = df.groupby(['SP'])['Volume'].sum()*(-1)
+        print(aa)
+        print(aa.index.values)
+        print(aa.values)
 
 
 if __name__ == '__main__':

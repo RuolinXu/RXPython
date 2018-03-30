@@ -10,37 +10,36 @@
 </head>
 <body>
 <input id="symbol" type="text" value="US.BABA">
-from: <input id="fromtime" type="date">
-to: <input id="totime" type="date">
+from: <input id="fromtime" type="date" value="2018-01-01">
+to: <input id="totime" type="date" value="2020-01-01">
 <input type="button" value="GetData" onclick="GetData()">
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="Chart1" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+<div id="Chart2" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
 <script>
     function makeChart1(data) {
         var ranges = data.ranges, averages = data.averages;
 
-        Highcharts.chart('container', {
+        Highcharts.chart('Chart1', {
             title: {
                 text: 'July temperatures'
             },
             xAxis: {
-                type: 'datetime'
+                type: 'int'
             },
             yAxis: {
                 title: {
                     text: null
                 }
             },
-
             tooltip: {
                 crosshairs: true,
                 shared: true,
-                valueSuffix: 'xxx°C'
+                valueSuffix: '°C'
             },
-
             legend: {
             },
-
-            series: [{
+            series: [
+                {
                 name: 'Temperature',
                 data: averages,
                 zIndex: 1,
@@ -48,8 +47,8 @@ to: <input id="totime" type="date">
                     fillColor: 'white',
                     lineWidth: 2,
                     lineColor: Highcharts.getOptions().colors[0]
-                }
-            }, {
+                }},
+                {
                 name: 'Range',
                 data: ranges,
                 type: 'arearange',
@@ -64,8 +63,81 @@ to: <input id="totime" type="date">
             }]
         });
     }
+    function makeChart2(data) {
+//        var categories = [
+//        '0-4', '5-9', '10-14', '15-19', '20-24', '25-29', '30-34', '35-39', '40-44',
+//        '45-49', '50-54', '55-59', '60-64', '65-69', '70-74', '75-79', '80-84', '85-89', '90-94',
+//        '95-99', '100 + '];
+//        var categories1 = [
+//        '0-4', '5-9', '10-14', '15-19', '20-24', '25-29', '30-34', '35-39', '40-44',
+//        '45-49', '50-54', '55-59', '60-64', '65-69', '70-74', '75-79', '80-84', '85-89', '90-94',
+//        '95-99', '100 ++ '];
+        var up_categories = data.up_categories;
+        var up_values = data.up_values;
+        var down_categories = data.down_categories;
+        var down_values = data.down_values
+
+        Highcharts.chart('Chart2', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Population pyramid for Germany, 2015'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: [{
+                categories: down_categories,
+                reversed: false,
+                labels: {
+                    step: 1
+                }
+            },
+                { // mirror axis on right side
+                opposite: true,
+                reversed: false,
+                categories: up_categories,
+                linkedTo: 0,
+                labels: {
+                    step: 1
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                labels: {
+                    formatter: function () {
+                        return Math.abs(this.value) + '%';
+                    }
+                }
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + ', age ' + this.point.category + '</b><br/>' +
+                        'Population: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
+                }
+            },
+
+            series: [{
+                name: 'Male',
+                data: down_values
+            }, {
+                name: 'Female',
+                data: up_values
+            }]
+        });
+    }
     function GetData() {
-        d = {"sender":"Raymond","recipient":"Sylvia","amount":123};
+
+        d = {"symbol":$("#symbol").val(),"fromtime":$("#fromtime").val(),"totime":$("#totime").val()};
         $.ajax({
         type: "post",
         dataType: 'json',
@@ -74,6 +146,17 @@ to: <input id="totime" type="date">
         data: JSON.stringify(d),
         success: function (data) {
             makeChart1(data);
+        }
+        });
+
+        $.ajax({
+        type: "post",
+        dataType: 'json',
+        url: "/chart2",
+        contentType: 'application/json',
+        data: JSON.stringify(d),
+        success: function (data) {
+            makeChart2(data);
         }
         });
     }

@@ -55,14 +55,15 @@ def pandas_test():
     # for x in df1['a']:
     #     print(x)
     #
-    # df = pd.DataFrame({'A': ['foo', 'bar', 'foo', 'bar', 'foo', 'bar', 'foo', 'bar'],
-    #                    'B': ['one', 'one', 'two', 'one', 'one', 'two', 'one', 'two'],
-    #                    'C': np.random.randn(8),
-    #                    'D': np.random.randn(8)
-    #                    })
-    # print('here:{}'.format(type(df['A'])))
-    # print('分组统计')
-    # print(df.groupby(['A', 'B']).sum())
+    df = pd.DataFrame({'A': ['foo', 'bar', 'foo', 'bar', 'foo', 'bar', 'foo', 'bar'],
+                       'B': ['one', 'one', 'two', 'one', 'one', 'two', 'one', 'two'],
+                       'C': np.random.randn(8),
+                       'D': np.random.randn(8)
+                       })
+    print('here:{}'.format(type(df['A'])))
+    print(df)
+    print('分组统计')
+    print(df.groupby(['A','B'])['C'].sum())
 
 
 

@@ -17,12 +17,29 @@ import datetime
 # dt2 = dt + td
 
 
+#
+# start_time = datetime.datetime.now()
+#
+# for x in range(1000000):
+#     pass
+#
+# end_time = datetime.datetime.now()
+#
+# print((end_time - start_time).microseconds)
 
-start_time = datetime.datetime.now()
 
-for x in range(1000000):
-    pass
+def datetime_int(datetime):
+    import time
+    print(datetime)
+    timeArray = time.strptime(str(datetime), "%Y-%m-%d %H:%M:%S")
+    return int(time.mktime(timeArray))
 
-end_time = datetime.datetime.now()
+def int_datetime(timeStamp):
+    import time
+    timeArray = time.localtime(timeStamp)
+    return time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
 
-print((end_time - start_time).microseconds)
+
+print(int_datetime(1493602260))
+print(int_datetime(1246406400))
+print(datetime_int('2017-05-01 09:31:00'))
