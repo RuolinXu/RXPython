@@ -250,19 +250,29 @@ class StockData2:
         pass
 
 
-def datetime_int(datetime):
-    import time
-    # print(datetime)
-    timeArray = time.strptime(str(datetime), "%Y-%m-%d %H:%M:%S")
-    return int(time.mktime(timeArray))*1000
+def chart2Data(df):
+    df['AvgP'] = round(df.eval('Turnover / Volume'), 1)
+    df['AP'] = df.apply(lambda x: int(x.AvgP*4)/4, axis=1)
+    df['IsUp'] = df.eval('Close > Open')
+    Udf, Ddf = df[df.Close > df.Open], df[df.Close < df.Open]
+    up = Udf.groupby(['AP'])['Volume'].sum()
+    down = Ddf.groupby(['AP'])['Volume'].sum()*(-1)
+
+    up_categories = [str(i) for i in up.index.values]
+    up_values = [int(x) for x in up.values]
+    down_categories = [str(i) for i in up.index.values]
+    down_values = [int(x) for x in down.values]
+    up_categories.extend(down_categories)
+    up_categories = list(set(up_categories))
+    return up_categories, up_values, down_categories, down_values
 
 
 if __name__ == '__main__':
     # create_db_table()
     # StockData2.update_db_kline1M()
     # StockData2.update_db_klineDAY()
-    pd = StockData2.kline_pd_from_db('US.BABA', ktype='K_DAY',start='2017-05-01')
+    pd = StockData2.kline_pd_from_db('US.BABA', ktype='K_DAY', start='2017-10-01')
     # StockData2.view_kline(pd, start='2017-05-01')
-    print(datetime_int(pd.index[0]))
+    chart2Data(pd)
 
     pass

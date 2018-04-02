@@ -42,13 +42,19 @@ def index():
 
 def chart2Data(df):
     df['AvgP'] = round(df.eval('Turnover / Volume'), 1)
+    df['AP'] = df.apply(lambda x: int(x.AvgP*4)/4, axis=1)
     df['IsUp'] = df.eval('Close > Open')
     Udf, Ddf = df[df.Close > df.Open], df[df.Close < df.Open]
-    up = Udf.groupby(['AvgP'])['Volume'].sum()
-    down = Ddf.groupby(['AvgP'])['Volume'].sum()*(-1)
-    up_categories, up_values = list(up.index.values), list(up.values)
-    down_categories, down_values = list(down.index.values), list(down.values)
-    return up_categories, up_values, down_categories, down_values
+    up = Udf.groupby(['AP'])['Volume'].sum()
+    down = Ddf.groupby(['AP'])['Volume'].sum()*(-1)
+
+    up_categories = [str(i) for i in up.index.values]
+    up_values = [int(x) for x in up.values]
+    down_categories = [str(i) for i in down.index.values]
+    down_values = [int(x) for x in down.values]
+    up_categories.extend(down_categories)
+    categories = sorted(list(set(up_categories)))
+    return categories, up_values, down_values
 
 
 @app.route('/chart2',methods=['POST'])
@@ -62,10 +68,11 @@ def chart2():
 
     from XQ.StockData2 import StockData2
     pd = StockData2.kline_pd_from_db(values['symbol'], start=values['fromtime'], end=values['totime'], ktype='K_1M')
-    up_categories, up_values, down_categories, down_values = chart2Data(pd)
+    categories, up_values, down_values = chart2Data(pd)
 
-    response = {'up_categories': up_categories, 'up_values': up_values,
-                'down_categories': down_categories, 'down_values': down_values}
+    # 'up_categories': up_categories,
+    # 'down_categories': down_categories,
+    response = {'categories': categories, 'up_values': up_values, 'down_values': down_values}
     return jsonify(response), 201
 
 
